@@ -1,0 +1,66 @@
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">商品清单</view>
+  </view>
+  <view class="order-info">
+    <block wx:for="{{orderInfo.goods_list}}" wx:key="{{item.id}}">
+      <view class="item">
+        <view class="info">
+          <view class="info-name">{{item.goods_type}} {{item.name}}</view>
+          <view class="info-price">
+            <view class="price-box">
+              <text>单价:</text>
+              <text class="price">￥{{item.price}}</text>
+            </view>
+            <view>数量:{{item.total}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">售后问题</view>
+  </view>
+  <view class="order-info">
+
+    <view class="after-sale">
+      <checkbox-group bindchange="afterSaleChange">
+        <checkbox value="产品品质需要售后">产品品质需要售后</checkbox>
+        <checkbox value="货物型号、数量不对">货物型号、数量不对</checkbox>
+        <checkbox value="物流配送问题">物流配送问题</checkbox>
+        <checkbox value="other">其他</checkbox>
+      </checkbox-group>
+      <block wx:if="{{other}}">
+        <block wx:if="{{!modal}}">
+        <textarea maxlength="-1" placeholder="输入您的问题" value="{{otherQuestions}}" data-name="otherQuestions"
+                  bindinput="getInput"></textarea>
+        </block>
+      </block>
+    </view>
+
+  </view>
+</view>
+
+<view class="after-sale-btn" bindtap="submitAfterSale">提交</view>
+
+<block wx:if="{{modal}}">
+  <view class="modal-box">
+    <view class="box-content">
+      <view class="content-title">我的业务员</view>
+      <view class="content-section">
+        <view>姓名：{{nickname}}</view>
+        <view>
+          <text>联系方式：</text>
+          <text class="content-phone" catchtap="contact">{{contact}}</text>
+        </view>
+      </view>
+      <view class="content-btn" bindtap="modalBtn">确定</view>
+    </view>
+  </view>
+</block>

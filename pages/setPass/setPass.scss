@@ -1,0 +1,99 @@
+@import "../../common";
+
+.input-item {
+  box-sizing: border-box;
+  margin-top: rpx(46);
+  display: flex;
+
+  .item-title {
+    line-height: rpx(100);
+    font-size: rpx(32);
+    padding: 0 rpx(20);
+  }
+
+  .jinggao {
+    position: absolute;
+    right: rpx(-80);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: rpx(50);
+    color: #FF0202;
+    height: rpx(60);
+    width: rpx(60);
+  }
+
+  .inner-item {
+    padding-left: rpx(5);
+    border: 1px solid #cccccc;
+    border-top: 1px solid #000;
+    display: flex;
+    height: rpx(90);
+    position: relative;
+
+    .line {
+      background-color: #999999;
+      width: rpx(1);
+      height: rpx(45);
+      margin-top: rpx(25);
+      margin-right: rpx(15);
+      margin-left: rpx(-5);
+    }
+
+    .item-icon {
+      padding-right: rpx(10);
+      padding-top: rpx(12);
+
+      .icon {
+        font-size: rpx(60);
+        color: #999999;
+      }
+    }
+
+    .input-mobile {
+      padding-top: rpx(20);
+      width: rpx(470);
+
+      input {
+
+      }
+    }
+
+    .input-placeholder {
+      color: #999999;
+      font-size: rpx(28);
+    }
+  }
+
+  .pis {
+    color: #666666;
+    font-size: rpx(24);
+
+    .inner-pis {
+      display: flex;
+      justify-content: space-between;
+
+      .pis-speck {
+        margin-top: rpx(10);
+      }
+
+      .up-button {
+        border: 1px solid #cccccc;
+        padding: rpx(20) rpx(40);
+        margin-top: rpx(20);
+        color: #999999;
+      }
+    }
+  }
+}
+
+.post {
+  width: rpx(550);
+  height: rpx(90);
+  line-height: rpx(90);
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: rpx(130);
+  background-color: #1E5093;
+}

@@ -1,0 +1,23 @@
+<!-- 2019-1-8-add -->
+<navigator url="/packageA/index_new/index" class="more">返回首页</navigator>
+
+
+<block wx:for="{{new_list}}" wx:key="{{index}}">
+
+  <view class="new_item big_img" data-index="{{index}}" data-item="{{item}}" bindtap="info">
+    <block wx:if="{{item.image}}">
+      <image src="{{imgUrl+item.image}}"></image>
+    </block>
+
+    <view class="item-content">
+      <view class="title">{{item.title}}</view>
+      <view class="watch">
+        <view class="icon icon-watch">{{item.views}}</view>
+        <view>{{item.create_time}}</view>
+      </view>
+      <!--<rich-text class="content" nodes="{{item.content}}"></rich-text>-->
+    </view>
+  </view>
+
+</block>
+<tabBar set-index="{{tabBar}}"></tabBar>

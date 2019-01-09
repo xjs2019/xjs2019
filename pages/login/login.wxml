@@ -1,0 +1,65 @@
+<!--<view class="background">-->
+
+<!--<image src="/image/LOGO.gif" class="logo"></image>-->
+
+<!--<view class="input-box">-->
+<!--<view class="input-item">-->
+<!--<view class="item-icon">-->
+<!--<view class="icon icon-icon-user"></view>-->
+<!--</view>-->
+<!--<view class="line"></view>-->
+<!--<view class="input-mobile">-->
+<!--<input placeholder="请输入帐号" data-name="mobile" bindblur="getInput" bindinput="getInput"/>-->
+<!--</view>-->
+<!--</view>-->
+<!--<view class="input-item">-->
+<!--<view class="item-icon">-->
+<!--<view class="icon icon-icon-pass"></view>-->
+<!--</view>-->
+<!--<view class="line"></view>-->
+<!--<view class="input-mobile">-->
+<!--<input placeholder="请输入密码" password data-name="password" bindblur="getInput" bindinput="getInput"/>-->
+<!--</view>-->
+<!--</view>-->
+<!--</view>-->
+<!--<view class="btn">-->
+<!--<view class="btn-l" bindtap="login">-->
+<!--登录-->
+<!--</view>-->
+<!--<navigator class="btn-r" url="/pages/register_new/register">-->
+<!--注册-->
+<!--</navigator>-->
+<!--</view>-->
+<!--<view class="forget">-->
+<!--<navigator url="/pages/personFindPass/personFindPass">人工找回密码</navigator>-->
+<!--<navigator url="/pages/findPass/findPass">忘记密码？</navigator>-->
+<!--</view>-->
+<!--</view>-->
+
+
+<view class="login">
+
+  <image mode="widthFix" src="/image/LOGO.png"></image>
+
+  <view class="cell">
+    <view class="icon icon-icon-user"></view>
+    <input placeholder-class="ph_color" placeholder="用户名/手机" data-name="mobile" bindblur="getInput"
+           bindinput="getInput"/>
+  </view>
+
+  <view class="cell">
+    <view class="icon icon-icon-pass"></view>
+    <input placeholder-class="ph_color" placeholder="输入密码" data-name="password" bindblur="getInput" bindinput="getInput"
+           password/>
+  </view>
+
+  <view class="login-btn" bindtap="login">登录</view>
+
+  <view class="login-reg" bindtap="register">注册</view>
+
+  <view class="footer">
+    <!-- <navigator url="/pages/personFindPass/personFindPass">人工找回密码</navigator> -->
+    <navigator url="/pages/findPass/findPass">忘记密码？</navigator>
+  </view>
+
+</view>

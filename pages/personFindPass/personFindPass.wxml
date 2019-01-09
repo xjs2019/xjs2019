@@ -1,0 +1,7 @@
+<view class="text">
+  <text class="text1">人工找回密码</text>
+  <text class="text2">{{phone}}</text>
+</view>
+<view class="post" bindtap="dial">
+  拨号
+</view>

@@ -1,0 +1,14 @@
+<view class="section">
+  <view class="section-input">
+    <input placeholder="请输入原密码" password data-name="pwd" bindinput="getInput"/>
+  </view>
+  <view class="section-input">
+    <input placeholder="请输入新密码" password data-name="repwd" bindinput="getInput"/>
+  </view>
+  <view class="section-input">
+    <input placeholder="请确认新密码" password data-name="repwd2" bindinput="getInput"/>
+    <!--<view>设置6-18位字母与数字相结合的密码</view>-->
+  </view>
+</view>
+
+<view class="pwd-define" bindtap="confirm">确认</view>

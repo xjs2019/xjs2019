@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#1a4681",
+  "navigationBarTextStyle": "#ffffff",
+  "navigationBarTitleText": "仓管员",
+  "usingComponents": {
+    "tabBar": "/components/tabBar/tabBar"
+  }
+}

@@ -1,0 +1,96 @@
+<view class="item">
+
+  <view class="common-title" data-index="{{index}}" data-item="{{item}}" bindtap="more">
+
+    <view class="title-left">
+      <view class="icon icon-user"></view>
+      <view class="text">客户信息</view>
+      <!--<view class="icon icon-more"></view>-->
+    </view>
+
+    <view class="title-right">
+      {{time}}
+    </view>
+
+  </view>
+
+  <view class="user-info">
+    {{data.name}} {{data.mobile}}
+  </view>
+
+
+  <view class="order">
+
+    <view class="title">
+      <view class="icon icon-shuxian"></view>
+      <view class="title-name">商品清单</view>
+    </view>
+
+    <view class="order-info">
+
+      <block wx:for="{{list}}" wx:for-item="i" wx:key="{{i.goods_list_id}}">
+        <view class="item">
+          <view class="info">
+            <view class="info-name">{{i.goods_type}} {{i.name}}</view>
+            <view class="info-price">
+              <view class="price-box">
+                <text>单价:</text>
+                <input class="price-num" type="digit" value="{{i.old_price}}" data-index="{{index}}" bindblur="getPrice"
+                       bindinput="getPrice"/>
+              </view>
+              <view class="number-box">数量:{{i.total}}</view>
+            </view>
+            <view class="info-price">
+              <view class="price-box">
+                <text>差价:</text>
+                <input class="price-num" type="digit" data-index="{{index}}" bindblur="spread" bindinput="spread"/>
+              </view>
+              <view class="number-box" style="visibility: hidden">数量:{{i.total}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+    </view>
+
+    <view class="opinion">
+      <view class="title">欠款金额:</view>
+      <input placeholder="请输入欠款金额" value="{{qian}}" data-name="qian" bindblur="getInput"
+             bindinput="getInput"/>
+      <view class="title">支付方式:</view>
+      <textarea maxlength="-1" placeholder="请输入支付方式" value="{{pay_type}}" data-name="pay_type" bindblur="getInput"
+                bindinput="getInput"></textarea>
+      <view class="title">申请原因:</view>
+      <textarea maxlength="-1" placeholder="请输入申请原因" value="{{why}}" data-name="why" bindblur="getInput"
+                bindinput="getInput"></textarea>
+      <view class="title">议价意见:</view>
+      <textarea maxlength="-1" placeholder="请输入议价意见" value="{{questions}}" data-name="questions" bindblur="getInput"
+                bindinput="getInput"></textarea>
+    </view>
+
+    <view class="order-total">
+      <!--<view>合计:￥{{item.pay_price}}</view>-->
+      <view class="changePrice" bindtap="submit">提交</view>
+    </view>
+
+  </view>
+
+  <block wx:if="{{item.opinion.length}}">
+    <view class="order">
+
+      <view class="title">
+        <view class="icon icon-shuxian"></view>
+        <view class="title-name">意见</view>
+      </view>
+      <view class="order-info">
+
+        <block wx:for="{{data.opinion}}" wx:for-item="i" wx:key="{{i.id}}">
+          <view>{{i.name}}：{{i.msg}}</view>
+        </block>
+
+      </view>
+
+    </view>
+  </block>
+
+</view>

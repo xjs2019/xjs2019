@@ -1,0 +1,175 @@
+@import "../../common";
+
+page {
+  padding-bottom: rpx(100);
+}
+
+button {
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 0;
+
+  &::after {
+    border: none;
+  }
+}
+
+.top {
+  position: relative;
+  width: 100%;
+
+  image {
+    width: 100%;
+  }
+
+  .swiper {
+    width: 100%;
+
+    image {
+      width: 100%;
+    }
+  }
+
+  .countdown {
+    box-sizing: border-box;
+    padding: rpx(30);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    color: #ffffff;
+    background-color: rgba(#000, .2);
+  }
+}
+
+.title {
+  padding: rpx(30);
+  border-bottom: rpx(20) solid #eee;
+  font-size: rpx(36);
+  color: #333;
+}
+
+.type-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: rpx(20);
+
+  .item {
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: rpx(30);
+    box-shadow: 0 0 rpx(16) 0 rgba(210, 207, 207, 0.5);
+    border-radius: rpx(30);
+    color: #999999;
+  }
+
+  .item-select {
+    padding: rpx(20);
+    width: 100%;
+  }
+
+  .item-color {
+    color: #ed4f50;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  border-top: 1px solid #ccc;
+  display: flex;
+  height: rpx(100);
+  background: #FFFFFF;
+
+  view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    color: #666;
+  }
+
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: rpx(5);
+    flex: 1;
+  }
+
+  .share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: rpx(5);
+    flex: 1;
+  }
+
+  .cart {
+    width: rpx(180);
+    color: #FFFFFF;
+    background: #ff9d00;
+  }
+
+  .pay {
+    width: rpx(180);
+    color: #FFFFFF;
+    background: #ed4f50;
+  }
+}
+
+.poster {
+  position: fixed;
+  top: 20%;
+  left: 12%;
+  z-index: 200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 280px;
+
+  background: #fff;
+  padding: rpx(30) rpx(15);
+
+  border-radius: rpx(10);
+
+  .cvs {
+    margin-bottom: rpx(15);
+  }
+
+  .poster_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: rpx(80);
+    border-radius: rpx(80);
+
+    color: #FFF;
+    background: #385eff;
+  }
+}
+
+.mu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+  background-color: #000000;
+}
+
+.action-sheet-share {
+  line-height: 1.35;
+}

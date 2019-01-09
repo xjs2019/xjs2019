@@ -1,0 +1,200 @@
+@import "../../common";
+
+.cart-list {
+  padding: rpx(20);
+
+  .item {
+    padding: rpx(20);
+    margin-bottom: rpx(20);
+    background-color: #ffffff;
+    box-shadow: 0 0 rpx(20) 0 rgba(187, 187, 187, 0.5);
+    border-radius: rpx(10);
+
+    .icon {
+      font-size: rpx(24);
+      color: #666666;
+
+      &::before {
+        margin-right: rpx(15);
+      }
+    }
+
+    .icon-select {
+      &::before {
+        color: red;
+      }
+    }
+
+    .item-name {
+      margin: rpx(15) 0;
+      font-size: rpx(26);
+      color: #666666;
+    }
+
+    .item-val {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .val-price {
+        font-size: rpx(28);
+        color: red;
+      }
+
+      .val-number {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        height: rpx(50);
+
+        border-radius: rpx(10);
+        border: solid 1px #ccc;
+
+        .operation {
+          width: rpx(50);
+          height: 100%;
+          line-height: rpx(45);
+          text-align: center;
+          color: #999;
+
+          &:first-child {
+            line-height: rpx(40);
+            border-right: 1px solid #ccc;
+          }
+
+          &:last-child {
+            border-left: 1px solid #ccc;
+          }
+        }
+
+        input {
+          width: rpx(120);
+          height: rpx(4) !important;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: rpx(300);
+
+  .null-img {
+    width: rpx(400);
+  }
+
+  .null-desc {
+    margin-top: rpx(30);
+    font-size: rpx(30);
+    color: #999999;
+  }
+}
+
+.settle-accounts-box {
+  padding-bottom: rpx(100);
+
+  .settle-accounts {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    bottom: rpx(100);
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: rpx(100);
+    padding-left: rpx(20);
+    background-color: #fff;
+
+    .select-all {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon:before {
+      margin-right: rpx(10);
+      color: red;
+    }
+
+    .icon-no-select:before {
+      color: #999999;
+    }
+
+    .accounts-total {
+      flex: 1;
+      margin-left: rpx(30);
+
+      .total-price {
+        color: red;
+      }
+    }
+
+    .total {
+      height: 100%;
+      line-height: rpx(100);
+      text-align: center;
+      font-size: rpx(28);
+      color: #fff;
+    }
+
+    .total-bargain {
+      width: rpx(120);
+      background-color: #1a4681;
+    }
+
+    .total-pay {
+      width: rpx(180);
+      background-color: red;
+    }
+  }
+}
+
+/*模态框*/
+.modal-box {
+  .box-content {
+    box-sizing: border-box;
+    position: fixed;
+    top: 35%;
+    left: rpx((750-600)/2);
+    width: rpx(600);
+    z-index: 10;
+    background-color: #f2f2f2;
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, .5);
+  }
+}
+
+.box-content {
+  border-radius: rpx(5);
+
+  .content-item {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: rpx(100);
+    padding-left: rpx(30);
+    font-size: rpx(30);
+  }
+
+  .content-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.bargain-status {
+  font-size: rpx(24);
+  color: #666;
+}

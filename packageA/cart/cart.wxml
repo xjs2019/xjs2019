@@ -1,0 +1,81 @@
+<block wx:if="{{load}}">
+  <view class="cart-list">
+    <block wx:for="{{cartList}}" wx:key="{{item.cart_id}}">
+
+      <view class="item" data-lock="{{item.lock}}" data-cart_id="{{item.cart_id}}" bindlongpress="press">
+
+        <view class="icon {{item.check?'icon-select':'icon-no-select'}}" data-index="{{index}}"
+              data-cart_id="{{item.cart_id}}" data-total="{{item.total}}" data-check="{{!item.check}}"
+              bindtap="selectItem">{{item.goods_type}}
+        </view>
+        <view class="item-name">{{item.name}}</view>
+        <view class="item-val">
+
+
+          <block wx:if="{{check}}">
+            <view class="val-price">￥{{item.price}}</view>
+          </block>
+
+          <block wx:else>
+            <view class="val-price">*****</view>
+          </block>
+
+          <view style="display: flex;align-items: center;color: #666;">
+            <view>购买数量</view>
+            <view class="val-number" data-index="{{index}}" data-item="{{item}}" data-number="{{item.total}}"
+                  data-cart_id="{{item.cart_id}}" bindtap="quantity">
+              <!--<view class="operation" data-name="less">-</view>-->
+
+              <input type="number" value="{{item.total}}" data-index="{{index}}" data-item="{{item}}"
+                     data-cart_id="{{item.cart_id}}" bindblur="inputQuantity"/>
+              <!--<view class="operation" data-name="add">+</view>-->
+            </view>
+          </view>
+
+        </view>
+
+      </view>
+
+    </block>
+  </view>
+
+  <block wx:if="{{!cartList.length}}">
+    <view class="null">
+      <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+      <view class="null-desc">购物车是空的哦~</view>
+    </view>
+  </block>
+
+  <view class="settle-accounts-box">
+    <view class="settle-accounts">
+      <view class="icon select-all {{isSelectAll?'icon-select':'icon-no-select'}}" data-selectAll="{{!isSelectAll}}"
+            bindtap="selectAll">全选
+      </view>
+      <view class="accounts-total">
+        <text class="total-name">合计:</text>
+
+
+        <block wx:if="{{check}}">
+          <text class="total-price">￥{{priceAll}}</text>
+        </block>
+
+        <block wx:else>
+          <text class="total-price">*****</text>
+        </block>
+
+      </view>
+      <view class="total total-bargain" bindtap="bargain">议价</view>
+      <view class="total total-pay" bindtap="settlement">去结算({{selectCount}})</view>
+    </view>
+  </view>
+
+  <block wx:if="{{modal}}">
+    <view class="modal-box" bindtap="modalClose">
+      <view class="box-content">
+        <view class="content-item" bindtap="del">删除</view>
+      </view>
+    </view>
+  </block>
+</block>
+
+<tabBar set-index="{{tabBar}}"></tabBar>

@@ -1,0 +1,32 @@
+<block wx:if="{{load}}">
+  <view class="tab" bindtap="tab">
+    <block wx:for="{{goodsType}}" wx:key="{{item.type_id}}">
+      <view data-index="{{item.type_id}}" class="{{tabIndex===item.type_id?'tab-select':''}}">{{item.name}}</view>
+    </block>
+  </view>
+
+  <view class="discount-list">
+    <block wx:for="{{specialGoods}}" wx:key="{{item.goods_id}}">
+
+      <view class="item">
+        <view class="item-val">
+          <view class="val-name">{{item.name}}</view>
+
+
+          <block wx:if="{{check}}">
+            <view class="val-price">￥{{item.special_price}}</view>
+          </block>
+
+          <block wx:else>
+            <view class="val-price">*****</view>
+          </block>
+
+        </view>
+        <view class="item-btn" data-goods_id="{{item.goods_id}}" bindtap="orderNow">下单</view>
+      </view>
+
+    </block>
+  </view>
+</block>
+
+<tabBar set-index="{{tabBar}}"></tabBar>

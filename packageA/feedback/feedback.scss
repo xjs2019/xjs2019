@@ -1,0 +1,31 @@
+@import "../../common";
+
+.content {
+  padding: rpx(30);
+
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: rpx(400);
+    padding: rpx(30);
+    box-shadow: 0 0 rpx(20) 0 rgba(187, 187, 187, 0.5);
+    border-radius: rpx(10);
+  }
+}
+
+.type-btn {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rpx(410);
+    height: rpx(90);
+    box-shadow: 0 0 rpx(16) 0 rgba(14, 47, 91, 0.5);
+    border-radius: rpx(45);
+    color: #ffffff;
+    background-color: #1a4681;
+  }
+}

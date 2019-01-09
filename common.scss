@@ -1,0 +1,92 @@
+@function rpx($rpx:0) {
+  @return $rpx*1rpx;
+}
+
+$color: #1a4681 !default;
+
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: rpx(300);
+
+  .null-img {
+    width: rpx(400);
+  }
+
+  .null-desc {
+    margin-top: rpx(30);
+    font-size: rpx(30);
+    color: #999999;
+  }
+}
+
+@mixin floatFix() {
+  zoom: 1;
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin ell() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin img() {
+  position: relative;
+  padding-top: percentage(200/750);
+  height: 0;
+  overflow: hidden;
+  imgage {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@mixin arrow($right:15) {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - #{rpx(8)});
+    right: rpx(4 + $right);
+    display: inline-block;
+    height: rpx(16);
+    width: rpx(16);
+    border-width: rpx(4) rpx(4) 0 0;
+    border-style: solid;
+    border-color: #C0C0C0;
+    transform: rotateZ(45deg);
+  }
+}
+
+@mixin border($last:true,$direction:bottom,$color:#e0e0e0) {
+  $last: if($last, null, ':not(:last-child)');
+  $direction: if($direction, -$direction, null);
+  &#{$last} {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      border#{$direction}: 1px solid $color;
+      box-sizing: border-box;
+      transform: scale(.5);
+      transform-origin: 0 0;
+      pointer-events: none;
+    }
+  }
+}

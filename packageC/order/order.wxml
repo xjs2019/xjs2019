@@ -1,0 +1,55 @@
+<view class="order-nav">
+  <view class="nav-item {{tabIndex===-1?'nav-selected':''}}" data-index="{{-1}}" bindtap="tab">
+    <view class="icon icon-quanbu"></view>
+    <view>全部</view>
+  </view>
+  <view class="nav-item {{tabIndex===0?'nav-selected':''}}" data-index="{{0}}" bindtap="tab">
+    <view class="icon icon-daifukuan"></view>
+    <view>待付款</view>
+  </view>
+  <view class="nav-item {{tabIndex===1?'nav-selected':''}}" data-index="{{1}}" bindtap="tab">
+    <view class="icon icon-daishouhuo"></view>
+    <view>待发货</view>
+  </view>
+  <view class="nav-item {{tabIndex===2?'nav-selected':''}}" data-index="{{2}}" bindtap="tab">
+    <view class="icon icon-daishouhuo"></view>
+    <view>待收货</view>
+  </view>
+  <view class="nav-item {{tabIndex===4?'nav-selected':''}}" data-index="{{4}}" bindtap="tab">
+    <view class="icon icon-yiwancheng"></view>
+    <view>已完成</view>
+  </view>
+</view>
+
+<view class="order-list">
+  <block wx:for="{{orderList}}" wx:key="{{item.id}}" wx:if="{{item.status!==-1}}">
+
+    <view class="item" data-id="{{item.id}}" bindtap="orderInfo">
+      <view class="item-top">
+        <view class="time">{{item.create_time}}</view>
+        <view class="orderNumber">订单号: {{item.order_sn}}</view>
+
+      </view>
+      <view class="order-info">
+        <view class="info">
+          <block wx:for="{{item.goods_list}}" wx:for-item="i" wx:key="{{i.id}}">
+            <view class="info-name">{{i.goods_type}} {{i.name}}</view>
+          </block>
+          <view class="info-price">
+
+            <view>{{item.goods_list.length}}件商品</view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </block>
+</view>
+
+<block wx:if="{{!orderList.length}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">你还没有商品哦~</view>
+  </view>
+</block>

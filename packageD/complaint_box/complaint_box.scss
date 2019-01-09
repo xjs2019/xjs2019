@@ -1,0 +1,42 @@
+@import "../../common";
+
+//.bg {
+//  position: absolute;
+//  top: rpx(-1000/1.4);
+//  left: rpx(-1000/8);
+//  z-index: -1;
+//  width: rpx(1000);
+//  height: rpx(1000);
+//  border-radius: 50%;
+//  background-color: $color;
+//}
+
+.choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: rpx(30) 0;
+  //color: #fff;
+  .choose-line {
+    margin: 0 rpx(30);
+  }
+}
+
+.list {
+  margin: 0 rpx(20) rpx(20);
+  font-size: rpx(26);
+  color: #999999;
+  background-color: #ffffff;
+
+  .item {
+    padding: rpx(20);
+    margin-bottom: rpx(20);
+    box-shadow: 0 0 rpx(10) 0 rgba(187, 187, 187, 0.5);
+    border-radius: rpx(10);
+
+    .item-time {
+      font-size: rpx(24);
+      margin: rpx(10) 0;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "特价专区",
+  "usingComponents": {
+    "tabBar": "/components/tabBar/tabBar"
+  }
+}

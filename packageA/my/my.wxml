@@ -1,0 +1,66 @@
+<!--<block wx:if="{{load}}">-->
+<!--<view class="personal-center">-->
+<!--<image class="bg" src="{{bgImg}}"></image>-->
+<!--<image class="head" src="{{info.head_img}}"></image>-->
+<!--<view>{{info.name}}</view>-->
+<!--&lt;!&ndash;<view>{{info.mobile}}</view>&ndash;&gt;-->
+<!--<button class="syncAvatar" open-type="getUserInfo" bindgetuserinfo="getUserInfo">更新信息</button>-->
+<!--</view>-->
+
+
+<!--</block>-->
+
+<view class="cell-list">
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/my_info/my_info">
+    <view class="icon icon-my"></view>
+    <view>个人资料</view>
+  </navigator>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/order/order">
+    <view class="icon icon-dingdan"></view>
+    <view>我的订单</view>
+  </navigator>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/bargainList/bargainList">
+    <view class="icon icon-weixiu"></view>
+    <view>我的议价</view>
+  </navigator>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/my_after/my_after">
+    <view class="icon icon-shouhou"></view>
+    <view>我的售后</view>
+  </navigator>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/my_account/my_account">
+    <view class="icon icon-anquan"></view>
+    <view>账号安全</view>
+  </navigator>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/address_list/address_list">
+    <view class="icon icon-daishouhuo"></view>
+    <view>地址列表</view>
+  </navigator>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/invoice_list/invoice_list">
+    <view class="icon icon-car"></view>
+    <view>发票列表</view>
+  </navigator>
+
+  <view class="cell arrow" bindtap="call">
+    <view class="icon icon-phone"></view>
+    <view>客服电话</view>
+  </view>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/feedback/feedback">
+    <view class="icon icon-yiquxiao"></view>
+    <view>意见反馈</view>
+  </navigator>
+
+</view>
+
+<view class="type-btn">
+  <view class="btn" bindtap="logOut">退出登陆</view>
+</view>
+
+<tabBar set-index="{{tabBar}}"></tabBar>

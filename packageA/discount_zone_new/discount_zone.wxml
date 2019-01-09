@@ -1,0 +1,33 @@
+<block wx:if="{{load}}">
+
+  <block wx:for="{{special_price}}" wx:key="{{item.id}}">
+    <view class="home-list" data-item="{{item}}" bindtap="go">
+      <view class="img">
+        <block wx:if="{{item.small_image}}">
+          <image mode="widthFix" src="{{imgUrl+item.small_image}}"></image>
+        </block>
+        <view class="countdown">{{item.special_total>0?item.timeDown:'已抢光'}}</view>
+      </view>
+      <view>{{item.name}}</view>
+      <view class="item-btn">
+        <block wx:if="{{check}}">
+          <view>{{item.special_price}}元起/{{item.sku}}</view>
+          <view>{{item.old_price}}元起/{{item.sku}}</view>
+        </block>
+        <block wx:else>
+          <view>*****元起/{{item.sku}}</view>
+          <view>*****元起/{{item.sku}}</view>
+        </block>
+
+        <view>立即抢购</view>
+      </view>
+    </view>
+  </block>
+
+</block>
+
+<button class="customer-service " open-type="contact">
+  <view class="icon icon-hongbao"></view>
+</button>
+
+<tabBar set-index="{{tabBar}}"></tabBar>

@@ -1,0 +1,175 @@
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">收货人信息</view>
+  </view>
+  <view class="order-info" bindtap="address">
+    <block wx:if="{{defaultAddress.name}}">
+      <view>姓名: {{defaultAddress.name}}</view>
+      <view>电话: {{defaultAddress.mobile}}</view>
+      <view>地址: {{defaultAddress.province}}{{defaultAddress.city}}{{defaultAddress.area}}{{defaultAddress.address}}
+      </view>
+    </block>
+    <block wx:else>
+      <view>请添加收货人信息</view>
+    </block>
+  </view>
+</view>
+
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">商品清单</view>
+  </view>
+  <view class="order-info">
+    <block wx:for="{{orderList}}" wx:key="{{item.id}}">
+      <view class="item">
+        <view class="info">
+          <view class="info-name">{{item.goods_type}} {{item.name}}</view>
+
+          <view class="info-price">
+            <view class="price-box">
+              <!--<text>原价:</text>-->
+              <!--<text class="price">￥{{item.old_price}}</text>-->
+            </view>
+            <view class="price-box">
+              <text>价格:</text>
+              <block wx:if="{{check}}">
+                <text class="price">￥{{item.price}}</text>
+              </block>
+              <block wx:else>
+                <text class="price">*****</text>
+              </block>
+            </view>
+            <view>数量:{{item.total}}</view>
+          </view>
+
+          <block wx:if="{{item.te_total>0}}">
+
+            <view class="info-price">
+              <view class="price-box"></view>
+              <view class="price-box">
+                <text>特价:</text>
+                <text class="price">￥{{item.te_price}}</text>
+              </view>
+              <view class="number-box">数量:{{item.te_total}}</view>
+            </view>
+
+          </block>
+
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">支付配送</view>
+  </view>
+  <view class="order-info arrow" bindtap="settlement_way_go">
+    <view>支付方式: {{pay_type}}</view>
+    <view>配送方式: {{sendWay}}</view>
+  </view>
+
+  <block wx:if="{{payWay_id===4||payWay_id===5}}">
+    <block wx:if="{{!image}}">
+      <view class="order-img" bindtap="addImage">
+        <image src="/image/addPhoto.png"></image>
+      </view>
+    </block>
+    <block wx:else>
+      <image class="check" mode="widthFix" src="{{img+image}}"></image>
+    </block>
+  </block>
+
+</view>
+
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">发票信息</view>
+  </view>
+  <view class="order-info">
+    <radio-group class="radio-group" bindchange="invoice">
+      <radio value="0" checked="{{invoice===0}}" color="#173d71">不开发票</radio>
+      <radio value="1" checked="{{invoice===1}}" color="#173d71">开具发票</radio>
+    </radio-group>
+    <block wx:if="{{!invoice}}"></block>
+    <block wx:else>
+      <navigator url="/packageA/invoice_list/invoice_list" hover-class="none" class="arrow">
+        <view class="invoice-info">
+          <view>公司名称：</view>
+          <view>{{defaultBilling.company}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>公司地址：</view>
+          <view>{{defaultBilling.address}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>纳税识别号：</view>
+          <view>{{defaultBilling.identify}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>开户银行：</view>
+          <view>{{defaultBilling.bank}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>账号：</view>
+          <view>{{defaultBilling.account}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>电话：</view>
+          <view>{{defaultBilling.phone}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>传真：</view>
+          <view>{{defaultBilling.fax}}</view>
+        </view>
+
+        <view class="invoice-info">
+          <view>收票地址：</view>
+          <view>{{defaultBilling.shou_area}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>收票电话：</view>
+          <view>{{defaultBilling.shou_phone}}</view>
+        </view>
+        <view class="invoice-info">
+          <view>收票人：</view>
+          <view>{{defaultBilling.shou_name}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
+
+<view class="footer">
+  <view class="footer-box">
+    <view class="box-price">
+
+      <view class="price">
+
+        <block wx:if="{{check}}">
+          <view>￥{{total_price}}</view>
+        </block>
+
+        <block wx:else>
+          <view>*****</view>
+        </block>
+
+        <view>
+          <view>物流费用：￥{{shippingPrice}}</view>
+          <view>支付费用：￥{{pay_type_price}}</view>
+          <view>发票费用：￥{{cheque}}</view>
+        </view>
+
+      </view>
+
+      <!--<view class="total">合计：￥{{orderPrice}}</view> -->
+
+    </view>
+    <view class="box-btn" bindtap="addOrder">提交订单</view>
+  </view>
+</view>

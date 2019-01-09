@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#1a4681",
+  "navigationBarTextStyle": "#ffffff",
+  "navigationBarTitleText": "议价单",
+  "usingComponents": {
+    "tabBar": "/components/tabBar/tabBar"
+  }
+}

@@ -1,0 +1,170 @@
+@import "../../common";
+
+.order-list {
+  margin: rpx(20) rpx(20) 0;
+  color: #666666;
+
+  .item {
+    padding: rpx(20);
+    margin-bottom: rpx(20);
+    box-shadow: 0 0 rpx(8) 0 rgba(187, 187, 187, 0.5);
+    border-radius: rpx(10);
+
+    .item-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: rpx(22);
+      color: #c1c1c1;
+    }
+
+    .order-info {
+      display: flex;
+      align-items: center;
+
+      .info-type {
+        flex: none;
+        font-size: rpx(24);
+        color: #666666;
+      }
+
+      .info {
+        flex: 1;
+        margin: rpx(20) 0 rpx(20) rpx(20);
+
+        .info-name {
+          font-size: rpx(26);
+          color: #666666;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .info-price {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: rpx(15);
+          font-size: rpx(24);
+          color: #999999;
+
+          .price-box {
+            margin-right: rpx(30);
+
+            .price {
+              color: red;
+            }
+          }
+
+          .pay-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: rpx(120);
+            height: rpx(60);
+            margin-left: rpx(30);
+            border-radius: rpx(8);
+            color: #ffffff;
+            background-color: red;
+          }
+
+          .pay-after {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+  }
+}
+
+.process-y {
+  padding: 0 rpx(30);
+
+  .process-item {
+    position: relative;
+    padding: rpx(15) 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: rpx(-2);
+      height: 100%;
+      border-left: rpx(4) solid #c5c3c3;
+    }
+
+    &:first-child::before {
+      top: 50%;
+      height: 50%;
+    }
+
+    &:last-child::before {
+      top: 0;
+      height: 50%;
+    }
+
+    &:only-child::before {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - #{rpx(15)});
+      left: rpx(-15);
+      width: rpx(30);
+      height: rpx(30);
+      border-radius: 50%;
+      background-color: #c5c3c3;
+    }
+
+    .item-content {
+      margin-left: rpx(30);
+    }
+  }
+
+  .item-selected {
+    &::before {
+      border-left: rpx(4) solid red;
+    }
+
+    &::after {
+      background-color: red;
+    }
+  }
+}
+
+// 自定义内容样式
+.process-y {
+  .item-content {
+    font-size: rpx(24);
+
+    .content-date {
+      font-size: rpx(22);
+    }
+  }
+}
+
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: rpx(300);
+
+  .null-img {
+    width: rpx(400);
+  }
+
+  .null-desc {
+    margin-top: rpx(30);
+    font-size: rpx(30);
+    color: #999999;
+  }
+}
+
+.service {
+  text-align: right;
+  font-size: rpx(22);
+  color: #999;
+}

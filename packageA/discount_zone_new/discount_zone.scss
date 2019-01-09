@@ -1,0 +1,55 @@
+@import "../../common";
+
+.home-list {
+  border-bottom: rpx(20) solid #f2f2f2;
+  padding: rpx(30) rpx(30) 0;
+
+  .img {
+    position: relative;
+    width: 100%;
+    //height: rpx(400);
+    image {
+      width: 100%;
+      //height: rpx(400);
+    }
+
+    .countdown {
+      box-sizing: border-box;
+      padding: rpx(30);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: right;
+      color: #ffffff;
+      background-color: rgba(#000, .2);
+    }
+  }
+
+  .item-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: rpx(80);
+
+    view:nth-child(1) {
+      color: red;
+    }
+
+    view:nth-child(2) {
+      text-decoration: line-through;
+      color: #656565;
+    }
+
+    view:nth-child(3) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rpx(140);
+      height: rpx(50);
+      border-radius: rpx(24);
+      font-size: rpx(26);
+      color: #FFF;
+      background-color: #ff9d00;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30rpx 0;
+  color: #333;
+}
+.choose .choose-line {
+  margin: 0 30rpx;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-top: 15rpx;
+}
+.title .icon {
+  color: #1a4681;
+}
+.title .title-name {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.order {
+  margin: 0 20rpx 20rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.order .order-info {
+  padding: 15rpx;
+}
+.order .order-total {
+  padding: 0 20rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.order .order-total .changePrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  color: #ffffff;
+  background-color: #1a4681;
+}
+
+.order .order-info .item .info-type {
+  flex: none;
+  font-size: 24rpx;
+  color: #666666;
+}
+.order .order-info .item .info {
+  flex: 1;
+  margin: 20rpx 0 20rpx 20rpx;
+}
+.order .order-info .item .info .info-name {
+  font-size: 26rpx;
+  color: #666666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order .order-info .item .info .info-price {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999999;
+}
+.order .order-info .item .info .info-price .price-box {
+  display: flex;
+  align-items: center;
+  min-width: 250rpx;
+  margin-right: 30rpx;
+}
+.order .order-info .item .info .info-price .price-box .price {
+  color: red;
+}
+.order .order-info .item .info .info-price .number-box {
+  min-width: 120rpx;
+}
+.order .opinion {
+  margin: 0 15rpx 20rpx;
+  box-sizing: border-box;
+}
+.order .opinion textarea {
+  width: 100%;
+  height: 200rpx;
+  box-sizing: border-box;
+  padding: 30rpx 15rpx;
+  box-shadow: 0 0 20rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10rpx;
+}
+
+.item .common-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  color: #ffffff;
+  background-color: #1a4681;
+}
+.item .common-title .title-left {
+  display: flex;
+  padding: 20rpx 0;
+  line-height: 50rpx;
+}
+.item .common-title .title-left .icon-more {
+  margin-left: 20rpx;
+  transition: all 0.4s;
+}
+.item .common-title .title-right {
+  font-size: 24rpx;
+  line-height: 90rpx;
+}
+.item .user-info {
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.active .icon-more {
+  transform: rotate(180deg);
+}
+
+.order-info .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.order-info .btn > view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  box-shadow: 0 0 30rpx 0 rgba(14, 47, 91, 0.5);
+  color: #ffffff;
+}
+.order-info .btn .pass {
+  background-color: #1a4681;
+}
+.order-info .btn .reject {
+  background-color: #999;
+}

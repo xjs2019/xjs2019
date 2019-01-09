@@ -1,0 +1,83 @@
+@import "../../common";
+
+//.bg {
+//  position: absolute;
+//  top: rpx(-1000/1.4);
+//  left: rpx(-1000/8);
+//  z-index: -1;
+//  width: rpx(1000);
+//  height: rpx(1000);
+//  border-radius: 50%;
+//  background-color: $color;
+//}
+
+.choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: rpx(30) 0;
+  //color: #fff;
+  .choose-line {
+    margin: 0 rpx(30);
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-top: rpx(15);
+
+  .icon {
+    color: $color;
+  }
+
+  .title-name {
+    font-size: rpx(28);
+    color: #999999;
+  }
+}
+
+.order {
+  margin: 0 rpx(20) rpx(20);
+  box-shadow: 0 0 rpx(8) 0 rgba(187, 187, 187, .8);
+  border-radius: rpx(10);
+  font-size: rpx(24);
+  color: #999999;
+  background-color: #fff;
+
+  .order-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .order-info {
+    padding: rpx(15);
+  }
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .info-item {
+    margin: rpx(15) 0;
+    box-sizing: border-box;
+    width: calc(1 / 3 * 100%);
+    text-align: center;
+    font-size: rpx(28);
+
+    > view {
+      margin: rpx(10) 0;
+    }
+
+    .info-name {
+      color: #999999;
+    }
+
+    .info-number {
+      color: #db3636;
+    }
+  }
+}

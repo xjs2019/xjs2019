@@ -1,0 +1,155 @@
+@import "../../common";
+
+.choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: rpx(30) 0;
+  color: #333;
+
+  .choose-line {
+    margin: 0 rpx(30);
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-top: rpx(15);
+
+  .icon {
+    color: $color;
+  }
+
+  .title-name {
+    font-size: rpx(28);
+    color: #999999;
+  }
+}
+
+.order {
+  margin: rpx(20);
+  box-shadow: 0 0 rpx(8) 0 rgba(187, 187, 187, .8);
+  border-radius: rpx(10);
+  font-size: rpx(24);
+  color: #999999;
+
+  .order-info {
+    padding: rpx(15);
+  }
+
+  .order-total {
+    padding: 0 rpx(20) rpx(20);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .changePrice {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rpx(120);
+      height: rpx(60);
+      border-radius: rpx(60);
+      color: #ffffff;
+      background-color: $color;
+    }
+  }
+}
+
+.order {
+  .order-info {
+    .item {
+      padding: rpx(20);
+      margin-bottom: rpx(10);
+      box-shadow: 0 0 rpx(8) 0 rgba(187, 187, 187, 0.5);
+      border-radius: rpx(10);
+
+      .info-type {
+        flex: none;
+        font-size: rpx(24);
+        color: #666666;
+      }
+
+      .info {
+        flex: 1;
+        margin: rpx(20) 0 rpx(20) rpx(20);
+
+        .info-name {
+          font-size: rpx(26);
+          color: #666666;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .info-price {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: rpx(15);
+          font-size: rpx(24);
+          color: #999999;
+
+          .price-box {
+            min-width: rpx(200);
+            margin-right: rpx(30);
+
+            .price {
+              color: red;
+            }
+          }
+
+          .number-box {
+            min-width: rpx(120);
+          }
+        }
+      }
+    }
+  }
+}
+
+.item {
+  border-bottom: 1px solid #fff;
+
+  .common-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 rpx(20);
+    color: #ffffff;
+    background-color: #1a4681;
+
+    .title-left {
+      display: flex;
+      padding: rpx(20) 0;
+      line-height: rpx(50);
+
+      .icon-more {
+        flex: 1;
+        text-align: right;
+        margin-left: rpx(20);
+        transition: all .4s;
+      }
+    }
+
+    .title-right {
+      font-size: rpx(24);
+      line-height: rpx(90);
+    }
+
+  }
+
+  .user-info {
+    padding: rpx(20);
+    font-size: rpx(28);
+    color: #666;
+  }
+
+}
+
+.active {
+  .icon-more {
+    transform: rotate(180deg);
+  }
+}

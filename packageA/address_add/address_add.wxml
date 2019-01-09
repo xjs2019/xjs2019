@@ -1,0 +1,33 @@
+<view class="cell-box">
+  <view class="cell">
+    <view>收货人</view>
+    ：
+    <input placeholder="请输入收货人" value="{{name}}" data-name="name" bindblur="getInput" bindinput="getInput"/>
+  </view>
+  <view class="cell">
+    <view>联系方式</view>
+    ：
+    <input placeholder="请输入联系方式" value="{{mobile}}" data-name="mobile" bindblur="getInput" bindinput="getInput"/>
+  </view>
+  <view class="cell">
+    <view>所在地区</view>
+    ：
+    <picker mode="multiSelector" value="{{cityIndex}}" range-key="area_name" range="{{citys}}"
+            bindcolumnchange="cityColumnChange"
+            bindchange="cityChange" bindcancel="cityCancel">
+      <block wx:if="{{!edit}}">
+        {{citys[0][cityIndex[0]].area_name}},{{citys[1][cityIndex[1]].area_name}},{{citys[2][cityIndex[2]].area_name}}
+      </block>
+      <block wx:else>
+        {{province}},{{city}},{{area}}
+      </block>
+    </picker>
+  </view>
+  <view class="cell">
+    <view>详细地址</view>
+    ：
+    <input placeholder="请输入详细地址" value="{{address}}" data-name="address" bindblur="getInput" bindinput="getInput"/>
+  </view>
+</view>
+
+<view class="save" bindtap="save">保存</view>

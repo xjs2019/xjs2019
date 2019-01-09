@@ -1,0 +1,75 @@
+<view class="choose">
+  <picker mode="date" value="{{start_time}}" bindchange="start">
+    {{start_time}}
+  </picker>
+  <view class="icon icon-line"></view>
+  <picker mode="date" bindchange="end">
+    {{end_time}}
+  </picker>
+</view>
+
+<block wx:for="{{list}}" wx:key="list">
+
+  <view class="item {{item.out_status===1?'wait':''}}">
+
+    <view class="order">
+
+      <view class="title">
+        <view class="icon icon-shuxian"></view>
+        <view class="title-name">订单号:{{item.order_sn}}</view>
+      </view>
+
+      <view class="order-info" data-id="{{item.id}}" bindtap="orderInfo">
+
+        <block wx:for="{{item.goods_list}}" wx:for-item="i" wx:key="{{i.id}}">
+          <view class="item">
+            <view class="info">
+              <view class="info-name">{{i.goods_type}} {{i.name}}</view>
+              <view class="info-price">
+                <view class="price-box">
+                  <!--<text>单价:</text>-->
+                  <!--<text class="price">￥{{i.price}}</text>-->
+                </view>
+                <view class="number-box">数量:{{i.total}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+
+      </view>
+
+      <block wx:if="{{item.out_status===2}}">
+        <view class="title">
+          <view class="icon icon-shuxian"></view>
+          <view class="title-name">出库信息</view>
+        </view>
+        <view class="order-info">
+          <view>出库时间：{{item.out_time}}</view>
+          <view>出库时长：{{item.out_time_length}}</view>
+        </view>
+      </block>
+
+      <block wx:if="{{item.out_status!==2}}">
+        <view class="order-total">
+          <!--<view>合计:￥{{item.pay_price}}</view>-->
+          <view class="changePrice" data-id="{{item.id}}" bindtap="outLibrary">
+            出库
+          </view>
+        </view>
+      </block>
+
+    </view>
+
+  </view>
+
+</block>
+
+<block wx:if="{{!list.length}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">订单是空的哦~</view>
+  </view>
+</block>
+
+
+<tabBar set-tab="{{setTab}}"></tabBar>

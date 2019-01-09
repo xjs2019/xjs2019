@@ -1,0 +1,85 @@
+<view class="choose">
+  <picker mode="date" value="{{start_time}}" bindchange="start">
+    {{start_time}}
+  </picker>
+  <view class="icon icon-line"></view>
+  <picker mode="date" bindchange="end">
+    {{end_time}}
+  </picker>
+</view>
+
+
+<block wx:for="{{list}}" wx:key="list">
+
+  <view class="item {{item.on?'active':''}}">
+
+    <view class="common-title" data-index="{{index}}" data-item="{{item}}" bindtap="more">
+
+      <view class="title-left">
+        <!--<view class="icon icon-user"></view>-->
+        <view class="text">订单号:{{item.order_sn}}</view>
+        <view class="icon icon-more"></view>
+      </view>
+
+      <view class="title-right">
+        {{item.create_time}}
+      </view>
+
+    </view>
+
+    <!--<view class="user-info">-->
+    <!--{{item.name}} {{item.mobile}}-->
+    <!--</view>-->
+
+    <block wx:if="{{item.on}}">
+
+      <view class="order">
+        <view class="title">
+          <view class="icon icon-shuxian"></view>
+          <view class="title-name">商品清单</view>
+        </view>
+        <view class="order-info">
+
+          <block wx:for="{{item.goods_list}}" wx:for-item="i" wx:key="{{i.id}}">
+            <view class="item">
+              <view class="info">
+                <view class="info-name">{{i.goods_type}} {{i.name}}</view>
+                <view class="info-price">
+                  <view class="price-box">
+                    <!--<text>单价:</text>-->
+                    <!--<text class="price">￥{{i.price}}</text>-->
+                  </view>
+                  <view class="number-box">数量:{{i.total}}</view>
+                </view>
+              </view>
+            </view>
+          </block>
+
+        </view>
+
+        <view class="title">
+          <view class="icon icon-shuxian"></view>
+          <view class="title-name">支付配送</view>
+        </view>
+        <view class="order-info">
+          <view>出库时间：{{item.out_time}}</view>
+          <view>出库时长：{{item.out_time_length}}</view>
+        </view>
+
+      </view>
+
+
+    </block>
+
+  </view>
+
+</block>
+
+<block wx:if="{{!list.length}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">订单是空的哦~</view>
+  </view>
+</block>
+
+<tabBar set-tab="{{setTab}}" set-index="{{setIndex}}"></tabBar>

@@ -1,0 +1,154 @@
+<block>
+  <!--<view class="input-box">-->
+
+  <!--<view class="input-item">-->
+  <!--<view class="inner-item">-->
+  <!--<view class="item-icon">-->
+  <!--<view class="icon icon-mobile"></view>-->
+  <!--</view>-->
+  <!--<view class="line"></view>-->
+  <!--<view class="input-mobile">-->
+  <!--<input placeholder="请输入手机帐号" type="number" data-name="mobile" bindblur="getInput" bindinput="getInput"/>-->
+  <!--</view>-->
+  <!--</view>-->
+  <!--</view>-->
+
+  <!--<view class="input-item code">-->
+  <!--<view class="input-code">-->
+  <!--<view class="inner-item">-->
+  <!--<view class="item-icon">-->
+  <!--<view class="icon icon-code"></view>-->
+  <!--</view>-->
+  <!--<view class="line"></view>-->
+  <!--<view class="input-mobile">-->
+  <!--<input placeholder="请输入验证码" type="number" data-name="sms_code" bindblur="getInput" bindinput="getInput"/>-->
+  <!--</view>-->
+  <!--</view>-->
+  <!--<button class="{{button}}" disabled='{{disabled}}' bindtap="getCode">-->
+  <!--{{time}}-->
+  <!--</button>-->
+  <!--</view>-->
+  <!--</view>-->
+
+  <!--<view class="input-item button">-->
+  <!--<view class="inner-item">-->
+  <!--<view class="item-icon">-->
+  <!--<view class="icon icon-company"></view>-->
+  <!--</view>-->
+  <!--<view class="line"></view>-->
+  <!--<view class="input-mobile">-->
+  <!--<input placeholder="请输入公司名称" data-name="company" bindblur="getInput" bindinput="getInput"/>-->
+  <!--</view>-->
+  <!--</view>-->
+  <!--</view>-->
+
+  <!--<view class="input-item">-->
+  <!--<view class="inner-item">-->
+  <!--<view class="item-icon">-->
+  <!--<view class="icon icon-share"></view>-->
+  <!--</view>-->
+  <!--<view class="line"></view>-->
+  <!--<view class="input-mobile">-->
+  <!--<input placeholder="请输入邀请码(选填)" value="{{invite}}" data-name="invite" bindblur="getInput"-->
+  <!--bindinput="getInput"/>-->
+  <!--</view>-->
+  <!--&lt;!&ndash;<view class="icon icon-jinggao jinggao"></view>&ndash;&gt;-->
+  <!--</view>-->
+  <!--</view>-->
+
+  <!--<view class="input-item">-->
+  <!--<view class="inner-item">-->
+  <!--<view class="item-icon">-->
+  <!--<view class="icon icon-icon-pass"></view>-->
+  <!--</view>-->
+  <!--<view class="line"></view>-->
+  <!--<view class="input-mobile">-->
+  <!--<input placeholder="设置6-18位字母与数字相结合的密码" password data-name="password"-->
+  <!--bindblur="getInput" bindinput="getInput"/>-->
+  <!--</view>-->
+  <!--</view>-->
+  <!--</view>-->
+
+  <!--<view class="input-item">-->
+  <!--<view class="inner-item">-->
+  <!--<view class="item-icon">-->
+  <!--<view class="icon icon-icon-pass"></view>-->
+  <!--</view>-->
+  <!--<view class="line"></view>-->
+  <!--<view class="input-mobile">-->
+  <!--<input placeholder="请重新输入密码" password data-name="re_password" bindblur="getInput" bindinput="getInput"/>-->
+  <!--</view>-->
+  <!--</view>-->
+  <!--</view>-->
+
+  <!--</view>-->
+
+  <!--<view class="agree">-->
+  <!--<checkbox value="123" bindtap="agree"></checkbox>-->
+  <!--<view class="a">同意</view>-->
+  <!--<view class="a b" bindtap="protocol">《新捷仕网上商城会员注册协议》</view>-->
+  <!--</view>-->
+
+  <!--<view class="post" bindtap="post">-->
+  <!--注册-->
+  <!--</view>-->
+</block>
+
+<view class="register">
+
+  <view class="box">
+    <view class="icon icon-mobile"></view>
+    <view class="input">
+      <input placeholder="请输入手机帐号" type="number" data-name="mobile" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="box">
+    <view class="icon icon-code"></view>
+    <view class="input code">
+      <input placeholder="请输入验证码" type="number" data-name="sms_code" bindblur="getInput" bindinput="getInput"/>
+      <view class="v-code" bindtap="getCode">{{time}}</view>
+    </view>
+  </view>
+
+  <!--<view class="box">
+    <view class="icon icon-company"></view>
+    <view class="input">
+      <input placeholder="请输入公司名称" data-name="company" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="box">
+    <view class="icon icon-share"></view>
+    <view class="input">
+      <input placeholder="请输入邀请码(选填)" value="{{invite}}" data-name="invite" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view>-->
+
+  <view class="box">
+    <view class="icon icon-icon-pass"></view>
+    <view class="input">
+      <input placeholder="设置6-18位字母与数字相结合的密码" password data-name="password" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="box">
+    <view class="icon icon-icon-pass"></view>
+    <view class="input">
+      <input placeholder="请重新输入密码" password data-name="re_password" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="agree">
+    <checkbox value="123" bindtap="agree"></checkbox>
+    <view class="a">同意</view>
+    <view class="a b" bindtap="protocol">《新捷仕网上商城会员注册协议》</view>
+  </view>
+
+  <view class="post" bindtap="post">注册</view>
+
+  <view class="login-box">
+    <navigator url="/pages/login/login" class="login">登录</navigator>
+  </view>
+
+</view>

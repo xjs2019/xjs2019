@@ -1,0 +1,16 @@
+<view class="cell-list">
+
+  <view class="cell">
+    <view class="cell-name">我的账号</view>
+    <view class="cell-value">{{name}}</view>
+  </view>
+
+  <navigator class="cell arrow" hover-class="none" url="/packageA/my_pwd_alter/my_pwd_alter">
+    <view class="cell-name">修改密码</view>
+  </navigator>
+
+  <navigator class="cell arrow" hover-class="none" url="/pages/findPass/findPass">
+    <view class="cell-name">重置密码</view>
+  </navigator>
+
+</view>

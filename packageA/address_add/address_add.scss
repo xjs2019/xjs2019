@@ -1,0 +1,49 @@
+@import "../../common";
+
+.cell-box {
+  padding: 0 rpx(30);
+
+  .cell {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: rpx(100);
+    border-bottom: 1px solid #eee;
+    font-size: rpx(28);
+
+    view {
+      flex: none;
+      width: rpx(180);
+      height: rpx(30);
+      text-align: justify;
+      text-align-last: justify;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    input {
+      flex: 1;
+      padding: 0 rpx(30);
+    }
+
+    picker {
+      flex: 1;
+      padding: 0 rpx(30);
+    }
+  }
+}
+
+.save {
+  width: rpx(360);
+  height: rpx(80);
+  margin: rpx(30) auto;
+  line-height: rpx(80);
+  text-align: center;
+  color: #ffffff;
+  background-color: $color;
+}

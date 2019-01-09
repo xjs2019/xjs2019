@@ -1,0 +1,185 @@
+@charset "UTF-8";
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+checkbox .wx-checkbox-input {
+  flex: none;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: #1a4681;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: #fff;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-top: 15rpx;
+}
+.title .icon {
+  color: #1a4681;
+}
+.title .title-name {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.order {
+  margin: 20rpx;
+  box-shadow: 0 0 8rpx 0 rgba(187, 187, 187, 0.8);
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.order .order-info {
+  padding: 15rpx;
+}
+
+.order .order-info .item {
+  padding: 20rpx;
+  margin-bottom: 10rpx;
+  box-shadow: 0 0 8rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10rpx;
+}
+.order .order-info .item .info-type {
+  flex: none;
+  font-size: 24rpx;
+  color: #666666;
+}
+.order .order-info .item .info {
+  flex: 1;
+  margin: 20rpx 0 20rpx 20rpx;
+}
+.order .order-info .item .info .info-name {
+  font-size: 26rpx;
+  color: #666666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order .order-info .item .info .info-price {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.order .order-info .item .info .info-price .price-box {
+  margin-right: 30rpx;
+}
+.order .order-info .item .info .info-price .price-box .price {
+  color: red;
+}
+
+.after-sale {
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+.after-sale checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.after-sale checkbox-group checkbox {
+  width: 50%;
+  margin-bottom: 10rpx;
+}
+.after-sale textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 500rpx;
+  margin-top: 50rpx;
+  padding: 30rpx 15rpx;
+  box-shadow: 0 0 20rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10rpx;
+}
+
+.after-sale-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  margin: 30rpx auto;
+  color: #ffffff;
+  background-color: #1a4681;
+}
+
+/*模态框*/
+.modal-box .box-content {
+  box-sizing: border-box;
+  position: fixed;
+  top: 35%;
+  left: 75rpx;
+  width: 600rpx;
+  z-index: 10;
+  background-color: #f2f2f2;
+}
+.modal-box::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}
+.box-content .content-title {
+  font-weight: bold;
+  margin: 30rpx 0;
+}
+.box-content .content-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 460rpx;
+  padding: 50rpx 0 50rpx 70rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+.box-content .content-section view {
+  margin: 10rpx 0;
+}
+.box-content .content-section .content-phone {
+  color: #1a4681;
+}
+.box-content .content-btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  margin: 20rpx 0;
+  color: #ffffff;
+  background-color: #1a4681;
+}

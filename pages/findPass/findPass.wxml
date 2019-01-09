@@ -1,0 +1,62 @@
+<view class="input-item">
+  <view class="item-title">手机帐号</view>
+  <view>
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-mobile"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请输入手机账号" type="number" data-name="mobile" bindblur="getInput" bindinput="getInput"/>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="input-item">
+  <view class="item-title">验证码</view>
+  <view class="item-xxx">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-code"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile code">
+        <input placeholder="请输入验证码" type="number" data-name="sms_code" bindblur="getInput" bindinput="getInput"/>
+      </view>
+    </view>
+    <button disabled="{{disabled}}" bindtap="getCode" class="{{button}}">
+      {{time}}
+    </button>
+  </view>
+</view>
+
+<view class="post" bindtap="post">
+  下一步
+</view>
+
+
+<!--<view class="cell-list">-->
+
+<!--<view class="cell">-->
+<!--<view class="cell-name">账号</view>-->
+<!--<view class="cell-value">-->
+<!--<input placeholder="请输入手机账号" type="number" data-name="mobile" bindblur="getInput" bindinput="getInput"/>-->
+<!--</view>-->
+<!--</view>-->
+
+
+<!--<view class="cell">-->
+<!--<view class="cell-name">验证码</view>-->
+<!--<view class="cell-value">-->
+<!--<input placeholder="请输入验证码" type="number" data-name="sms_code" bindblur="getInput" bindinput="getInput"/>-->
+<!--</view>-->
+<!--<button disabled='{{disabled}}' bindtap="getCode" class="{{button}}">-->
+<!--{{time}}-->
+<!--</button>-->
+<!--</view>-->
+
+
+<!--</view>-->
+

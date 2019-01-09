@@ -1,0 +1,31 @@
+@import "../../common";
+
+.post {
+  width: rpx(550);
+  height: rpx(90);
+  line-height: rpx(90);
+  text-align: center;
+  color: #ffffff;
+  margin: rpx(200) auto 0;
+  background-color: #1E5093;
+  font-size: rpx(32);
+}
+
+.text {
+  width: rpx(550);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: rpx(100) auto 0;
+
+  .text1 {
+    color: #666666;
+    line-height: rpx(60);
+    font-size: rpx(32);
+  }
+
+  .text2 {
+    font-size: rpx(40);
+    color: #FF0202;
+  }
+}

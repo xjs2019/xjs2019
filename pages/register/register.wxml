@@ -1,0 +1,198 @@
+<view class="input-box">
+
+  <view class="input-item">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-icon-user"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请输入姓名" data-name="name" bindblur="getInput" bindinput="getInput"/>
+      </view>
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请输入联系人姓名</view>
+      </view>
+    </view>
+  </view>
+  <view class="input-item">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-mobile"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请输入手机帐号" type="number" data-name="mobile" bindblur="getInput" bindinput="getInput"/>
+      </view>
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请输入手机帐号</view>
+      </view>
+    </view>
+  </view>
+  <view class="input-item">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-share"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请输入邀请码" type="number" data-name="invite" bindblur="getInput" bindinput="getInput"/>
+      </view>
+      <!--<view class="icon icon-jinggao jinggao"></view>-->
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请输入邀请码</view>
+      </view>
+    </view>
+  </view>
+  <view class="input-item button">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-company"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请输入公司名称" data-name="company" bindblur="getInput" bindinput="getInput"/>
+      </view>
+      <!--<view class="icon icon-jinggao jinggao"></view>-->
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请输入公司名称</view>
+        <view class="up-button" data-name="company" bindtap="upImg">上传公司执照</view>
+      </view>
+    </view>
+  </view>
+  <!--~-->
+  <block wx:if="{{company_img}}">
+    <view class="img">
+      <image mode="widthFix" src="{{img+company_img}}"></image>
+    </view>
+  </block>
+
+  <view class="input-item button">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-faren"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请输入公司法人姓名" data-name="company_person" bindblur="getInput" bindinput="getInput"/>
+      </view>
+      <!--<view class="icon icon-jinggao jinggao"></view>-->
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请输入公司法人姓名</view>
+        <view class="up-button" data-name="person" bindtap="upImg">上传身份证件照</view>
+      </view>
+    </view>
+    <!--~-->
+    <block wx:if="{{company_person_img}}">
+      <view class="img">
+        <image mode="widthFix" src="{{img+company_person_img}}"></image>
+      </view>
+    </block>
+
+
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck"></view>
+        <view class="up-button" data-name="person2" bindtap="upImg">上传身份证件照</view>
+      </view>
+    </view>
+    <!--~-->
+    <block wx:if="{{company_person_img2}}">
+      <view class="img">
+        <image mode="widthFix" src="{{img+company_person_img2}}"></image>
+      </view>
+    </block>
+
+  </view>
+
+  <view class="input-item">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-share"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请输入身份证号" type="number" data-name="id_card" bindblur="getInput" bindinput="getInput"/>
+      </view>
+      <!--<view class="icon icon-jinggao jinggao"></view>-->
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请输入法人身份证号</view>
+      </view>
+    </view>
+  </view>
+  <view class="input-item code">
+    <view class="input-code">
+      <view class="inner-item">
+        <view class="item-icon">
+          <view class="icon icon-code"></view>
+        </view>
+        <view class="line"></view>
+        <view class="input-mobile">
+          <input placeholder="请输入验证码" type="number" data-name="sms_code" bindblur="getInput" bindinput="getInput"/>
+        </view>
+      </view>
+      <button class="{{button}}" disabled='{{disabled}}' bindtap="getCode">
+        {{time}}
+      </button>
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请输入验证码</view>
+      </view>
+    </view>
+  </view>
+  <view class="input-item">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-icon-pass"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="设置6-18位字母与数字相结合的密码" password data-name="password"
+               bindblur="getInput" bindinput="getInput"/>
+      </view>
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">设置6-18位字母与数字相结合的密码</view>
+      </view>
+    </view>
+  </view>
+  <view class="input-item">
+    <view class="inner-item">
+      <view class="item-icon">
+        <view class="icon icon-icon-pass"></view>
+      </view>
+      <view class="line"></view>
+      <view class="input-mobile">
+        <input placeholder="请重新输入密码" password data-name="re_password" bindblur="getInput" bindinput="getInput"/>
+      </view>
+    </view>
+    <view class="pis">
+      <view class="inner-pis">
+        <view class="pis-speck">请重新输入密码</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="agree">
+  <checkbox value="123" bindtap="agree"></checkbox>
+  <view class="a">同意</view>
+  <view class="a b">《新捷士网上商城会员注册协议》</view>
+</view>
+
+<view class="post" bindtap="post">
+  注册
+</view>

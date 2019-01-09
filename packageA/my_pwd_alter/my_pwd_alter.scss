@@ -1,0 +1,35 @@
+@import "../../common";
+
+.section {
+  padding: 0 rpx(30);
+  font-size: rpx(26);
+
+  .section-input {
+    margin-top: rpx(30);
+    font-size: rpx(22);
+
+    input {
+      height: rpx(80);
+      padding: 0 rpx(20);
+      border: 1px solid #cccccc;
+      border-radius: rpx(8);
+      box-shadow: 0 0 rpx(30) 0 rgba(187, 187, 187, 0.5);
+    }
+
+    > view {
+      color: #666666;
+    }
+  }
+}
+
+.pwd-define {
+  width: rpx(400);
+  height: rpx(80);
+  margin: rpx(30) auto;
+  line-height: rpx(80);
+  text-align: center;
+  border-radius: rpx(80);
+  color: #ffffff;
+  background-color: $color;
+  box-shadow: 0 0 rpx(30) 0 rgba(187, 187, 187, 0.5);
+}

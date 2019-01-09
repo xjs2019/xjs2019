@@ -1,0 +1,60 @@
+<block wx:if="{{!poster}}">
+  <view class="top">
+    <!--<swiper class="swiper" autoplay circular>-->
+    <!--<swiper-item wx:if="{{discount_item.image}}">-->
+    <!--<image mode="widthFix" src="{{imgUrl+discount_item.image}}"></image>-->
+    <!--</swiper-item>-->
+    <!--</swiper>-->
+    <block wx:if="{{discount_item.small_image}}">
+      <image mode="widthFix" src="{{imgUrl+discount_item.small_image}}"></image>
+    </block>
+    <view class="countdown">{{discount_item.special_total>0?timeDown:'已抢光'}}</view>
+  </view>
+
+
+  <view class="title">{{discount_item.name}}</view>
+
+  <view class="type-list">
+    <block wx:for="{{goodsSpec}}" wx:key="{{item.id}}" wx:if="{{item}}">
+
+      <view class="item">
+        <view class="item-select {{item.index!==undefined?'item-color':''}}">
+          {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限'}}
+        </view>
+      </view>
+
+    </block>
+  </view>
+
+  <view class="footer">
+    <navigator class="home icon icon-index" open-type="reLaunch" url="/packageA/index_new/index">首页</navigator>
+    <view class="share icon icon-fenxiang" hover-class="navigator-hover" bindtap="listenerActionSheet">分享</view>
+    <!--<button class="share icon icon-fenxiang" open-type="share">分享</button>-->
+    <!--<view class="share icon icon-fenxiang" hover-class="navigator-hover" bindtap="poster">海报</view>-->
+    <view class="cart" bindtap="addCart">加入购物车</view>
+    <view class="pay" bindtap="buy_now">立即购买</view>
+  </view>
+</block>
+
+<block wx:if="{{poster}}">
+  <view class="mu"></view>
+  <view class="poster">
+    <view class="cvs">
+      <canvas canvas-id='canvas_poster' class='wx-poster' style="width: 280px;height: 290px;"></canvas>
+    </view>
+    <view class="poster_btn" bindtap="savePoster">保存图片</view>
+  </view>
+</block>
+
+<!--默认action-sheet为隐藏，由button触发-->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+
+  <action-sheet-item bindtap="listenerActionSheet">
+    <button class="action-sheet-share" open-type="share">分享</button>
+  </action-sheet-item>
+  <action-sheet-item bindtap="poster">
+    海报
+  </action-sheet-item>
+
+  <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

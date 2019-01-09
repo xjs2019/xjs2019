@@ -1,0 +1,44 @@
+<view class="cell-list">
+
+  <view class="cell">
+    <view class="cell-name">姓名：</view>
+    <view>{{user_info.name?user_info.name:''}}</view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">账号：</view>
+    <view>{{user_info.mobile?user_info.mobile:''}}</view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">性别：</view>
+    <view>{{user_info.sex===1?'男':'女'}}</view>
+  </view>
+
+  <!-- <view class="cell">
+    <view class="cell-name">微信号：</view>
+    <view>{{user_info.areas?user_info.areas:''}}</view>
+  </view> -->
+
+  <view class="cell">
+    <view class="cell-name">我的客服：</view>
+    <view>{{user_info.admin_name?user_info.admin_name:''}}</view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">公司名称：</view>
+    <view>{{user_info.company?user_info.company:''}}</view>
+  </view>
+
+  <!-- <view class="cell cell-image">
+    <view class="cell-name">公司执照：</view>
+    <block wx:if="{{user_info.company_img}}">
+      <image mode="widthFix" src="{{imgUrl+user_info.company_img}}" bindtap="view_image"></image>
+    </block>
+  </view> -->
+
+</view>
+
+<view class="type-btn">
+  <view class="btn" bindtap="edit">修改</view>
+</view>

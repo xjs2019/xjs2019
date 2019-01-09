@@ -1,0 +1,42 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.post {
+  width: 550rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #ffffff;
+  margin: 200rpx auto 0;
+  background-color: #1E5093;
+  font-size: 32rpx;
+}
+
+.text {
+  width: 550rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100rpx auto 0;
+}
+.text .text1 {
+  color: #666666;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+.text .text2 {
+  font-size: 40rpx;
+  color: #FF0202;
+}

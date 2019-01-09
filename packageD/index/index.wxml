@@ -1,0 +1,64 @@
+<!--<view class="bg"></view>-->
+
+<view class="choose">
+  <picker mode="date" value="{{start_time}}" bindchange="start">
+    {{start_time}}
+  </picker>
+  <view class="icon icon-line"></view>
+  <picker mode="date" bindchange="end">
+    {{end_time}}
+  </picker>
+</view>
+
+<view class="order">
+  <view class="order-title">
+    <view class="title">
+      <view class="icon icon-shuxian"></view>
+      <view class="title-name">销售数量</view>
+    </view>
+    <view>单位（张）</view>
+  </view>
+  <view class="order-info">
+
+    <block wx:for="{{specList}}" wx:key="{{item.id}}">
+      <view class="info-item">
+        <view class="info-name">{{item.name}}</view>
+        <view class="info-number">{{item.total}}</view>
+      </view>
+    </block>
+    <block wx:for="{{typeList}}" wx:key="{{item.id}}">
+      <view class="info-item">
+        <view class="info-name">{{item.name}}</view>
+        <view class="info-number">{{item.total}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class="order">
+  <view class="order-title">
+    <view class="title">
+      <view class="icon icon-shuxian"></view>
+      <view class="title-name">销售金额</view>
+    </view>
+    <view>单位（元）</view>
+  </view>
+
+  <view class="order-info">
+    <block wx:for="{{specList}}" wx:key="{{item.id}}">
+      <view class="info-item">
+        <view class="info-name">{{item.name}}</view>
+        <view class="info-number">{{item.price}}</view>
+      </view>
+    </block>
+    <block wx:for="{{typeList}}" wx:key="{{item.id}}">
+      <view class="info-item">
+        <view class="info-name">{{item.name}}</view>
+        <view class="info-number">{{item.price}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<tabBar set-tab="{{setTab}}"></tabBar>

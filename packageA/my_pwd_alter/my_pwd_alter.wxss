@@ -1,0 +1,45 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.section {
+  padding: 0 30rpx;
+  font-size: 26rpx;
+}
+.section .section-input {
+  margin-top: 30rpx;
+  font-size: 22rpx;
+}
+.section .section-input input {
+  height: 80rpx;
+  padding: 0 20rpx;
+  border: 1px solid #cccccc;
+  border-radius: 8rpx;
+  box-shadow: 0 0 30rpx 0 rgba(187, 187, 187, 0.5);
+}
+.section .section-input > view {
+  color: #666666;
+}
+
+.pwd-define {
+  width: 400rpx;
+  height: 80rpx;
+  margin: 30rpx auto;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 80rpx;
+  color: #ffffff;
+  background-color: #1a4681;
+  box-shadow: 0 0 30rpx 0 rgba(187, 187, 187, 0.5);
+}

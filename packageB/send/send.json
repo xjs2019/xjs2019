@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "已出库",
+  "usingComponents": {
+    "tabBar": "/components/tabBar/tabBar"
+  }
+}

@@ -1,0 +1,95 @@
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">商品清单</view>
+  </view>
+  <view class="order-info">
+    <block wx:for="{{orderInfo.goods_list}}" wx:key="{{item.id}}">
+      <view class="item">
+        <view class="info">
+          <view class="info-name">{{item.goods_type}} {{item.name}}</view>
+          <view class="info-price">
+            <view class="price-box">
+              <text>价格:</text>
+              <text class="price">￥{{item.price}}</text>
+            </view>
+            <view>数量:{{item.total}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">订单信息</view>
+  </view>
+  <view class="order-info">
+    <view class="process-y">
+      <block wx:for="{{orderInfo.log}}" wx:key="{{index}}">
+        <view class="process-item">
+          <view class="item-content">
+            <view>{{item.msg}}</view>
+            <view class="content-date">{{item.create_time}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">收货人信息</view>
+  </view>
+  <view class="order-info">
+    <view>姓名: {{orderInfo.consignee}}</view>
+    <view>电话: {{orderInfo.mobile}}</view>
+    <view>地址: {{orderInfo.address}}</view>
+  </view>
+</view>
+
+<view class="order">
+  <view class="title">
+    <view class="icon icon-shuxian"></view>
+    <view class="title-name">支付配送方式</view>
+  </view>
+  <view class="order-info">
+    <view>支付方式: {{orderInfo.pay_type}}</view>
+    <view>配送方式: {{orderInfo.shipping_type}}</view>
+  </view>
+</view>
+
+<block wx:if="{{orderInfo.invoice_company}}">
+  <view class="order">
+    <view class="title">
+      <view class="icon icon-shuxian"></view>
+      <view class="title-name">发票信息</view>
+    </view>
+
+    <view class="order-info">
+      <view>公司名称: {{orderInfo.invoice_company}}</view>
+      <view>公司地址: {{orderInfo.invoice_address}}</view>
+      <view>纳税识别号: {{orderInfo.invoice_identify}}</view>
+      <view>账号: {{orderInfo.invoice_account}}</view>
+      <view>开户银行: {{orderInfo.invoice_bank}}</view>
+    </view>
+  </view>
+</block>
+
+<view class="footer">
+  <view class="footer-box">
+    <view class="box-price">
+      <view>合计：￥{{orderInfo.total_price}}</view>
+      <view>
+        <view>物流费用：￥{{orderInfo.shipping_price}}</view>
+        <view>支付费用：￥{{orderInfo.pay_type_price}}</view>
+        <view>发票费用：￥{{orderInfo.invoice_price}}</view>
+      </view>
+    </view>
+    <!--<view class="box-btn">提交订单</view>-->
+  </view>
+</view>

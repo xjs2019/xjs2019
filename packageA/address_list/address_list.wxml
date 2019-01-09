@@ -1,0 +1,36 @@
+<view class="cell-box">
+
+  <block wx:for="{{addressList}}" wx:key="{{item.id}}">
+    <view class="cell" data-item="{{item}}" data-id="{{item.id}}" bindlongpress="press">
+      <view class="cell-left" data-item="{{item}}" data-id="{{item.id}}" bindtap="selectAddress">
+        <view class="cell-name">{{item.name}}，{{item.mobile}}</view>
+        <view class="cell-address">{{item.province}} {{item.city}} {{item.area}} {{item.address}}</view>
+      </view>
+      <view class="cell-right" data-item="{{item}}" bindtap="edit">
+        修改
+      </view>
+      <view class="cell-del" data-item="{{item}}" data-id="{{item.id}}" bindtap="del">
+        删除
+      </view>
+    </view>
+  </block>
+
+</view>
+
+<block wx:if="{{modal}}">
+  <view class="modal-box" bindtap="modalClose">
+    <view class="box-content">
+      <view class="content-item" bindtap="edit">修改</view>
+      <view class="content-item" bindtap="del">删除</view>
+    </view>
+  </view>
+</block>
+
+<navigator url="/packageA/address_add/address_add" class="add icon icon-add"></navigator>
+
+<block wx:if="{{!addressList.length}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">地址是空的哦~</view>
+  </view>
+</block>

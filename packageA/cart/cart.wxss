@@ -1,0 +1,183 @@
+@charset "UTF-8";
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.cart-list {
+  padding: 20rpx;
+}
+.cart-list .item {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #ffffff;
+  box-shadow: 0 0 20rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10rpx;
+}
+.cart-list .item .icon {
+  font-size: 24rpx;
+  color: #666666;
+}
+.cart-list .item .icon::before {
+  margin-right: 15rpx;
+}
+.cart-list .item .icon-select::before {
+  color: red;
+}
+.cart-list .item .item-name {
+  margin: 15rpx 0;
+  font-size: 26rpx;
+  color: #666666;
+}
+.cart-list .item .item-val {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-list .item .item-val .val-price {
+  font-size: 28rpx;
+  color: red;
+}
+.cart-list .item .item-val .val-number {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 50rpx;
+  border-radius: 10rpx;
+  border: solid 1px #ccc;
+}
+.cart-list .item .item-val .val-number .operation {
+  width: 50rpx;
+  height: 100%;
+  line-height: 45rpx;
+  text-align: center;
+  color: #999;
+}
+.cart-list .item .item-val .val-number .operation:first-child {
+  line-height: 40rpx;
+  border-right: 1px solid #ccc;
+}
+.cart-list .item .item-val .val-number .operation:last-child {
+  border-left: 1px solid #ccc;
+}
+.cart-list .item .item-val .val-number input {
+  width: 120rpx;
+  height: 4rpx !important;
+  text-align: center;
+}
+
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.settle-accounts-box {
+  padding-bottom: 100rpx;
+}
+.settle-accounts-box .settle-accounts {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10;
+  bottom: 100rpx;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  padding-left: 20rpx;
+  background-color: #fff;
+}
+.settle-accounts-box .settle-accounts .select-all {
+  display: flex;
+  align-items: center;
+}
+.settle-accounts-box .settle-accounts .icon:before {
+  margin-right: 10rpx;
+  color: red;
+}
+.settle-accounts-box .settle-accounts .icon-no-select:before {
+  color: #999999;
+}
+.settle-accounts-box .settle-accounts .accounts-total {
+  flex: 1;
+  margin-left: 30rpx;
+}
+.settle-accounts-box .settle-accounts .accounts-total .total-price {
+  color: red;
+}
+.settle-accounts-box .settle-accounts .total {
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+.settle-accounts-box .settle-accounts .total-bargain {
+  width: 120rpx;
+  background-color: #1a4681;
+}
+.settle-accounts-box .settle-accounts .total-pay {
+  width: 180rpx;
+  background-color: red;
+}
+
+/*模态框*/
+.modal-box .box-content {
+  box-sizing: border-box;
+  position: fixed;
+  top: 35%;
+  left: 75rpx;
+  width: 600rpx;
+  z-index: 10;
+  background-color: #f2f2f2;
+}
+.modal-box::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box-content {
+  border-radius: 5rpx;
+}
+.box-content .content-item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+}
+.box-content .content-item:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.bargain-status {
+  font-size: 24rpx;
+  color: #666;
+}

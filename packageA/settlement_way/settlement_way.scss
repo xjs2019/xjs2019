@@ -1,0 +1,66 @@
+@import "../../common";
+
+.way {
+  padding: rpx(30);
+  border-top: 1px solid #eee;
+
+  .way-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: rpx(30);
+    font-size: rpx(32);
+    font-weight: bold;
+    color: #1a4681;
+  }
+
+  .way-list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: rpx(26);
+    color: #999999;
+
+    > view {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 23%;
+      height: rpx(70);
+      border-radius: rpx(70);
+      margin-right: 2%;
+      margin-bottom: rpx(15);
+      border: 1px solid #999999;
+    }
+
+    .selected {
+      color: #ffffff;
+      background-color: $color;
+      border: 1px solid $color;
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rpx(410);
+  height: rpx(90);
+  margin: rpx(200) auto 0;
+  box-shadow: 0 0 rpx(30) 0 rgba(14, 47, 91, 0.5);;
+  border-radius: rpx(90);
+  font-size: rpx(32);
+  color: #ffffff;
+  background-color: #1a4681;
+}
+
+.check_day {
+  text-align: center;
+  width: rpx(250);
+  padding: rpx(30);
+  margin: 0 auto rpx(30);
+  color: #999;
+  font-size: rpx(26);
+  box-shadow: 0 0 rpx(10) 0 #999;
+  border-radius: rpx(10);
+}

@@ -1,0 +1,73 @@
+@import "../../common";
+
+//.title {
+//  display: flex;
+//  align-items: center;
+//  padding-top: rpx(15);
+//  .icon {
+//    color: $color;
+//  }
+//  .title-name {
+//    font-size: rpx(28);
+//    color: #999999;
+//  }
+//}
+//
+//.item {
+//  .common-title {
+//    display: flex;
+//    justify-content: space-between;
+//    padding: 0 rpx(20);
+//    color: #ffffff;
+//    background-color: #1a4681;
+//
+//    .title-left {
+//      display: flex;
+//      padding: rpx(20) 0;
+//      line-height: rpx(50);
+//
+//      .icon-more {
+//        margin-left: rpx(20);
+//        transition: all .4s;
+//      }
+//
+//    }
+//
+//    .title-right {
+//      font-size: rpx(24);
+//      line-height: rpx(90);
+//    }
+//
+//  }
+//
+//  .user-info {
+//    padding: rpx(20);
+//    font-size: rpx(28);
+//    color: #666;
+//  }
+//
+//}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: rpx(20);
+  padding: rpx(20);
+  background-color: #ffffff;
+  box-shadow: 0 0 rpx(20) 0 rgba(187, 187, 187, 0.5);
+  border-radius: rpx(10);
+  @include arrow();
+
+  //view:first-child {
+  //  min-width: rpx(200);
+  //}
+  .phone {
+    margin-right: rpx(30);
+  }
+
+}
+
+.red {
+  color: red;
+}

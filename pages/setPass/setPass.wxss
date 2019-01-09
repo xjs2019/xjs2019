@@ -1,0 +1,96 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.input-item {
+  box-sizing: border-box;
+  margin-top: 46rpx;
+  display: flex;
+}
+.input-item .item-title {
+  line-height: 100rpx;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+}
+.input-item .jinggao {
+  position: absolute;
+  right: -80rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 50rpx;
+  color: #FF0202;
+  height: 60rpx;
+  width: 60rpx;
+}
+.input-item .inner-item {
+  padding-left: 5rpx;
+  border: 1px solid #cccccc;
+  border-top: 1px solid #000;
+  display: flex;
+  height: 90rpx;
+  position: relative;
+}
+.input-item .inner-item .line {
+  background-color: #999999;
+  width: 1rpx;
+  height: 45rpx;
+  margin-top: 25rpx;
+  margin-right: 15rpx;
+  margin-left: -5rpx;
+}
+.input-item .inner-item .item-icon {
+  padding-right: 10rpx;
+  padding-top: 12rpx;
+}
+.input-item .inner-item .item-icon .icon {
+  font-size: 60rpx;
+  color: #999999;
+}
+.input-item .inner-item .input-mobile {
+  padding-top: 20rpx;
+  width: 470rpx;
+}
+.input-item .inner-item .input-placeholder {
+  color: #999999;
+  font-size: 28rpx;
+}
+.input-item .pis {
+  color: #666666;
+  font-size: 24rpx;
+}
+.input-item .pis .inner-pis {
+  display: flex;
+  justify-content: space-between;
+}
+.input-item .pis .inner-pis .pis-speck {
+  margin-top: 10rpx;
+}
+.input-item .pis .inner-pis .up-button {
+  border: 1px solid #cccccc;
+  padding: 20rpx 40rpx;
+  margin-top: 20rpx;
+  color: #999999;
+}
+
+.post {
+  width: 550rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 130rpx;
+  background-color: #1E5093;
+}

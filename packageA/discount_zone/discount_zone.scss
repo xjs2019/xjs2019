@@ -1,0 +1,58 @@
+@import "../../common";
+
+.tab {
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: rpx(28);
+
+  view {
+    flex: 1;
+    line-height: rpx(80);
+  }
+
+  .tab-select {
+    color: #1a4681;
+    border-bottom: 2px solid #1a4681;
+  }
+}
+
+.discount-list {
+  padding: rpx(20);
+
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: rpx(20);
+    padding: rpx(20);
+    box-shadow: 0 0 rpx(20) 0 rgba(187, 187, 187, 0.5);
+    border-radius: rpx(10);
+
+    .item-val {
+      flex: 1;
+
+      .val-name {
+        font-size: rpx(24);
+        color: #666;
+      }
+
+      .val-price {
+        color: red;
+      }
+    }
+
+    .item-btn {
+      flex: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rpx(120);
+      height: rpx(60);
+      margin-left: rpx(15);
+      font-size: rpx(24);
+      box-shadow: 0 0 rpx(10) 0 rgba(187, 187, 187, 0.5);
+      border-radius: rpx(10);
+      color: #1a4681;
+    }
+  }
+}

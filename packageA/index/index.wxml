@@ -1,0 +1,36 @@
+<block wx:if="{{load}}">
+
+  <swiper autoplay circular>
+    <block wx:for="{{banner}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{imgUrl+item.image}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="tab" bindtap="tab">
+    <block wx:for="{{goodsType}}" wx:key="{{item.type_id}}">
+      <view class="tab-item {{tabIndex===item.type_id?'tab-select':''}}" data-index="{{item.type_id}}">{{item.name}}
+      </view>
+    </block>
+  </view>
+
+  <view class="type-list">
+    <block wx:for="{{goodsSpec}}" wx:key="{{item.id}}">
+      <view class="item">
+        <view class="item-name">{{item.name}}:</view>
+        <picker class="item-select" range="{{item.item}}" range-key="item" data-index="{{index}}"
+                bindchange="pickerChange">
+          {{item.index?item.item[item.index].item:'请选择类别'}}
+        </picker>
+      </view>
+    </block>
+  </view>
+
+  <view class="type-btn">
+    <view class="btn" bindtap="addCart">加入购物车</view>
+  </view>
+
+</block>
+
+<tabBar set-index="{{tabBar}}"></tabBar>

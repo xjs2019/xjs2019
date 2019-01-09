@@ -1,0 +1,57 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.cell-box {
+  padding: 0 30rpx;
+}
+.cell-box .cell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+}
+.cell-box .cell view {
+  flex: none;
+  width: 180rpx;
+  height: 30rpx;
+  text-align: justify;
+  text-align-last: justify;
+}
+.cell-box .cell view::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.cell-box .cell input {
+  flex: 1;
+  padding: 0 30rpx;
+}
+.cell-box .cell picker {
+  flex: 1;
+  padding: 0 30rpx;
+}
+
+.save {
+  width: 360rpx;
+  height: 80rpx;
+  margin: 30rpx auto;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1a4681;
+}

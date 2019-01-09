@@ -1,0 +1,46 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+  box-shadow: 0 0 20rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10rpx;
+  position: relative;
+}
+.item:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8rpx);
+  right: 19rpx;
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-style: solid;
+  border-color: #C0C0C0;
+  transform: rotateZ(45deg);
+}
+.item .phone {
+  margin-right: 30rpx;
+}
+
+.red {
+  color: red;
+}

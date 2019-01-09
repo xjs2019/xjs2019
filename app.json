@@ -1,0 +1,86 @@
+{
+  "pages": [
+    "pages/index_new/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/register_new/register",
+    "pages/setPass/setPass",
+    "pages/findPass/findPass",
+    "pages/personFindPass/personFindPass",
+    "pages/protocol/protocol"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "index_new/index",
+        "index/index",
+        "cart/cart",
+        "my/my",
+        "my_after/my_after",
+        "my_account/my_account",
+        "my_pwd_alter/my_pwd_alter",
+        "settlement/settlement",
+        "settlement_way/settlement_way",
+        "settlement_pay/settlement_pay",
+        "settlement_pay_success/settlement_pay_success",
+        "order/order",
+        "order_info/order_info",
+        "order_after/order_after",
+        "address_add/address_add",
+        "address_list/address_list",
+        "invoice_add/invoice_add",
+        "invoice_list/invoice_list",
+        "discount_zone_new/discount_zone",
+        "bargainList/bargainList",
+        "list_new/list_new",
+        "new_info/new_info",
+        "commodity_info/commodity_info",
+        "discount_info/discount_info",
+        "my_info/my_info",
+        "my_info_add/my_info",
+        "settlement_buy/settlement",
+        "feedback/feedback"
+      ]
+    },
+    {
+      "root": "packageB",
+      "pages": [
+        "index/index",
+        "my/my",
+        "send/send",
+        "my_account/my_account"
+      ]
+    },
+    {
+      "root": "packageC",
+      "pages": [
+        "index/index",
+        "index_new/index",
+        "my/my",
+        "myOrderList/myOrderList",
+        "user_info/user_info",
+        "evaluate/evaluate",
+        "order/order",
+        "my_account/my_account"
+      ]
+    },
+    {
+      "root": "packageD",
+      "pages": [
+        "index/index",
+        "audit/audit",
+        "complaint_box/complaint_box",
+        "user_info/user_info",
+        "my/my",
+        "my_account/my_account"
+      ]
+    }
+  ]
+}

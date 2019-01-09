@@ -1,0 +1,75 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.way {
+  padding: 30rpx;
+  border-top: 1px solid #eee;
+}
+.way .way-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1a4681;
+}
+.way .way-list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 26rpx;
+  color: #999999;
+}
+.way .way-list > view {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23%;
+  height: 70rpx;
+  border-radius: 70rpx;
+  margin-right: 2%;
+  margin-bottom: 15rpx;
+  border: 1px solid #999999;
+}
+.way .way-list .selected {
+  color: #ffffff;
+  background-color: #1a4681;
+  border: 1px solid #1a4681;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 410rpx;
+  height: 90rpx;
+  margin: 200rpx auto 0;
+  box-shadow: 0 0 30rpx 0 rgba(14, 47, 91, 0.5);
+  border-radius: 90rpx;
+  font-size: 32rpx;
+  color: #ffffff;
+  background-color: #1a4681;
+}
+
+.check_day {
+  text-align: center;
+  width: 250rpx;
+  padding: 30rpx;
+  margin: 0 auto 30rpx;
+  color: #999;
+  font-size: 26rpx;
+  box-shadow: 0 0 10rpx 0 #999;
+  border-radius: 10rpx;
+}

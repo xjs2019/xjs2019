@@ -1,0 +1,30 @@
+@import "../../common";
+
+.pay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: rpx(300);
+
+  .pay-success {
+    width: rpx(150);
+  }
+
+  .pay-desc {
+    margin-top: rpx(50);
+    font-size: rpx(60);
+    color: #43bb85;
+  }
+}
+
+.look-order {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: rpx(100);
+  color: #ffffff;
+  background-color: $color;
+}

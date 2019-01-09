@@ -1,0 +1,7 @@
+<view class="box">
+  <view class="item">
+    <view class="name">我的账号</view>
+    <view class="name-content">{{mobile}}</view>
+  </view>
+</view>
+<button>退出</button>

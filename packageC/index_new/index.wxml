@@ -1,0 +1,104 @@
+<view class="choose">
+  <picker mode="date" value="{{start_time}}" bindchange="start">
+    {{start_time}}
+  </picker>
+  <view class="icon icon-line"></view>
+  <picker mode="date" bindchange="end">
+    {{end_time}}
+  </picker>
+</view>
+
+<block wx:for="{{list}}" wx:key="{{item.id}}">
+
+  <view
+    class="item {{item.status===0?'wait':''}} {{item.status===1?'agreeing':''}} {{item.status===2?'agree':''}} {{item.status===3?'turnDown':''}} {{item.status===4?'overOrder':''}} {{item.status===5?'overdue':''}}">
+
+    <!--<view class="common-title" data-index="{{index}}" data-item="{{item}}" bindtap="more">-->
+
+    <!--<view class="title-left">-->
+    <!--<view class="icon icon-user"></view>-->
+    <!--<view class="text">议价客户</view>-->
+    <!--<view class="icon icon-more"></view>-->
+    <!--</view>-->
+
+    <!--<view class="title-right">-->
+    <!--{{item.create_time}}-->
+    <!--</view>-->
+
+    <!--</view>-->
+
+
+    <view class="order">
+
+      <view class="user-info">
+        <text> {{item.name}}</text>
+        <text data-call="{{item.mobile}}" bindtap="call"> {{item.mobile}}</text>
+      </view>
+
+
+      <view class="order-info" data-id="{{item.order_id}}">
+
+        <block wx:for="{{item.goods_list}}" wx:for-item="i" wx:key="{{i.id}}">
+          <view class="item">
+            <view class="info">
+              <view class="info-name">{{i.goods_type}} {{i.name}}</view>
+              <view class="info-price">
+
+                <view class="price-box">
+                  <text>单价:</text>
+                  <text class="price">￥{{i.old_price}}</text>
+                </view>
+
+                <view class="number-box">数量:{{i.total}}</view>
+
+                <view class="inventory">库存:{{i.inventory}}</view>
+
+              </view>
+            </view>
+          </view>
+        </block>
+
+      </view>
+
+      <block wx:if="{{item.status===0}}">
+        <view class="order-total">
+          <!--<view>合计:￥{{item.pay_price}}</view>-->
+          <navigator class="changePrice" hover-class="none" url="/packageC/evaluate/evaluate?id={{item.id}}">
+            议价
+          </navigator>
+        </view>
+      </block>
+
+      <block wx:if="{{item.opinion.length}}">
+
+        <view class="opinion">
+          <view class="title">
+            <view class="icon icon-shuxian"></view>
+            <view class="title-name">审批意见</view>
+          </view>
+          <view class="order-info">
+
+            <block wx:for="{{item.opinion}}" wx:for-item="i" wx:key="{{i.id}}">
+              <view>{{i.name}}：{{i.msg}}</view>
+            </block>
+
+          </view>
+        </view>
+
+      </block>
+
+    </view>
+
+
+  </view>
+
+</block>
+
+<block wx:if="{{showNull}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">你还没有议价单哦~</view>
+  </view>
+</block>
+
+<tabBar set-tab="{{setTab}}"></tabBar>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "议价",
+  "usingComponents": {
+    "tabBar": "/components/tabBar/tabBar"
+  }
+}

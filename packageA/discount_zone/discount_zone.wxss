@@ -1,0 +1,64 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.tab {
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+}
+.tab view {
+  flex: 1;
+  line-height: 80rpx;
+}
+.tab .tab-select {
+  color: #1a4681;
+  border-bottom: 2px solid #1a4681;
+}
+
+.discount-list {
+  padding: 20rpx;
+}
+.discount-list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 0 20rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10rpx;
+}
+.discount-list .item .item-val {
+  flex: 1;
+}
+.discount-list .item .item-val .val-name {
+  font-size: 24rpx;
+  color: #666;
+}
+.discount-list .item .item-val .val-price {
+  color: red;
+}
+.discount-list .item .item-btn {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120rpx;
+  height: 60rpx;
+  margin-left: 15rpx;
+  font-size: 24rpx;
+  box-shadow: 0 0 10rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10rpx;
+  color: #1a4681;
+}

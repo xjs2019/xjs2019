@@ -1,0 +1,32 @@
+<view class="bg"></view>
+
+<view class="choose">
+  <picker mode="date" value="{{start_time}}" bindchange="start">
+    {{start_time}}
+  </picker>
+  <view class="icon icon-line"></view>
+  <picker mode="date" bindchange="end">
+    {{end_time}}
+  </picker>
+</view>
+
+
+<view class="list">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+
+    <view class="item">
+      <view>{{item.data}}</view>
+      <view class="item-time">{{item.name}} {{item.create_time}}</view>
+    </view>
+
+  </block>
+</view>
+
+<block wx:if="{{!list.length}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">还没有意见反馈哦~</view>
+  </view>
+</block>
+
+<tabBar set-tab="{{setTab}}" set-index="{{setIndex}}"></tabBar>

@@ -1,0 +1,52 @@
+<view class="order-list">
+  <block wx:for="{{afterSale}}" wx:key="{{item.id}}">
+
+    <view class="item" data-id="{{item.id}}">
+      <view class="item-top">
+        <view class="time">{{item.create_time}}</view>
+        <view class="orderNumber">订单号: {{item.order_sn}}</view>
+        <!--<view data-id="{{item.id}}" catchtap="delOrder">删除</view>-->
+      </view>
+
+      <view class="order-info">
+        <view class="info">
+          <block wx:for="{{item.goods_list}}" wx:for-item="i" wx:key="{{i.id}}">
+            <view class="info-name">{{i.goods_type}} {{i.name}}</view>
+          </block>
+          <view class="info-price">
+            <view class="price-box">
+              <text>总金额:</text>
+              <text class="price"> ¥{{item.pay_price}}</text>
+            </view>
+
+            <view>{{item.goods_list.length}}件商品</view>
+            <!--<view class="pay-btn pay-after" data-order_id="{{item.id}}" catchtap="afterSale">申请售后</view>-->
+          </view>
+
+        </view>
+      </view>
+
+      <view class="process-y">
+        <block wx:for="{{item.log}}" wx:key="{{index}}">
+          <view class="process-item">
+            <view class="item-content">
+              <view>{{item.msg}}</view>
+              <view class="content-date">{{item.create_time}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+
+      <view class="service">业务员:{{item.nickname}} {{item.contact}}</view>
+
+    </view>
+
+  </block>
+</view>
+
+<block wx:if="{{!afterSale.length}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">你还没有售后申请哦~</view>
+  </view>
+</block>

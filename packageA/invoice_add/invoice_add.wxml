@@ -1,0 +1,77 @@
+<view class="cell-list">
+
+  <view class="cell">
+    <view class="cell-name">公司名称：</view>
+    <view>
+      <input placeholder="请输入公司名称" value="{{company}}" data-name="company" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">公司地址：</view>
+    <view>
+      <input placeholder="请输入公司地址" value="{{address}}" data-name="address" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">纳税人识别号：</view>
+    <view>
+      <input placeholder="请输入纳税人识别号" value="{{identify}}" data-name="identify" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">开户银行：</view>
+    <view>
+      <input placeholder="请输入开户银行" value="{{bank}}" data-name="bank" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">账号：</view>
+    <view>
+      <input placeholder="请输入账号" value="{{account}}" data-name="account" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">电话：</view>
+    <view>
+      <input placeholder="请输入电话号码" value="{{phone}}" data-name="phone" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">传真：</view>
+    <view>
+      <input placeholder="请输入传真号码" value="{{fax}}" data-name="fax" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">收票地址：</view>
+    <view>
+      <input placeholder="请输入收票地址" value="{{shou_area}}" data-name="shou_area" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">收票电话：</view>
+    <view>
+      <input placeholder="请输入收票电话" value="{{shou_phone}}" data-name="shou_phone" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">收票人：</view>
+    <view>
+      <input placeholder="请输入收票人" value="{{shou_name}}" data-name="shou_name" bindinput="getInput"/>
+    </view>
+  </view>
+
+</view>
+
+<view class="type-btn">
+  <view class="btn" bindtap="save">保存</view>
+</view>

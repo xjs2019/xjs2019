@@ -1,0 +1,23 @@
+<!--<block wx:for="{{list}}" wx:key="list" wx:if="{{item.status!==0}}">-->
+<!--<view class="item" data-id="{{item.id}}" bindtap="getUserOrder">-->
+<!--<view class="common-title">-->
+<!--<view class="title-left">-->
+<!--<view class="icon icon-user"></view>-->
+<!--<view class="text">客户信息</view>-->
+<!--<view class="icon icon-more"></view>-->
+<!--</view>-->
+<!--</view>-->
+<!--<view class="user-info">-->
+<!--{{item.name}} {{item.mobile}}-->
+<!--</view>-->
+<!--</view>-->
+<!--</block>-->
+
+<block wx:for="{{list}}" wx:key="list" wx:if="{{item.status!==0}}">
+  <view class="item" data-id="{{item.id}}" bindtap="getUserOrder">
+    <view class="{{item.red_status?'red':''}}">{{item.name?item.name:'未填名字'}}</view>
+    <view class="phone">{{item.mobile}}</view>
+  </view>
+</block>
+
+<tabBar set-tab="{{setTab}}" set-index="{{setIndex}}"></tabBar>

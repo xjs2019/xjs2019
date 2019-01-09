@@ -1,0 +1,48 @@
+@import "../../common";
+
+.blank {
+  height: rpx(100);
+}
+
+.tabBar {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
+  height: rpx(100);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #ffffff;
+
+  .tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .tab-icon {
+      width: rpx(54);
+      height: rpx(54);
+    }
+
+    .tab-text {
+      font-size: rpx(22);
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+  }
+}

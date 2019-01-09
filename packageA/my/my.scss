@@ -1,0 +1,100 @@
+@import "../../common";
+
+.personal-center {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: rpx(400);
+  padding-top: rpx(50);
+  color: #fff;
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: rpx(400);
+  }
+
+  .head {
+    border: 1px solid #fff;
+    width: rpx(200);
+    height: rpx(200);
+    border-radius: 50%;
+  }
+
+  .syncAvatar {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    padding: rpx(15);
+    line-height: 1;
+    font-size: rpx(24);
+    color: #ffffff;
+    background: none;
+
+    &::after {
+      border: none;
+    }
+  }
+}
+
+.cell-list {
+  width: 95%;
+  margin: rpx(30) auto;
+  box-shadow: 0 0 rpx(30) 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10px;
+
+  .arrow {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: calc(50% - #{rpx(8)});
+      right: rpx(34);
+      display: inline-block;
+      height: rpx(16);
+      width: rpx(16);
+      border-width: rpx(4) rpx(4) 0 0;
+      border-style: solid;
+      border-color: #C0C0C0;
+      transform: rotateZ(45deg);
+    }
+  }
+
+  .cell {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: rpx(100);
+    padding: rpx(30);
+    border-bottom: 1px solid #eee;
+  }
+
+  .icon {
+    width: rpx(50);
+  }
+}
+
+.type-btn {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rpx(410);
+    height: rpx(90);
+    box-shadow: 0 0 rpx(16) 0 rgba(14, 47, 91, 0.5);
+    border-radius: rpx(45);
+    color: #ffffff;
+    background-color: #1a4681;
+  }
+}

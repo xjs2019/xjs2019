@@ -1,0 +1,26 @@
+<block wx:if="{{load}}">
+  <view class="personal-center">
+    <image class="bg" src="{{bgImg}}"></image>
+    <image class="head" src="{{info.head_img}}"></image>
+    <view>{{info.name}}</view>
+    <!--<view>{{info.mobile}}</view>-->
+    <button class="syncAvatar" open-type="getUserInfo" bindgetuserinfo="getUserInfo">更新信息</button>
+  </view>
+
+  <view class="my-list">
+
+    <navigator class="item" hover-class="none" url="/packageA/my_account/my_account">
+      <view class="icon icon-anquan"></view>
+      <view>账号安全</view>
+    </navigator>
+
+    <!--<view class="item" bindtap="logOut">-->
+    <!--<view class="icon icon-anquan"></view>-->
+    <!--<view>退出登录</view>-->
+    <!--</view>-->
+
+  </view>
+</block>
+<!--<button class="customer-service icon icon-kefu" open-type="contact"></button>-->
+
+<tabBar set-tab="{{setTab}}" set-index="{{setIndex}}"></tabBar>

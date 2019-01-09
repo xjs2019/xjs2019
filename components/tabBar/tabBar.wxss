@@ -1,0 +1,57 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.blank {
+  height: 100rpx;
+}
+
+.tabBar {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #ffffff;
+}
+.tabBar .tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tabBar .tab .tab-icon {
+  width: 54rpx;
+  height: 54rpx;
+}
+.tabBar .tab .tab-text {
+  font-size: 22rpx;
+}
+.tabBar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  border-top: 1px solid #ccc;
+  box-sizing: border-box;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+}

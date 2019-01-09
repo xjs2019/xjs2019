@@ -1,0 +1,51 @@
+<view class="cell-list">
+
+  <view class="cell">
+    <view class="cell-name">姓名：</view>
+    <view>
+      <input placeholder="请输入姓名" value="{{name}}" data-name="name" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view>
+
+  <view class="cell">
+    <view class="cell-name">性别：</view>
+    <view>
+      <radio-group bindchange="sexChange">
+        <radio color="#1a4681" value="1" checked="{{sex===1}}">男</radio>
+        <radio color="#1a4681" value="2" checked="{{sex===2}}">女</radio>
+      </radio-group>
+    </view>
+  </view>
+
+  <!--<view class="cell">
+    <view class="cell-name">微信号：</view>
+    <view>
+      <input placeholder="请输入微信号" value="{{areas}}" data-name="areas" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view>-->
+
+  <!--<view class="cell cell-image">
+    <view class="cell-name">公司执照：</view>
+
+    <block wx:if="{{!company_img}}">
+      <image class="addPhoto" mode="widthFix" src="/image/addPhoto.png" bindtap="setImage"></image>
+    </block>
+    <block wx:else>
+      <image class="image" mode="widthFix" src="{{imgUrl+company_img}}" bindtap="setImage"></image>
+    </block>
+
+  </view>-->
+  
+  <view class="cell">
+    <view class="cell-name">公司名称：</view>
+    <view>
+      <input placeholder="请输入公司名" value="{{company}}" data-name="company" bindblur="getInput" bindinput="getInput"/>
+    </view>
+  </view> 
+
+</view>
+
+
+<view class="type-btn">
+  <view class="btn" bindtap="add">保存</view>
+</view>

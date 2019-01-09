@@ -1,0 +1,32 @@
+<view class="banner">
+  <view class="user-img">
+    <image src="{{userInfo.head_img}}"></image>
+  </view>
+  <view class="user-name">{{userInfo.name}}</view>
+  <view class="user-mobile">{{userInfo.mobile}}</view>
+  <!--<view class="btn">更新信息</view>-->
+</view>
+
+<!--<view class="tab-btn">-->
+<!--<view class="tab-l" data-url="../myOrderList/myOrderList" bindtap="linkTo">-->
+<!--<text class="icon icon-yijia"></text>-->
+<!--<view class="text">我的议价单</view>-->
+<!--</view>-->
+<!--<view class="line"></view>-->
+<!--<view class="tab-r" data-url="../user_info/user_info?mobile={{userInfo.mobile}}" bindtap="linkTo">-->
+<!--<text class="icon icon-yonghu2"></text>-->
+<!--<view class="text">账户信息</view>-->
+<!--</view>-->
+<!--</view>-->
+
+<!--<view class="title">-->
+<!--我的消息-->
+<!--</view>-->
+<!--<view class="list">-->
+<!--<view class="list-item" wx:for="{{messageList}}" wx:key="messageList">-->
+<!--<view class="item-content">{{item.msg}}</view>-->
+<!--<view class="item-date">{{item.create_time}}</view>-->
+<!--</view>-->
+<!--</view>-->
+
+<tabBar set-tab="{{setTab}}" set-index="{{setIndex}}"></tabBar>

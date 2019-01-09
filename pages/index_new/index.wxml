@@ -1,0 +1,55 @@
+<block wx:if="{{load}}">
+
+  <swiper class="swiper1" autoplay circular bindchange="swiperChange">
+
+    <block wx:for="{{banner}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{imgUrl+item.image}}"></image>
+      </swiper-item>
+    </block>
+
+  </swiper>
+
+  <view class="ad">
+    <swiper class="swiper2" autoplay circular vertical>
+      <block wx:for="{{new_list}}" wx:key="{{index}}">
+        <swiper-item data-index="{{index}}" data-item="{{item}}" bindtap="news_go">
+          <view class="icon icon-horn"></view>
+          <view class="content">{{item.title}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <navigator url="/packageA/list_new/list_new" class="more">更多></navigator>
+  </view>
+
+  <view class="tab" bindtap="tab">
+    <block wx:for="{{new_tab}}" wx:key="{{index}}">
+      <view class="tab-item {{tabIndex===index?'tab-select':''}}" data-index="{{index}}">{{item}}</view>
+    </block>
+  </view>
+
+  <block wx:for="{{home_list}}" wx:key="{{item.id}}">
+    <view class="home-list" data-item="{{item}}" bindtap="go">
+      <image mode="widthFix" src="{{imgUrl+item.small_image}}"></image>
+      <view>{{item.name}}</view>
+      <view class="item-btn">
+        <block wx:if="{{check}}">
+          <view>{{item.price?item.price:'0'}}元起/{{item.suk?item.suk:''}}</view>
+          <view>{{item.old_price?item.old_price:'0'}}元起/{{item.sku?item.sku:''}}</view>
+        </block>
+        <block wx:else>
+          <view>*****元起/{{item.sku}}</view>
+          <view>*****元起/{{item.sku}}</view>
+        </block>
+        <view>立即下单</view>
+      </view>
+    </view>
+  </block>
+
+</block>
+
+<button class="customer-service " open-type="contact">
+  <view class="icon icon-hongbao"></view>
+</button>
+
+<tabBar set-index="{{tabBar}}"></tabBar>

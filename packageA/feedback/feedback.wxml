@@ -1,0 +1,7 @@
+<view class="content">
+  <textarea placeholder="请输入意见" data-name="content" bindblur="getInput" bindinput="getInput"></textarea>
+</view>
+
+<view class="type-btn">
+  <view class="btn" bindtap="feedback">提交</view>
+</view>

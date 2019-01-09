@@ -1,0 +1,6 @@
+<view class="pay">
+  <image class="pay-success" src="/image/success.png" mode="widthFix"></image>
+  <view class="pay-desc">支付成功</view>
+</view>
+
+<view class="look-order">查看订单</view>

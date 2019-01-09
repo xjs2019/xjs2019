@@ -1,0 +1,41 @@
+.null {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300rpx;
+}
+.null .null-img {
+  width: 400rpx;
+}
+.null .null-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.box {
+  padding: 0 40rpx;
+}
+.box .item {
+  justify-content: space-between;
+  display: flex;
+  padding: 20rpx 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.box .item .name {
+  font-size: 32rpx;
+}
+.box .item .name-content {
+  font-size: 32rpx;
+}
+
+button {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #1A4681;
+  color: #ffffff;
+  font-size: 32rpx;
+  border-radius: 0;
+  margin-top: 50rpx;
+}

@@ -1,0 +1,156 @@
+<view class="choose">
+  <picker mode="date" value="{{start_time}}" bindchange="start">
+    {{start_time}}
+  </picker>
+  <view class="icon icon-line"></view>
+  <picker mode="date" bindchange="end">
+    {{end_time}}
+  </picker>
+</view>
+
+<block wx:for="{{list}}" wx:key="list" wx:if="{{item.status===1}}">
+
+  <view class="item {{item.on?'active':''}}">
+
+    <view class="common-title" data-index="{{index}}" data-item="{{item}}" bindtap="more">
+
+      <view class="title-left">
+        <view class="icon icon-user"></view>
+        <view class="text">客户信息</view>
+        <view class="icon icon-more"></view>
+      </view>
+
+      <view class="title-right">
+        {{item.create_time}}
+      </view>
+
+    </view>
+
+    <view class="user-info">
+      {{item.name}} {{item.mobile}}
+    </view>
+
+    <block wx:if="{{item.on}}">
+
+      <view class="order">
+
+        <view class="title">
+          <view class="icon icon-shuxian"></view>
+          <view class="title-name">商品清单</view>
+        </view>
+        <view class="order-info">
+          <block wx:for="{{item.goods_list}}" wx:for-item="i" wx:key="{{i.id}}">
+            <view class="item">
+              <view class="info">
+                <view class="info-name">{{i.goods_type}} {{i.name}}</view>
+
+                <view class="info-price">
+
+                  <view class="price-box">
+                    <view>原价:</view>
+                    <view class="price">￥{{i.old_price}}</view>
+                  </view>
+
+                  <view class="price-box">
+                    <view>议价:</view>
+                    <view class="price">￥{{i.price}}</view>
+                  </view>
+
+                </view>
+
+                <view class="info-price">
+
+                  <view class="price-box">
+                    <text>库存:</text>
+                    <text>{{i.inventory}}</text>
+                  </view>
+
+                  <view class="price-box">
+                    <text>数量:</text>
+                    <text>{{i.total}}</text>
+                  </view>
+
+                </view>
+
+              </view>
+            </view>
+          </block>
+        </view>
+
+        <block wx:if="{{item.opinion.length}}">
+          <view class="">
+            <view class="title">
+              <view class="icon icon-shuxian"></view>
+              <view class="title-name">意见</view>
+            </view>
+            <view class="order-info">
+              <block wx:for="{{item.opinion}}" wx:for-item="i" wx:key="{{i.id}}">
+                <view>{{i.name}}：{{i.msg}}</view>
+              </block>
+            </view>
+          </view>
+        </block>
+
+
+        <view class="">
+          <view class="title">
+            <view class="icon icon-shuxian"></view>
+            <view class="title-name">支付方式</view>
+          </view>
+          <view class="order-info">{{item.pay_type}}</view>
+        </view>
+
+        <view class="">
+          <view class="title">
+            <view class="icon icon-shuxian"></view>
+            <view class="title-name">欠款金额</view>
+          </view>
+          <view class="order-info">{{item.qian}}</view>
+        </view>
+
+        <view class="">
+          <view class="title">
+            <view class="icon icon-shuxian"></view>
+            <view class="title-name">申请原因</view>
+          </view>
+          <view class="order-info">{{item.why}}</view>
+        </view>
+
+      </view>
+
+
+      <view class="order">
+        <view class="title">
+          <view class="icon icon-shuxian"></view>
+          <view class="title-name">审核</view>
+        </view>
+        <view class="order-info">
+
+          <view class="opinion">
+            <textarea maxlength="-1" placeholder="请输入意见" value="{{questions}}" data-name="questions"
+                      bindinput="getInput">
+            </textarea>
+          </view>
+
+          <view class="btn">
+            <view class="pass" data-id="{{item.id}}" data-status="{{1}}" bindtap="audit">通过</view>
+            <view class="reject" data-id="{{item.id}}" data-status="{{2}}" bindtap="audit">驳回</view>
+          </view>
+
+        </view>
+      </view>
+
+    </block>
+
+  </view>
+
+</block>
+
+<block wx:if="{{showNull}}">
+  <view class="null">
+    <image class="null-img" mode="widthFix" src="/image/null.png"></image>
+    <view class="null-desc">你还没有议价单哦~</view>
+  </view>
+</block>
+
+<tabBar set-tab="{{setTab}}" set-index="{{setIndex}}"></tabBar>

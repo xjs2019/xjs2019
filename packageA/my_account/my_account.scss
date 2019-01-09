@@ -1,0 +1,37 @@
+@import "../../common";
+
+.cell-list {
+  width: 95%;
+  margin: rpx(30) auto;
+  box-shadow: 0 0 rpx(30) 0 rgba(187, 187, 187, 0.5);
+  border-radius: 10px;
+
+  .arrow {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: calc(50% - #{rpx(8)});
+      right: rpx(34);
+      display: inline-block;
+      height: rpx(16);
+      width: rpx(16);
+      border-width: rpx(4) rpx(4) 0 0;
+      border-style: solid;
+      border-color: #C0C0C0;
+      transform: rotateZ(45deg);
+    }
+  }
+
+  .cell {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: rpx(100);
+    padding: rpx(30);
+    border-bottom: 1px solid #eee;
+  }
+
+}

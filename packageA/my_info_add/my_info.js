@@ -67,7 +67,9 @@ Page({
       app.api.api_new.edit_info({ user_id: app.data.user_id, name, sex, company}).then(res => {
             if (res.response === 'data') {
                 wx.showToast({title: '个人信息修改成功', icon: 'none'})
-                wx.navigateBack()
+                //wx.navigateBack()
+                //parent.location.reload()
+                wx.reLaunch({url: '/packageA/commodity_info/commodity_info'})
             }
         })
     },

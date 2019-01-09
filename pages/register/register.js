@@ -79,10 +79,18 @@ Page({
             id_card,
         }).then(res => {
             if (res.response === 'data') {
-                wx.showToast({title: '您的资料已提交,请耐心等待审核', icon: 'none', mask: true})
+                app.data.user_id = res.data.user_id
+                app.data.check = res.data.check
+                wx.setStorageSync('name', res.data.mobile)
+                wx.setStorageSync('token', res.data.token)
+                wx.setStorageSync('user_id', res.data.user_id)
+                wx.setStorageSync('type', res.data.type)
+                wx.setStorageSync('check', res.data.check)
+                wx.reLaunch({url: '/packageA/index_new/index'})
+                /*wx.showToast({title: '您的资料已提交,请耐心等待审核', icon: 'none', mask: true})
                 setTimeout(function () {
                     wx.navigateBack()
-                }, 1000)
+                }, 1000)*/
             } else {
                 wx.showToast({title: res.error.message, icon: 'none'})
             }

@@ -87,7 +87,7 @@ Page({
                 wx.setStorageSync('type', res.data.type)
                 wx.setStorageSync('check', res.data.check)
                 wx.reLaunch({url: '/packageA/index_new/index'})
-                /*wx.showToast({title: '您的资料已提交,请耐心等待审核22', icon: 'none', mask: true})
+                /*wx.showToast({title: '您的资料已提交,请耐心等待审核21', icon: 'none', mask: true})
                 setTimeout(function () {
                     wx.navigateBack()
                 }, 1000)*/

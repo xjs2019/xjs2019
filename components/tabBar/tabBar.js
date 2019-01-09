@@ -36,6 +36,7 @@ Component({
                     iconPath: '/image/D3.png',
                     selectedIconPath: '/image/D31.png',
                   },
+                    
                     {
                         pagePath: '/packageA/my/my',
                         text: '个人中心',

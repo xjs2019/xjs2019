@@ -15,10 +15,10 @@
     <view>{{user_info.sex===1?'男':'女'}}</view>
   </view>
 
-  <!-- <view class="cell">
+  <view class="cell">
     <view class="cell-name">微信号：</view>
     <view>{{user_info.areas?user_info.areas:''}}</view>
-  </view> -->
+  </view>
 
   <view class="cell">
     <view class="cell-name">我的客服：</view>
@@ -30,12 +30,12 @@
     <view>{{user_info.company?user_info.company:''}}</view>
   </view>
 
-  <!-- <view class="cell cell-image">
+  <view class="cell cell-image">
     <view class="cell-name">公司执照：</view>
     <block wx:if="{{user_info.company_img}}">
       <image mode="widthFix" src="{{imgUrl+user_info.company_img}}" bindtap="view_image"></image>
     </block>
-  </view> -->
+  </view>
 
 </view>
 

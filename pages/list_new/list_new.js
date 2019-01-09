@@ -7,34 +7,11 @@ Page({
         imgUrl: app.imgUrl,
         page: 1,
         new_list: [],
-        tabBar: 3,
-        tabIndex: 1,
     },
 
     onLoad() {
-      
-      app.status()
-      this.getNews()
-      this.init()
+        this.getNews()
     },
-
-
-
-  init() {
-    app.data.tabBar = 1
-
-    Promise.all([
-      // this.goodsType(),
-      // this.specialGoods(),
-      this.new_list(),
-    ]).then(() => {
-      this.setData({
-        load: true,
-        check: app.data.check,
-      })
-
-    })
-  },
 
     info(e) {
         app.data.new_info = e.currentTarget.dataset.item

@@ -17,14 +17,14 @@
     </view>
   </view>
 
-  <!--<view class="cell">
-    <view class="cell-name">微信号：</view>
+  <view class="cell">
+    <view class="cell-name">公司名称：</view>
     <view>
-      <input placeholder="请输入微信号" value="{{areas}}" data-name="areas" bindblur="getInput" bindinput="getInput"/>
+      <input placeholder="请输入公司名称" value="{{company}}" data-name="company" bindblur="getInput" bindinput="getInput"/>
     </view>
-  </view>-->
-
-  <!--<view class="cell cell-image">
+  </view>
+<!--
+  <view class="cell cell-image">
     <view class="cell-name">公司执照：</view>
 
     <block wx:if="{{!company_img}}">
@@ -33,18 +33,9 @@
     <block wx:else>
       <image class="image" mode="widthFix" src="{{imgUrl+company_img}}" bindtap="setImage"></image>
     </block>
-
-  </view>-->
-  
-  <view class="cell">
-    <view class="cell-name">公司名称：</view>
-    <view>
-      <input placeholder="请输入公司名" value="{{company}}" data-name="company" bindblur="getInput" bindinput="getInput"/>
-    </view>
-  </view> 
-
+  </view>
+-->
 </view>
-
 
 <view class="type-btn">
   <view class="btn" bindtap="add">保存</view>

@@ -1,0 +1,51 @@
+@import "../../common";
+
+.new_item {
+  display: flex;
+  padding: rpx(30);
+  border-bottom: 1px solid #d8d8d8;
+
+  image {
+    flex: none;
+    width: rpx(140);
+    height: rpx(140);
+  }
+
+  .item-content {
+    margin-left: rpx(30);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      color: #333;
+    }
+
+    .watch {
+      display: flex;
+      align-items: center;
+      color: #666;
+      font-size: rpx(26);
+
+      .icon {
+        font-size: rpx(26);
+      }
+
+      view:last-child {
+        margin-left: rpx(50);
+      }
+    }
+
+    .content {
+      height: 2.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: rpx(24);
+      color: #656565;
+    }
+  }
+
+}

@@ -1,7 +1,10 @@
+<view class="wrap">
 <view class="text">
-  <text class="text1">人工找回密码</text>
+  <view class="icon icon-mobile" style="font-size:70rpx;"></view>
+  <text class="text1">客服热线：</text>
   <text class="text2">{{phone}}</text>
 </view>
-<view class="post" bindtap="dial">
+<view class="post next_fpass" bindtap="dial">
   拨号
+</view>
 </view>

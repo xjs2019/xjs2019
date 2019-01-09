@@ -8,14 +8,6 @@ Page({
         poster: false,
         actionSheetHidden: true,
     },
-//初始化api
-    init() {
-        Promise.all([
-            this.setData({index_item: res.data.info, goodsSpec}),
-        ]).then(() => {
-            this.setData({load: true, check: app.data.check})
-        })
-    },
 
     onLoad(e) {
         this.setData({goodsSpec: wx.getStorageSync('info-goodsSpec')})
@@ -42,17 +34,10 @@ Page({
                 }
 
                 app.data.index_item = res.data.info
-                //wx.getStorageSync('check')
-                //app.data.check
-                //res.data.check
-                //app.data.check = res.data.check
-                console.log(app.data.check+'/'+res.data.check)
-                if (res.data.check !==  app.data.check) {
-                        wx.setStorageSync('check', res.data.check)
-                    }
-                //this.init()
-                this.setData({check: app.data.check, index_item: res.data.info, goodsSpec})
-                //location.reload() 
+
+
+                this.setData({index_item: res.data.info, goodsSpec})
+
             }
 
         })
@@ -87,8 +72,6 @@ Page({
     addCart() {
         app.status()
         return new Promise(resolve => {
-            
-                
             if (!app.data.check) {
                 wx.navigateTo({url: '/packageA/my_info_add/my_info'})
                 return wx.showToast({title: '您还没有通过审核哦~', icon: 'none'})

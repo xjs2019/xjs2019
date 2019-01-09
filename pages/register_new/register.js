@@ -54,11 +54,9 @@ Page({
             return wx.showToast({title: '手机号不能为空', icon: 'none'})
         } else if (!this.data.sms_code) {
             return wx.showToast({title: '验证码不能为空', icon: 'none'})
-        }
-       /* else if (!this.data.company) {
+        } else if (!this.data.company) {
             return wx.showToast({title: '公司不能为空', icon: 'none'})
-        }*/
-        else if (this.data.re_password !== this.data.password) {
+        } else if (this.data.re_password !== this.data.password) {
             return wx.showToast({title: '两次密码输入不一致', icon: 'none'})
         } else if (!this.data.re_password) {
             return wx.showToast({title: '密码不能为空', icon: 'none'})
@@ -82,11 +80,10 @@ Page({
             company,
         }).then(res => {
             if (res.response === 'data') {
-                //wx.showToast({title: '您的资料已提交,请耐心等待审核', icon: 'none', mask: true})
-                wx.reLaunch({ url: '/packageA/index_new/index' })
-                // setTimeout(function () {
-                //     wx.navigateBack()
-                // })
+                wx.showToast({title: '您的资料已提交,请耐心等待审核', icon: 'none', mask: true})
+                setTimeout(function () {
+                    wx.navigateBack()
+                }, 1500)
             } else {
                 wx.showToast({title: res.error.message, icon: 'none'})
             }

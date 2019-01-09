@@ -1,11 +1,12 @@
+<view class="wrap">
 <view class="input-item">
-  <view class="item-title">手机帐号</view>
+  <!--<view class="item-title">手机帐号</view>-->
   <view>
     <view class="inner-item">
       <view class="item-icon">
         <view class="icon icon-mobile"></view>
       </view>
-      <view class="line"></view>
+      <!--<view class="line"></view>-->
       <view class="input-mobile">
         <input placeholder="请输入手机账号" type="number" data-name="mobile" bindblur="getInput" bindinput="getInput"/>
       </view>
@@ -15,25 +16,27 @@
 
 
 <view class="input-item">
-  <view class="item-title">验证码</view>
+  <!--<view class="item-title">验证码</view>-->
   <view class="item-xxx">
     <view class="inner-item">
       <view class="item-icon">
         <view class="icon icon-code"></view>
       </view>
       <view class="line"></view>
-      <view class="input-mobile code">
+      <view class="input-mobile code" style='width:7rem !important;'>
         <input placeholder="请输入验证码" type="number" data-name="sms_code" bindblur="getInput" bindinput="getInput"/>
       </view>
-    </view>
-    <button disabled="{{disabled}}" bindtap="getCode" class="{{button}}">
+      <view disabled="{{disabled}}" bindtap="getCode" class="{{button}}">
       {{time}}
-    </button>
+      </view>
+    </view>
+    
   </view>
 </view>
 
-<view class="post" bindtap="post">
+<view class="post next_fpass" bindtap="post">
   下一步
+</view>
 </view>
 
 

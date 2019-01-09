@@ -1,12 +1,14 @@
 {
+  
   "pages": [
     "pages/index_new/index",
     "pages/login/login",
-    "pages/register/register",
     "pages/register_new/register",
+    "pages/personFindPass/personFindPass",
     "pages/setPass/setPass",
     "pages/findPass/findPass",
-    "pages/personFindPass/personFindPass",
+    "pages/zp/zp",
+    "pages/register/register",
     "pages/protocol/protocol"
   ],
   "window": {

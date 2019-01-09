@@ -111,19 +111,19 @@
     </view>
   </view>
 
-  <!--<view class="box">
+  <!-- <view class="box">
     <view class="icon icon-company"></view>
     <view class="input">
-      <input placeholder="请输入公司名称" data-name="company" bindblur="getInput" bindinput="getInput"/>
+      <input placeholder="请输入公司名称1" data-name="company" bindblur="getInput" bindinput="getInput"/>
     </view>
-  </view>
+  </view> -->
 
-  <view class="box">
+  <!-- <view class="box">
     <view class="icon icon-share"></view>
     <view class="input">
       <input placeholder="请输入邀请码(选填)" value="{{invite}}" data-name="invite" bindblur="getInput" bindinput="getInput"/>
     </view>
-  </view>-->
+  </view> -->
 
   <view class="box">
     <view class="icon icon-icon-pass"></view>

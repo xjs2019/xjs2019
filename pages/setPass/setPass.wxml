@@ -1,7 +1,8 @@
+<view class="wrap">
 <view class="input-item">
-  <view class="item-title">设置密码</view>
+  <!-- <view class="item-title">设置密码</view> -->
   <view>
-    <view class="inner-item">
+    <view class="inner-item" style='border:none;border-bottom:1px solid #cccccc;'>
       <view class="item-icon">
         <view class="icon icon-icon-pass"></view>
       </view>
@@ -10,17 +11,17 @@
         <input placeholder="设置6-18位字母与数字相结合的密码" password data-name="password" bindblur="getInput" bindinput="getInput"/>
       </view>
     </view>
-    <view class="pis">
+    <!-- <view class="pis">
       <view class="inner-pis">
         <view class="pis-speck">设置6-18位字母与数字相结合的密码</view>
       </view>
-    </view>
+    </view> -->
   </view>
 </view>
 <view class="input-item">
-  <view class="item-title">重复密码</view>
+  <!-- <view class="item-title">重复密码</view> -->
   <view>
-    <view class="inner-item">
+    <view class="inner-item" style='border:none;border-bottom:1px solid #cccccc;'>
       <view class="item-icon">
         <view class="icon icon-icon-pass"></view>
       </view>
@@ -29,13 +30,14 @@
         <input placeholder="请重新输入密码" password data-name="re_password" bindblur="getInput" bindinput="getInput"/>
       </view>
     </view>
-    <view class="pis">
+    <!-- <view class="pis">
       <view class="inner-pis">
         <view class="pis-speck">请重新输入密码</view>
       </view>
-    </view>
+    </view> -->
   </view>
 </view>
-<view class="post" bindtap="post">
+<view class="post next_fpass" bindtap="post">
   确定
+</view>
 </view>

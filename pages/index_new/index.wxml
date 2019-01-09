@@ -19,7 +19,7 @@
         </swiper-item>
       </block>
     </swiper>
-    <navigator url="/packageA/list_new/list_new" class="more">更多></navigator>
+    <navigator url="/packageA/list_new/list_new" class="more">更多</navigator>
   </view>
 
   <view class="tab" bindtap="tab">

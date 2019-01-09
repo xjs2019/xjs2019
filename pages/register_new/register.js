@@ -54,9 +54,11 @@ Page({
             return wx.showToast({title: '手机号不能为空', icon: 'none'})
         } else if (!this.data.sms_code) {
             return wx.showToast({title: '验证码不能为空', icon: 'none'})
-        } else if (!this.data.company) {
-            return wx.showToast({title: '公司不能为空', icon: 'none'})
-        } else if (this.data.re_password !== this.data.password) {
+        } 
+        // else if (!this.data.company) {
+        //     return wx.showToast({title: '公司不能为空', icon: 'none'})
+        // } 
+        else if (this.data.re_password !== this.data.password) {
             return wx.showToast({title: '两次密码输入不一致', icon: 'none'})
         } else if (!this.data.re_password) {
             return wx.showToast({title: '密码不能为空', icon: 'none'})

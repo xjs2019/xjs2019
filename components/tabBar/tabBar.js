@@ -24,18 +24,19 @@ Component({
                         iconPath: '/image/order.png',
                         selectedIconPath: '/image/order1.png',
                     },
-                    {
-                        pagePath: '/packageA/cart/cart',
-                        text: '购物车',
-                        iconPath: '/image/cart.png',
-                        selectedIconPath: '/image/cart1.png',
-                    },
                   {
                     pagePath: '/packageA/list_new/list_new',
                     text: '新闻资讯',
                     iconPath: '/image/D3.png',
                     selectedIconPath: '/image/D31.png',
                   },
+                    {
+                        pagePath: '/packageA/cart/cart',
+                        text: '购物车',
+                        iconPath: '/image/cart.png',
+                        selectedIconPath: '/image/cart1.png',
+                    },
+                  
                     
                     {
                         pagePath: '/packageA/my/my',

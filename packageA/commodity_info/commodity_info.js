@@ -36,7 +36,11 @@ Page({
                 app.data.index_item = res.data.info
 
 
-                this.setData({index_item: res.data.info, goodsSpec})
+                if (res.data.check !==  app.data.check) {
+                    wx.setStorageSync('check', res.data.check)
+                }
+                //this.init()
+                this.setData({check: app.data.check, index_item: res.data.info, goodsSpec})
 
             }
 

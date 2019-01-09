@@ -82,7 +82,7 @@ Page({
             company,
         }).then(res => {
             if (res.response === 'data') {
-                const type = wx.getStorageSync('type')
+                
                 app.data.user_id = res.data.user_id
                 app.data.check = res.data.check
                 wx.setStorageSync('name', res.data.mobile)

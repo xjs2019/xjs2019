@@ -78,9 +78,9 @@ Page({
 
 
         this.setData({
-            pay_type: app.data.payWay ? app.data.payWay : '现金支付',
+            pay_type: app.data.payWay ? app.data.payWay : '微信',
             sendWay: app.data.sendWay || '上门自提',
-            payWay_id: app.data.payWay_id || 1,
+            payWay_id: app.data.payWay_id || 2,
             shipping_type: app.data.sendWay_id || 4,
             buy_now: app.data.buy_now,
             checkDay: app.data.checkDay || 0,

@@ -1,4 +1,4 @@
-<view class="order">
+    <view class="order">
   <view class="title">
     <view class="icon icon-shuxian"></view>
     <view class="title-name">收货人信息</view>

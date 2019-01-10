@@ -88,7 +88,7 @@ Page({
                 wx.setStorageSync('check', res.data.check)
                 wx.reLaunch({url: '/packageA/index_new/index'})
 
-                /*wx.showToast({title: '您的资料已提交,请耐心等待审核313', icon: 'none', mask: true})
+                /*wx.showToast({title: '您的资料已提交,请耐心等待审核3133', icon: 'none', mask: true})
                 console.log(12)
 
                 

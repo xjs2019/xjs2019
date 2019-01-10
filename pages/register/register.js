@@ -89,11 +89,8 @@ Page({
                 wx.reLaunch({url: '/packageA/index_new/index'})
 
                 /*wx.showToast({title: '您的资料已提交,请耐心等待审核21', icon: 'none', mask: true})
-<<<<<<< HEAD
-  
-=======
-                console.log(123)
->>>>>>> 7aef6fae8f2fc1e601716087b90d8db1972dd625
+                console.log(12)
+
                 
                 setTimeout(function () {
                     wx.navigateBack()

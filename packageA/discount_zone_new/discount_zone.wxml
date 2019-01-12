@@ -10,14 +10,16 @@
       </view>
       <view>{{item.name}}</view>
       <view class="item-btn">
-        <block wx:if="{{check}}">
+      <view>{{item.special_price}}元起/{{item.sku}}</view>
+          <view>{{item.old_price}}元起/{{item.sku}}</view>
+        <!--<block wx:if="{{check}}">
           <view>{{item.special_price}}元起/{{item.sku}}</view>
           <view>{{item.old_price}}元起/{{item.sku}}</view>
         </block>
         <block wx:else>
           <view>*****元起/{{item.sku}}</view>
           <view>*****元起/{{item.sku}}</view>
-        </block>
+        </block>-->
 
         <view>立即抢购</view>
       </view>

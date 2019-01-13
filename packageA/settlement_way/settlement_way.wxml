@@ -4,11 +4,12 @@
     <view>支付方式</view>
   </view>
   <view class="way-list" bindtap="payWay">
-    <view class="{{payWay_id===1?'selected':''}}" data-index="{{1}}" data-name="现金">现金</view>
+    <view class="{{payWay_id===2?'selected':''}}" data-index="{{2}}" data-name="微信">微信</view>
+    <!--<view class="{{payWay_id===1?'selected':''}}" data-index="{{1}}" data-name="现金">现金</view>
     <view class="{{payWay_id===2?'selected':''}}" data-index="{{2}}" data-name="微信">微信</view>
     <view class="{{payWay_id===3?'selected':''}}" data-index="{{3}}" data-name="货到付款">货到付款</view>
     <view class="{{payWay_id===4?'selected':''}}" data-index="{{4}}" data-name="银行承兑">银行承兑</view>
-    <view class="{{payWay_id===5?'selected':''}}" data-index="{{5}}" data-name="支票">支票</view>
+    <view class="{{payWay_id===5?'selected':''}}" data-index="{{5}}" data-name="支票">支票</view>-->
   </view>
 </view>
 

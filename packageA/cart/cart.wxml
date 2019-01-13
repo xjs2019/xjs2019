@@ -64,7 +64,7 @@
         </block>
 
       </view>
-      <view class="total total-bargain" bindtap="bargain">议价</view>
+      <!-- <view class="total total-bargain" bindtap="bargain">议价</view> -->
       <view class="total total-pay" bindtap="settlement">去结算({{selectCount}})</view>
     </view>
   </view>

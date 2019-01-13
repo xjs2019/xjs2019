@@ -39,7 +39,7 @@
 
 <view class="login">
 
-  <image mode="widthFix" src="/image/LOGO.png"></image>
+  <image mode="widthFix" src="/image/LOGO.png" style='margin-bottom:60rpx;'></image>
 
   <view class="cell">
     <view class="icon icon-icon-user"></view>

@@ -3,19 +3,21 @@
   "pages": [
     "pages/index_new/index",
     "pages/login/login",
+    "pages/findPass/findPass",
     "pages/register_new/register",
+
     "pages/personFindPass/personFindPass",
     "pages/setPass/setPass",
-    "pages/findPass/findPass",
+    
     "pages/zp/zp",
     "pages/register/register",
     "pages/protocol/protocol"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f64a48",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "#fff"
   },
   "subPackages": [
     {

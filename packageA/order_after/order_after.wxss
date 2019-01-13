@@ -21,7 +21,7 @@ checkbox .wx-checkbox-input {
 }
 
 checkbox .wx-checkbox-input.wx-checkbox-input-checked {
-  background-color: #1a4681;
+  background-color: #f64a48;
 }
 
 checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
@@ -34,7 +34,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   padding-top: 15rpx;
 }
 .title .icon {
-  color: #1a4681;
+  color: #f64a48;
 }
 .title .title-name {
   font-size: 28rpx;
@@ -120,7 +120,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   border-radius: 80rpx;
   margin: 30rpx auto;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48;
 }
 
 /*模态框*/
@@ -169,7 +169,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   margin: 10rpx 0;
 }
 .box-content .content-section .content-phone {
-  color: #1a4681;
+  color: #f64a48;
 }
 .box-content .content-btn {
   box-sizing: border-box;
@@ -181,5 +181,5 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   border-radius: 80rpx;
   margin: 20rpx 0;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48;
 }

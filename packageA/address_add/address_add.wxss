@@ -47,11 +47,11 @@
 }
 
 .save {
-  width: 360rpx;
+  width: 700rpx;
   height: 80rpx;
-  margin: 30rpx auto;
+  margin: 70rpx auto;
   line-height: 80rpx;
   text-align: center;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48; border-radius:40rpx;
 }

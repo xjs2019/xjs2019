@@ -1,6 +1,6 @@
 {
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#f64a48",
+  "navigationBarTextStyle": "#fff",
   "navigationBarTitleText": "账户信息",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",

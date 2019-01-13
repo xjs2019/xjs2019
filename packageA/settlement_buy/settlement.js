@@ -4,8 +4,12 @@ Page({
 
     data: {
         img: app.api.imgUrl,
+        //默认微信支付
+        //默认上门自提
+        //sendWay_id: 4,
         // 默认不开发票
         invoice: 0,
+        invoice2: 0,
         total: 1,
         loads: Promise.resolve(),
     },
@@ -80,6 +84,7 @@ Page({
         this.setData({
             pay_type: app.data.payWay ? app.data.payWay : '微信',
             sendWay: app.data.sendWay || '上门自提',
+            sendWay_id: app.data.sendWay_id || 4,
             payWay_id: app.data.payWay_id || 2,
             shipping_type: app.data.sendWay_id || 4,
             buy_now: app.data.buy_now,
@@ -93,6 +98,28 @@ Page({
     address() {
         wx.navigateTo({url: '/packageA/address_list/address_list'})
     },
+  // 开不开发票
+  sendWay2(e) {
+    const index = Number(e.detail.value)
+    //this.setData({ total: this.data.total })
+    console.log(e.detail.value)
+    this.setData({
+      invoice2: index
+    })
+    // if (index == 1){
+      
+    //   this.setData({
+    //     invoice: index,
+    //   })
+    // }else{
+      
+    //   this.setData({
+    //     invoice: index,
+    //   })
+
+    // }
+    
+  },
 
     // 开不开发票
     invoice(e) {

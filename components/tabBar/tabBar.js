@@ -18,18 +18,18 @@ Component({
                         iconPath: '/image/order.png',
                         selectedIconPath: '/image/order1.png',
                     },
-                    // {
-                    //     pagePath: '/packageA/discount_zone_new/discount_zone',
-                    //     text: '特价专区',
-                    //     iconPath: '/image/tejia.png',
-                    //     selectedIconPath: '/image/tejia2.png',
-                    // },
-                  {
-                    pagePath: '/packageA/list_new/list_new',
-                    text: '发现',
-                    iconPath: '/image/fx.png',
-                    selectedIconPath: '/image/fx2.png',
-                  },
+                     {
+                         pagePath: '/packageA/discount_zone_new/discount_zone',
+                         text: '特价专区',
+                         iconPath: '/image/tejia.png',
+                         selectedIconPath: '/image/tejia2.png',
+                     },
+                  // {
+                  //   pagePath: '/packageA/list_new/list_new',
+                  //   text: '发现',
+                  //   iconPath: '/image/fx.png',
+                  //   selectedIconPath: '/image/fx2.png',
+                  // },
                     {
                         pagePath: '/packageA/cart/cart',
                         text: '购物车',

@@ -38,15 +38,15 @@
   color: #fff;
   flex: none;
   padding: 10rpx 30rpx;
-  background: #1a4681;
+  background: #f64a48;
   border-radius: 15rpx;
 }
 .cell-box .cell .cell-del {
   margin-left: 15rpx;
-  color: #fff;
+  color: #000;
   flex: none;
   padding: 10rpx 30rpx;
-  background: #f56c6c;
+  /*background: #f56c6c;*/
   border-radius: 15rpx;
 }
 

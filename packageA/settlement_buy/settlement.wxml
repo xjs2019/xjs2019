@@ -1,7 +1,7 @@
     <view class="order">
   <view class="title">
     <view class="icon icon-shuxian"></view>
-    <view class="title-name">收货人信息1</view>
+    <view class="title-name">收货信息</view>
   </view>
   <view class="order-info" bindtap="address">
     <block wx:if="{{defaultAddress.name}}">
@@ -64,9 +64,9 @@
     <radio value="0"   class="payway2"  checked="{{sendWay_id===4}}"  >上门自提</radio>
     <radio value="1"   class="payway2"  checked="{{sendWay_id===1}}">物流代发</radio>
     </radio-group>
-    <input value="0" name="bz"  placeholder="默认时间为：p.m 8:30~ a.m 9:00"  hidden="{{invoice2!==0}}"  class="bz"  >
+    <input value="" name="bz"  placeholder="默认时间为：p.m 8:30~ a.m 9:00"  hidden="{{invoice2!==0}}"  class="bz"  >
     </input>
-    <input value="1" name="bz" placeholder="备注：默认物流发货，运费自付"  hidden="{{invoice2!==1}}" class="bz" >
+    <input value="" name="bz" placeholder="备注：默认物流发货，运费自付"  hidden="{{invoice2!==1}}" class="bz" >
     </input>
     
     </view>

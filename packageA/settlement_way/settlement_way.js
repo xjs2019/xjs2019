@@ -3,7 +3,7 @@ const app = getApp()
 Page({
 
     data: {
-        payWay_id: 1,
+        payWay_id: 2,
         sendWay_id: 1,
         chequeIndex: 0,
     },
@@ -16,7 +16,7 @@ Page({
 
         this.setData({
             order_number: app.data.order_number,
-            payWay_id: app.data.payWay_id || 1,
+            payWay_id: app.data.payWay_id || 2,
             sendWay_id: app.data.sendWay_id || 4,
         })
 

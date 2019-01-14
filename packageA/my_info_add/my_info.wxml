@@ -11,8 +11,8 @@
     <view class="cell-name">性别：</view>
     <view>
       <radio-group bindchange="sexChange">
-        <radio color="#1a4681" value="1" checked="{{sex===1}}">男</radio>
-        <radio color="#1a4681" value="2" checked="{{sex===2}}">女</radio>
+        <radio color="#f64a48" value="1" checked="{{sex===1}}">男</radio>
+        <radio color="#f64a48" value="2" checked="{{sex===2}}">女</radio>
       </radio-group>
     </view>
   </view>

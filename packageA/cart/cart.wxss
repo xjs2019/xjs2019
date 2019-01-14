@@ -138,7 +138,7 @@
 }
 .settle-accounts-box .settle-accounts .total-pay {
   width: 180rpx;
-  background-color: red;
+  background-color: #f64a48;
 }
 
 /*模态框*/

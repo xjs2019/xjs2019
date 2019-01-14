@@ -140,7 +140,7 @@
   </view>
 
   <view class="agree">
-    <checkbox value="123" bindtap="agree"></checkbox>
+    <checkbox value="123" bindtap="agree" checked></checkbox>
     <view class="a">同意</view>
     <view class="a b" bindtap="protocol">《新捷仕网上商城会员注册协议》</view>
   </view>

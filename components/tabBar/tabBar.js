@@ -10,7 +10,7 @@ Component({
             type: Object,
             value: {
                 color: '#8a8a8a',
-                selectedColor: '#173d71',
+              selectedColor: '#f64a48',
                 list: [
                     {
                         pagePath: '/packageA/index_new/index',
@@ -18,18 +18,18 @@ Component({
                         iconPath: '/image/order.png',
                         selectedIconPath: '/image/order1.png',
                     },
-                    {
-                        pagePath: '/packageA/discount_zone_new/discount_zone',
-                        text: '特价专区',
-                        iconPath: '/image/order.png',
-                        selectedIconPath: '/image/order1.png',
-                    },
-                  {
-                    pagePath: '/packageA/list_new/list_new',
-                    text: '新闻资讯',
-                    iconPath: '/image/D3.png',
-                    selectedIconPath: '/image/D31.png',
-                  },
+                     {
+                         pagePath: '/packageA/discount_zone_new/discount_zone',
+                         text: '特价专区',
+                         iconPath: '/image/tejia.png',
+                         selectedIconPath: '/image/tejia2.png',
+                     },
+                  // {
+                  //   pagePath: '/packageA/list_new/list_new',
+                  //   text: '发现',
+                  //   iconPath: '/image/fx.png',
+                  //   selectedIconPath: '/image/fx2.png',
+                  // },
                     {
                         pagePath: '/packageA/cart/cart',
                         text: '购物车',

@@ -49,17 +49,15 @@
     <view class="icon icon-shuxian"></view>
     <view class="title-name">配送方式</view>
   </view>
+
   <!--<view class="order-info arrow" >
   <view class="order-info arrow2" bindtap="settlement_way_go2">-->
-  <view class="order-info arrow2" >
-<!--
-    <view class="order-info arrow" bindtap="settlement_way_go">
+  <!--<view class="order-info arrow" bindtap="settlement_way_go">
           <view>支付方式: {{pay_type}}</view>
           <view>配送方式: {{sendWay}}</view>
     </view>
-    <view class="{{sendWay_id===4?'selected':''}}" data-index="{{4}}" data-name="上门自提">上门自提</view>
-    -->
-    <view>
+    <view class="{{sendWay_id===4?'selected':''}}" data-index="{{4}}" data-name="上门自提">上门自提</view>-->
+  <view class="order-info arrow2" >
     <radio-group class="radio-group2" bindchange="sendWay2" >
     <radio value="0"   class="payway2"  checked="{{sendWay_id===4}}"  >上门自提</radio>
     <radio value="1"   class="payway2"  checked="{{sendWay_id===1}}">物流代发</radio>
@@ -68,13 +66,9 @@
     </input>
     <input value="" name="bz" placeholder="备注：默认物流发货，运费自付"  hidden="{{invoice2!==1}}" class="bz" >
     </input>
+  </view> 
     
-    </view>
-    <view >
 
-    
-    </view>
-  </view>
   <block wx:if="{{payWay_id===4||payWay_id===5}}">
     <block wx:if="{{!image}}">
       <view class="order-img" bindtap="addImage">

@@ -68,7 +68,6 @@
     </input>
 
     <input value="" name="bz" placeholder="备注：默认物流发货，运费自付"  hidden="{{invoice2!==1}}" class="bz" >
-
     </input>
     
     </view>

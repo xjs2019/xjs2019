@@ -62,7 +62,9 @@
     <radio value="0"   class="payway2"  checked="{{sendWay_id===4}}"  >上门自提</radio>
     <radio value="1"   class="payway2"  checked="{{sendWay_id===1}}">物流代发</radio>
     </radio-group>
+
     <input value="" name="bz"  placeholder="提货时间： 8:00-21:00"  hidden="{{invoice2!==0}}"  class="bz"  >
+
     </input>
     <input value="" name="bz" placeholder="备注：默认物流发货，运费自付"  hidden="{{invoice2!==1}}" class="bz" >
     </input>

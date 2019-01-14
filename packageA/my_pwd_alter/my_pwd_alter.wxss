@@ -33,13 +33,13 @@
 }
 
 .pwd-define {
-  width: 400rpx;
+  width: 680rpx;
   height: 80rpx;
-  margin: 30rpx auto;
+  margin: 60rpx auto;
   line-height: 80rpx;
   text-align: center;
   border-radius: 80rpx;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48;
   box-shadow: 0 0 30rpx 0 rgba(187, 187, 187, 0.5);
 }

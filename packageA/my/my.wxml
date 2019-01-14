@@ -22,10 +22,10 @@
     <view>我的订单</view>
   </navigator>
 
-  <navigator class="cell arrow" hover-class="none" url="/packageA/bargainList/bargainList">
+  <!-- <navigator class="cell arrow" hover-class="none" url="/packageA/bargainList/bargainList">
     <view class="icon icon-weixiu"></view>
     <view>我的议价</view>
-  </navigator>
+  </navigator> -->
 
   <navigator class="cell arrow" hover-class="none" url="/packageA/my_after/my_after">
     <view class="icon icon-shouhou"></view>

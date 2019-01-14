@@ -30,7 +30,10 @@
 
   <block wx:for="{{home_list}}" wx:key="{{item.id}}">
     <view class="home-list" data-item="{{item}}" bindtap="go">
+      <!--
       <image mode="widthFix" src="{{imgUrl+item.small_image}}"></image>
+      -->
+      <image src="{{imgUrl+item.small_image}}"></image>
       <view>{{item.name}}</view>
       <view class="item-btn">
           <view>{{item.price?item.price:'0'}}元起/{{item.suk?item.suk:''}}</view>

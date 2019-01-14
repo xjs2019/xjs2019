@@ -3,7 +3,7 @@ const app = getApp()
 Page({
 
     data: {
-        tabBar: 3,
+        tabBar: 2,
         /**event**/
         tabIndex: 1,
         // 是否全选
@@ -21,7 +21,7 @@ Page({
     },
 
     init() {
-        app.data.tabBar = 3
+        app.data.tabBar = 2
 
 
         this.cartList().then(() => {

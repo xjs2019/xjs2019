@@ -33,7 +33,7 @@
       <image mode="widthFix" src="{{imgUrl+item.small_image}}"></image>
       <view>{{item.name}}</view>
       <view class="item-btn">
-         <view>{{item.price?item.price:'0'}}元起22/{{item.suk?item.suk:''}}</view>
+        <view>{{item.price?item.price:'0'}}元起/{{item.suk?item.suk:''}}</view>
           <view>{{item.old_price?item.old_price:'0'}}元起/张{{item.sku?item.sku:''}}</view>
         <!--<block wx:if="{{check}}">
           <view>{{item.price?item.price:'0'}}元起/{{item.suk?item.suk:''}}</view>

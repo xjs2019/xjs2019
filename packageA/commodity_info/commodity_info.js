@@ -144,7 +144,8 @@ Page({
           //Number(res.data.type)
           
           //app.data.type = Number(app.data.type)
-          if (app.data.type === '' ){
+          console.log()
+          if (app.data.type ===' ' ){
             wx.navigateTo({ url: '/pages/login/login' })
             //return false
             return wx.showToast({ title: '您还未登录哦1~', icon: 'none' })

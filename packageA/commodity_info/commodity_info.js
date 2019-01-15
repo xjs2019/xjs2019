@@ -34,11 +34,13 @@ Page({
                 }
 
                 app.data.index_item = res.data.info
+              //console.log(Number(res.data.type))
+
                 if (res.data.check !==  app.data.check) {
                     wx.setStorageSync('check', res.data.check)
                 }
-
-                this.setData({check:app.data.check, index_item: res.data.info, goodsSpec})
+                //this.init()
+                this.setData({check: app.data.check, index_item: res.data.info, goodsSpec})
 
             }
 
@@ -138,11 +140,26 @@ Page({
         app.status()
 
         return new Promise(resolve => {
-            if (!app.data.check) {
+          console.log(app.data.type)
+          //Number(res.data.type)
+          
+          //app.data.type = Number(app.data.type)
+          if (app.data.type === '' ){
+            wx.navigateTo({ url: '/pages/login/login' })
+            //return false
+            return wx.showToast({ title: '您还未登录哦1~', icon: 'none' })
+          } 
+          if (app.data.type === '' && app.data.type != 0) {
+            wx.navigateTo({ url: '/pages/login/login' })
+            //return false
+            return wx.showToast({ title: '您还未登录哦1~', icon: 'none' })
+          } 
+            if(!app.data.check  ) {
+            //if (!app.data.check) {
                 wx.navigateTo({url: '/packageA/my_info_add/my_info'})
                 return wx.showToast({title: '您还没有通过审核哦~', icon: 'none'})
             }
-
+         
             // 规格数组
             const arr = this.getSelectedType()
             if (arr.length > 0) {

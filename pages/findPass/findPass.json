@@ -1,6 +1,6 @@
 {
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#f64a48",
+  "navigationBarTextStyle": "#fff",
   "navigationBarTitleText": "找回密码",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light"

@@ -7,7 +7,7 @@ Page({
         imgUrl: app.imgUrl,
         page: 1,
         new_list: [],
-        tabBar: 3,
+        tabBar: 2,
         tabIndex: 1,
     },
 

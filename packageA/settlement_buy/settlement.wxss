@@ -33,7 +33,7 @@ radio .wx-radio-input {
   padding-top: 15rpx;
 }
 .title .icon {
-  color: #1a4681;
+  color: #f64a48;
 }
 .title .title-name {
   font-size: 28rpx;
@@ -95,7 +95,7 @@ radio .wx-radio-input {
   margin-right: 30rpx;
 }
 .order .order-info .item .info .info-price .price-box .price {
-  color: red;
+  color: #f64a48;
 }
 .order .order-info .item .info .info-number {
   display: flex;
@@ -175,4 +175,12 @@ radio .wx-radio-input {
 }
 .order .check {
   width: 100%;
+}
+.radio-group2 .invoice2{
+  margin:15px 30px 15px 0;
+  color:#173d71;
+}
+.bz{
+  width:80%;
+  border:1px solid #ccc;
 }

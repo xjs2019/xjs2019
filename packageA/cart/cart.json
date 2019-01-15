@@ -1,6 +1,6 @@
 {
-  "navigationBarBackgroundColor": "#FFFFFF",
-  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#f64a48",
+  "navigationBarTextStyle": "#fff",
   "navigationBarTitleText": "购物车",
   "usingComponents": {
     "tabBar": "/components/tabBar/tabBar"

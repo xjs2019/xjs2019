@@ -1,6 +1,6 @@
 {
-  "navigationBarBackgroundColor": "#FFFFFF",
-  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#f64a48",
+  "navigationBarTextStyle": "#fff",
   "navigationBarTitleText": "新捷仕覆铜板超市",
   "usingComponents": {
     "tabBar": "/components/tabBar/tabBar"

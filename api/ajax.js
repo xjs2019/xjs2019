@@ -26,8 +26,7 @@ export class Ajax {
                   //console.log(res.data + '/' + res.data.error + '/' + res.data.error['error_code'])
                     if (res.data && res.data.error && res.data.error['error_code'] === 88888) {
                         wx.clearStorageSync()
-                        //wx.showToast({title: '登录过期', icon: 'none'})
-                        wx.showToast({title: '请登录', icon: 'none'})
+
                         setTimeout(() => {
                             wx.reLaunch({url: '/pages/login/login'})
                         }, 1500)

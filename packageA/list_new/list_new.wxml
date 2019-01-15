@@ -1,4 +1,4 @@
-<navigator url="/packageA/index_new/index" class="more">返回首页</navigator>
+<!-- <navigator url="/packageA/index_new/index" class="more">返回首页</navigator> -->
 
 <block wx:for="{{new_list}}" wx:key="{{index}}">
 

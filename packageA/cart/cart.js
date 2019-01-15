@@ -254,7 +254,7 @@ Page({
         app.data.orderPrice = this.data.countPrice
 
         app.data.orderList = arr
-        wx.navigateTo({url: '/packageA/settlement/settlement'})
+      wx.navigateTo({ url: '/packageA/settlement/settlement'})
     },
 
     // 获取选中的商品

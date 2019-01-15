@@ -32,6 +32,7 @@ export class Ajax {
                         setTimeout(() => {
                             wx.reLaunch({url: '/pages/login/login'})
                         }, 1500)
+                      //wx.reLaunch({ url: '/packageA/commodity_info/commodity_info' })
                     }
                     resolve(res.data)
                 },

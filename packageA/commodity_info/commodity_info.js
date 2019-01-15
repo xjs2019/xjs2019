@@ -152,7 +152,7 @@ Page({
           if (app.data.type === '' && app.data.type != 0) {
             wx.navigateTo({ url: '/pages/login/login' })
             //return false
-            return wx.showToast({ title: '您还未登录哦1~', icon: 'none' })
+            return wx.showToast({ title: '您还未登录哦2~', icon: 'none' })
           } 
             if(!app.data.check  ) {
             //if (!app.data.check) {

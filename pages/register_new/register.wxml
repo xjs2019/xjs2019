@@ -140,15 +140,15 @@
   </view>
 
   <view class="agree">
-    <checkbox value="123" bindtap="agree" checked></checkbox>
+    <checkbox value="123" bindtap="agree" ></checkbox>
     <view class="a">同意</view>
     <view class="a b" bindtap="protocol">《新捷仕网上商城会员注册协议》</view>
   </view>
 
   <view class="post" bindtap="post">注册</view>
 
-  <view class="login-box">
+  <!-- <view class="login-box">
     <navigator url="/pages/login/login" class="login">登录</navigator>
-  </view>
+  </view> -->
 
 </view>

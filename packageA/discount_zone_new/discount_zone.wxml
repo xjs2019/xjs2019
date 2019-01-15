@@ -21,7 +21,7 @@
         <block wx:else>
           <view>*****元起/{{item.sku}}</view>
           <view>*****元起/{{item.sku}}</view>
-        </block> -->
+        </block>-->
 
         <view>立即抢购</view>
       </view>

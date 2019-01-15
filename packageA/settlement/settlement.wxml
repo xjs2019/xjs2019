@@ -68,10 +68,20 @@
     <view class="icon icon-shuxian"></view>
     <view class="title-name">支付配送</view>
   </view>
-  <view class="order-info arrow" bindtap="settlement_way_go">
+  <!--<view class="order-info arrow" bindtap="settlement_way_go">
     <view>支付方式: {{pay_type}}</view>
     <view>配送方式: {{sendWay}}</view>
-  </view>
+  </view>-->
+  <view class="order-info arrow2" >
+    <radio-group class="radio-group2" bindchange="sendWay2" >
+    <radio value="0"   class="payway2"  checked="{{sendWay_id===4}}"  >上门自提</radio>
+    <radio value="1"   class="payway2"  checked="{{sendWay_id===1}}">物流代发</radio>
+    </radio-group>
+    <input value="" name="bz"  placeholder="提货时间： 8:00-21:00"  hidden="{{invoice2!==0}}"  class="bz"  >
+    </input>
+    <input value="" name="bz" placeholder="备注：默认物流发货，运费自付"  hidden="{{invoice2!==1}}" class="bz" >
+    </input>
+  </view> 
 
   <block wx:if="{{payWay_id===4||payWay_id===5}}">
     <block wx:if="{{!image}}">
@@ -93,8 +103,8 @@
   </view>
   <view class="order-info">
     <radio-group class="radio-group" bindchange="invoice">
-      <radio value="0" checked="{{invoice===0}}" color="#173d71">不开发票</radio>
-      <radio value="1" checked="{{invoice===1}}" color="#173d71">开具发票</radio>
+      <radio value="0" checked="{{invoice===0}}" color="#f64a48">不开发票</radio>
+      <radio value="1" checked="{{invoice===1}}" color="#f64a48">开具发票</radio>
     </radio-group>
     <block wx:if="{{!invoice}}"></block>
     <block wx:else>

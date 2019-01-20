@@ -127,7 +127,7 @@ padding-bottom:10rpx; border-radius: 2rpx;
   box-shadow: 0 0 16rpx 0 rgba(14, 47, 91, 0.5);
   border-radius: 45rpx;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48;
 }
 
 .tab_new {
@@ -144,7 +144,7 @@ padding-bottom:10rpx; border-radius: 2rpx;
 }
 .tab_new .tab-select {
   position: relative;
-  color: #1a4681;
+  color: #f64a48;
 }
 .tab_new .tab-select::after {
   content: "";
@@ -154,7 +154,7 @@ padding-bottom:10rpx; border-radius: 2rpx;
   width: 30rpx;
   height: 30rpx;
   border-radius: 50%;
-  background-color: #1a4681;
+  background-color: #f64a48;
   opacity: 0.3;
 }
 

@@ -7,7 +7,7 @@ Page({
         end_time: '',
         setTab: {
             color: '#8a8a8a',
-            selectedColor: '#173d71',
+          selectedColor: '#f64a48',
             list: [
                 {
                     pagePath: '/packageB/index/index',

@@ -7,7 +7,7 @@ Page({
         list: [],
         setTab: {
             color: '#8a8a8a',
-            selectedColor: '#173d71',
+          selectedColor: '#f64a48',
             list: [{
                 pagePath: '/packageC/index_new/index',
                 text: '议价单',

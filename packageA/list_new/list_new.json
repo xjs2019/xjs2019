@@ -1,5 +1,8 @@
 {
   "navigationBarBackgroundColor": "#f64a48",
   "navigationBarTextStyle": "#fff",
-  "navigationBarTitleText": "公司动态"
+  "navigationBarTitleText": "公司动态",
+  "usingComponents": {
+    "tabBar": "/components/tabBar/tabBar"
+  }
 }

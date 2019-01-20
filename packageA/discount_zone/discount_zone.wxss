@@ -24,8 +24,8 @@
   line-height: 80rpx;
 }
 .tab .tab-select {
-  color: #1a4681;
-  border-bottom: 2px solid #1a4681;
+  color: #f64a48;
+  border-bottom: 2px solid #f64a48;
 }
 
 .discount-list {
@@ -60,5 +60,5 @@
   font-size: 24rpx;
   box-shadow: 0 0 10rpx 0 rgba(187, 187, 187, 0.5);
   border-radius: 10rpx;
-  color: #1a4681;
+  color: #f64a48;
 }

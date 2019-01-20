@@ -33,7 +33,7 @@
 button {
   width: 80%;
   margin: 0 auto;
-  background-color: #1A4681;
+  background-color: #f64a48;
   color: #ffffff;
   font-size: 32rpx;
   border-radius: 0;

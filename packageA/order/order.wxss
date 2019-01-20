@@ -33,20 +33,20 @@
   font-size: 44rpx;
 }
 .order-nav .nav-selected {
-  color: #1a4681;
+  color: #f64a48;
 }
 .order-nav .nav-selected .icon {
-  color: #1a4681;
+  color: #f64a48;
 }
 
 .order-title {
   display: flex;
   align-items: center;
   margin: 20rpx;
-  color: #1a4681;
+  color: #f64a48;
 }
 .order-title .icon {
-  color: #1a4681;
+  color: #f64a48;
 }
 
 .order-list {

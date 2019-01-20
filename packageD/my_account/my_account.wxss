@@ -58,5 +58,5 @@
   box-shadow: 0 0 16rpx 0 rgba(14, 47, 91, 0.5);
   border-radius: 45rpx;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48;
 }

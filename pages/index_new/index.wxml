@@ -10,7 +10,7 @@
 
   </swiper>
 
-  <view class="ad">
+  <!-- <view class="ad">
     <swiper class="swiper2" autoplay circular vertical>
       <block wx:for="{{new_list}}" wx:key="{{index}}">
         <swiper-item data-index="{{index}}" data-item="{{item}}" bindtap="news_go">
@@ -20,11 +20,17 @@
       </block>
     </swiper>
     <navigator url="/packageA/list_new/list_new" class="more">更多</navigator>
-  </view>
+  </view> -->
 
   <view class="tab" bindtap="tab">
     <block wx:for="{{new_tab}}" wx:key="{{index}}">
+     <block wx:if="{{index==3}}">
+         <view class="tab-item {{tabIndex===index?'tab-select':''}}" data-index="{{index}}"> 
+         <navigator url="/packageA/discount_zone_new/discount_zone">{{item}}</navigator></view>
+      </block>
+      <block wx:else>
       <view class="tab-item {{tabIndex===index?'tab-select':''}}" data-index="{{index}}">{{item}}</view>
+      </block>
     </block>
   </view>
 

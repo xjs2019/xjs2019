@@ -2,6 +2,10 @@
   
   "pages": [
     "pages/index_new/index",
+    "pages/list_new/list_new",
+    
+    
+    
     "pages/login/login",
     "pages/findPass/findPass",
     "pages/register_new/register",

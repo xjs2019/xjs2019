@@ -7,8 +7,9 @@ Page({
         imgUrl: app.imgUrl,
         page: 1,
         new_list: [],
-        tabBar: 2,
+        tabBar: 1,
         tabIndex: 1,
+        
     },
 
     onLoad() {
@@ -16,6 +17,10 @@ Page({
       app.status()
       this.getNews()
       this.init()
+      // wx.setTabBarBadge({
+      //   index: 0,
+      //   text: '1'
+      // })
     },
 
 

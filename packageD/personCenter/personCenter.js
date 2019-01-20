@@ -8,7 +8,7 @@ Page({
         setIndex: 3,
         setTab: {
             color: '#8a8a8a',
-            selectedColor: '#173d71',
+          selectedColor: '#f64a48',
             list: [
                 {
                     pagePath: '/packageD/index/index',

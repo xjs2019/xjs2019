@@ -38,3 +38,8 @@ App({
     },
 
 })
+
+// globalData: {
+//   userInfo: null,
+//     timer: require('/plug/wxTimer.js')
+// }

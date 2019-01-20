@@ -3,6 +3,9 @@ const app = getApp()
 Page({
 
     data: {
+      tabBar: 1,
+        /**event**/
+        tabIndex: 1,
         nodes: '',
         imgUrl: app.imgUrl,
         page: 1,
@@ -10,8 +13,27 @@ Page({
     },
 
     onLoad() {
+      console.log(app.data)
+        app.status()
+        this.init()
         this.getNews()
+     
     },
+
+  init() {
+    app.data.tabBar = 1
+
+    this.new_list().then(() => {
+
+      this.setData({
+        
+        load: true,
+        check: app.data.check,
+        
+      })
+      
+    })
+  },
 
     info(e) {
         app.data.new_info = e.currentTarget.dataset.item

@@ -52,10 +52,10 @@ Page({
         var data2 = {}
         // 所有规格数组下标
         const itemIndex = e.target.dataset.index
-      //console.log(itemIndex)
+      
         // 选中规格数组下标
         const selectedIndex = e.detail.value
-      //console.log(selectedIndex)
+      
         //修改下标
         this.data.goodsSpec[itemIndex].index = selectedIndex
       //console.log(this.data.goodsSpec[itemIndex].item[selectedIndex])
@@ -66,7 +66,7 @@ Page({
           //屏蔽点击项的后面
           if (k>itemIndex){
             this.data.goodsSpec[k].index = 0
-            //this.data.goodsSpec[k].option = 0
+            
           }
 
           //获取点击项的前面参数,itemIndex规格下标，规格参数下标
@@ -81,12 +81,11 @@ Page({
           k++;
         })
       console.log(check_n)
-      console.log(this.data.goodsSpec)
+      //console.log(this.data.goodsSpec)
       
       data2.attr_id = itemIndex
       data2.checked_id = selectedIndex
       data2.total_num = this.data.goodsSpec.length
-      //data2.checked_name = this.data.goodsSpec[itemIndex].item[itemIndex+1]['item']
       data2.checked_name = check_n
       data2.first_name = this.data.goodsSpec[0].item[1]['item']
       var next = []
@@ -95,22 +94,16 @@ Page({
       const url2 = 'https://www.szxjs.com.cn/app/Index/goodsFilter';
       var that = this;
 
-      
       app.api.apiA.goodsFilter({ 'data': data2 }).then(res => {
-        
         var res2 =[]
         res2 = res['data']
-        
 
         var next2 = []
         var next3 = []
         next2 = next[itemIndex + 1].item
-
         for (var i = 0; i < next2.length; i++) {
-
           for (let j in res2) {
             if (next2[i].item == res2[j]) {
-
               next3.push(next2[i])
             }
           }
@@ -121,7 +114,7 @@ Page({
         }
         next[itemIndex + 1].item = next3
 
-        console.log(next)
+        //console.log(next)
         that.setData({ goodsSpec: next })
       })
       

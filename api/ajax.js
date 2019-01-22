@@ -1,7 +1,9 @@
 export const imgUrl = 'https://www.szxjs.com.cn/upload/'
+//export const imgUrl = '127.0.0.1/upload/'
 
 export class Ajax {
     host = 'https://www.szxjs.com.cn/app/'
+  //host = '127.0.0.1/app/'
 
     get(url, data) {
         return this.request(url, data, 'GET')
@@ -23,7 +25,7 @@ export class Ajax {
                 },
                 success: (res) => {
                     wx.hideLoading()
-                  //console.log(res.data + '/' + res.data.error + '/' + res.data.error['error_code'])
+                  
                     if (res.data && res.data.error && res.data.error['error_code'] === 88888) {
                         wx.clearStorageSync()
 

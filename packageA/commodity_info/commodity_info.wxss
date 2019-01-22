@@ -113,7 +113,7 @@ button::after {
 }
 .tab .tab-select {
   position: relative;
-  color: #1a4681;
+  color: #f64a48;
 }
 .tab .tab-select::after {
   content: "";
@@ -123,7 +123,7 @@ button::after {
   width: 30rpx;
   height: 30rpx;
   border-radius: 50%;
-  background-color: #1a4681;
+  background-color: #f64a48;
   opacity: 0.3;
 }
 
@@ -162,7 +162,7 @@ button::after {
   height: 80rpx;
   border-radius: 80rpx;
   color: #FFF;
-  background: #385eff;
+  background: #f64a48;
 }
 
 .mu {

@@ -134,7 +134,7 @@
 }
 .settle-accounts-box .settle-accounts .total-bargain {
   width: 120rpx;
-  background-color: #1a4681;
+  background-color: #f64a48;
 }
 .settle-accounts-box .settle-accounts .total-pay {
   width: 180rpx;

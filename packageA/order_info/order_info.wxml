@@ -1,3 +1,4 @@
+
 <view class="order">
   <view class="title">
     <view class="icon icon-shuxian"></view>
@@ -90,6 +91,7 @@
         <view>发票费用：￥{{orderInfo.invoice_price}}</view>
       </view>
     </view>
-    <!--<view class="box-btn">提交订单</view>-->
+    <!-- <view class="box-btn" bindtap="addOrder">提交订单</view> -->
+    <!-- <view class="box-btn pay-btn" data-order_sn="{{item.order_sn}}" catchtap="pay">立即付款</view> -->
   </view>
 </view>

@@ -3,6 +3,7 @@ const app = getApp()
 Page({
     data: {
         imgUrl: app.api.imgUrl,
+        tabBar: 0,
         /**event**/
         tabIndex: 0,
         /**api**/
@@ -45,7 +46,7 @@ Page({
     tab(e) {
         const {index} = e.target.dataset
         if (index === undefined) return
-
+         
         this.setData({tabIndex: index})
         app.data.tabIndex = index
         this.home_list()

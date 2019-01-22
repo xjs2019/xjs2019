@@ -29,7 +29,7 @@
   padding-top: 15rpx;
 }
 .title .icon {
-  color: #1a4681;
+  color: #f64a48;
 }
 .title .title-name {
   font-size: 28rpx;

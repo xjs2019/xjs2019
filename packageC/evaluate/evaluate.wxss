@@ -19,7 +19,7 @@
   padding-top: 15rpx;
 }
 .title .icon {
-  color: #1a4681;
+  color: #f64a48;
 }
 .title .title-name {
   font-size: 28rpx;
@@ -50,7 +50,7 @@
   height: 60rpx;
   border-radius: 60rpx;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48;
 }
 .order .opinion {
   margin: 0 15rpx 20rpx;
@@ -123,7 +123,7 @@
   justify-content: space-between;
   padding: 0 20rpx;
   color: #ffffff;
-  background-color: #1a4681;
+  background-color: #f64a48;
 }
 .item .common-title .title-left {
   display: flex;

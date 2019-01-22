@@ -3,8 +3,9 @@
     <view class="content">
       <view class="title">{{item.title}}</view>
       <view class="watch">
-        <view class="icon icon-watch">{{item.views}}</view>
-        <view>{{item.create_time}}</view>
+      <view class="meter"><image style="" src='../../image/watch.png'></image>{{item.views}}</view>
+        <view class="meter"><image src='../../image/zan.png'></image>33</view>
+        <view class="meter"><image src='../../image/clock.png'></image>{{item.create_time}}</view>
       </view>
       <block wx:if="{{item.image}}">
         <image src="{{imgUrl+item.image}}"></image>

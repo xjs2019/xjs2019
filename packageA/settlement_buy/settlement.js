@@ -285,3 +285,25 @@ Page({
 
 
 })
+
+// add 倒计时
+ timer = require('../../plug/wxTimer.js')
+ //var app = getApp().globalData,
+ timer = app.timer;
+
+
+var wxTimer = new timer({
+  beginTime: "00:30:00"
+ })
+ wxTimer.start(this);
+ wxTimer.stop();
+
+//开启第一个定时器 
+var wxTimer1 = new timer({
+beginTime: "00:30:10",
+  name: 'wxTimer1',
+    complete: function() {
+      console.log("完成了")
+    }
+})
+wxTimer1.start(this);

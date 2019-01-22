@@ -232,8 +232,7 @@ Page({
           //Number(res.data.type)
           
           //app.data.type = Number(app.data.type)
-          //if (app.data.type === '' ){
-          //console.log()
+          console.log()
           if (app.data.type ===' ' ){
             wx.navigateTo({ url: '/pages/login/login' })
             //return false

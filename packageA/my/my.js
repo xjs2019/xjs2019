@@ -4,7 +4,7 @@ Page({
 
     data: {
         bgImg: '',
-        tabBar: 4,
+        tabBar: 3,
         tabIndex: 1,
     },
 
@@ -14,7 +14,7 @@ Page({
     },
 
     init() {
-        app.data.tabBar = 4
+        app.data.tabBar = 3
 
         Promise.all([
             this.info(),

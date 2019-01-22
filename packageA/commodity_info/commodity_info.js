@@ -18,7 +18,7 @@ Page({
                 let goodsSpec = res.data.item
 
                 goodsSpec.forEach(items => {
-                    items.item.unshift({item: '不限'})
+                    items.item.unshift({item: '请选择'})
                     for (let i = 0; i < items.item.length; i++) {
                         if (items.item[i].check) {
                             items.index = i
@@ -49,13 +49,82 @@ Page({
 
     // 商品规格改变
     pickerChange(e) {
+        var data2 = {}
         // 所有规格数组下标
         const itemIndex = e.target.dataset.index
+      //console.log(itemIndex)
         // 选中规格数组下标
         const selectedIndex = e.detail.value
+      //console.log(selectedIndex)
         //修改下标
         this.data.goodsSpec[itemIndex].index = selectedIndex
-        this.setData({goodsSpec: this.data.goodsSpec})
+      //console.log(this.data.goodsSpec[itemIndex].item[selectedIndex])
+
+        var k=0;
+        var check_n = '';
+        this.data.goodsSpec.forEach(items => {
+          //屏蔽点击项的后面
+          if (k>itemIndex){
+            this.data.goodsSpec[k].index = 0
+            //this.data.goodsSpec[k].option = 0
+          }
+
+          //获取点击项的前面参数,itemIndex规格下标，规格参数下标
+          if (k <= itemIndex){
+            if (k == 0) {
+              check_n += items.item[items.index].item
+            }else{
+              
+              check_n += '-' + items.item[items.index].item
+            }
+          }
+          k++;
+        })
+      console.log(check_n)
+      console.log(this.data.goodsSpec)
+      
+      data2.attr_id = itemIndex
+      data2.checked_id = selectedIndex
+      data2.total_num = this.data.goodsSpec.length
+      //data2.checked_name = this.data.goodsSpec[itemIndex].item[itemIndex+1]['item']
+      data2.checked_name = check_n
+      data2.first_name = this.data.goodsSpec[0].item[1]['item']
+      var next = []
+      next = this.data.goodsSpec
+      
+      const url2 = 'https://www.szxjs.com.cn/app/Index/goodsFilter';
+      var that = this;
+
+      
+      app.api.apiA.goodsFilter({ 'data': data2 }).then(res => {
+        
+        var res2 =[]
+        res2 = res['data']
+        
+
+        var next2 = []
+        var next3 = []
+        next2 = next[itemIndex + 1].item
+
+        for (var i = 0; i < next2.length; i++) {
+
+          for (let j in res2) {
+            if (next2[i].item == res2[j]) {
+
+              next3.push(next2[i])
+            }
+          }
+        }
+        next3.unshift({ item: '请选择' })
+        if (res2 !== '401') {
+          next[itemIndex + 1].option = 1
+        }
+        next[itemIndex + 1].item = next3
+
+        console.log(next)
+        that.setData({ goodsSpec: next })
+      })
+      
     },
 
     // 获取选择的类别id

@@ -51,6 +51,11 @@ Page({
         this.home_list()
     },
 
+
+    tej(e) {
+      wx.reLaunch({ url: '/packageA/discount_zone_new/discount_zone' })
+    },
+
     // 商品规格改变
     pickerChange(e) {
         // 所有规格id

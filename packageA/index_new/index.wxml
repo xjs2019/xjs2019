@@ -24,15 +24,14 @@
 
   <view class="tab" bindtap="tab">
     <block wx:for="{{new_tab}}" wx:key="{{index}}">
-     <block wx:if="{{index==3}}">
-         <view class="tab-item {{tabIndex===index?'tab-select':''}}" data-index="{{index}}"> 
-         <navigator url="/packageA/discount_zone_new/discount_zone">{{item}}</navigator></view>
+     <block wx:if="{{index<3}}">
+       <view  class="tab-item {{tabIndex===index?'tab-select':''}}" data-index="{{index}}">
+        {{item}}
+       </view>
       </block>
-      <block wx:else>
-      <view class="tab-item {{tabIndex===index?'tab-select':''}}" data-index="{{index}}">{{item}}</view>
-      </block>
-    </block>
+    </block> 
   </view>
+  <view bindtap="tej"  class="tej" data-index="">特价专区</view>
 
   <block wx:for="{{home_list}}" wx:key="{{item.id}}">
     <view class="home-list" data-item="{{item}}" bindtap="go">

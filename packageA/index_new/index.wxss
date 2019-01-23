@@ -72,7 +72,7 @@ page {
   display: flex;
   justify-content: space-around;
   font-size: 32rpx;
-  color: #555;  float:left;  width:75%; line-height:64rpx;
+  color: #555;  float:left;  width:75%; line-height:64rpx; margin-bottom: 40rpx;
   /*border-bottom: 20rpx solid #f2f2f2; padding-bottom: 30rpx;*/
 }
 .tab .tab-select {
@@ -159,7 +159,7 @@ page {
 
 .home-list {
   border-bottom: 20rpx solid #f2f2f2;
-  padding: 30rpx 30rpx 0; margin-top: 90rpx;
+  padding: 30rpx 30rpx 0; 
 }
 .home-list image {
   width: 100%;

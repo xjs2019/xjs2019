@@ -7,9 +7,9 @@
         <view class="meter"><image src='../../image/zan.png'></image>33</view>
         <view class="meter"><image src='../../image/clock.png'></image>{{item.create_time}}</view>
       </view>
-      <block wx:if="{{item.image}}">
+      <!-- <block wx:if="{{item.image}}">
         <image src="{{imgUrl+item.image}}"></image>
-      </block>
+      </block> -->
       <rich-text class="content" nodes="{{item.content}}"></rich-text>
     </view>
 

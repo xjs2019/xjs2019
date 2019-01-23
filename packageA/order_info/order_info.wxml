@@ -1,4 +1,5 @@
-
+<!-- <view>显示剩余时间：{{wxTimer}}</view> -->
+<view>显示剩余时间：{{clock}}</view>
 <view class="order">
   <view class="title">
     <view class="icon icon-shuxian"></view>

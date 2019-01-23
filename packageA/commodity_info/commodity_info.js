@@ -58,8 +58,7 @@ Page({
         
         //修改下标
         this.data.goodsSpec[itemIndex].index = selectedIndex
-        //console.log(this.data.goodsSpec[itemIndex].item[selectedIndex])
-        console.log(this.data.goodsSpec)
+        
         var k=0;
         var check_n = '';
         this.data.goodsSpec.forEach(items => {
@@ -77,6 +76,9 @@ Page({
             }else{
               if (items.index >0){
                 check_n += '-' + items.item[items.index].item
+              //} else if (items.index == 0){
+              } else{
+
               }         
             }
           }
@@ -91,14 +93,11 @@ Page({
       data2.checked_name = check_n
       data2.first_name = this.data.goodsSpec[0].item[1]['item']
       
-      console.log(data2)
+      //console.log(data2)
 
       if (data2.attr_id+1 <data2.total_num){  
-      
-      
-        
-      var that = this; 
-        
+         
+      var that = this;     
       app.api.apiA.goodsFilter({ 'data': data2 }).then(res => {
         var res2 =[]
         res2 = res['data']
@@ -110,11 +109,9 @@ Page({
             var next2 = []
             var next3 = []
             
-            next2 = wx.getStorageSync('info-goodsSpec')
-            //console.log(next4)
-            
+            next2 = wx.getStorageSync('info-goodsSpec') 
               console.log(next)
-              console.log(next2)
+              
               for (var i = 0; i < next2[itemIndex + 1].item.length; i++) {
                 for (let j in res2) {
                   if (next2[itemIndex + 1].item[i].item == res2[j]) {
@@ -124,19 +121,32 @@ Page({
                   }
                 }
               }
-              console.log(next3)
+              //console.log(next3)
               
-              if (res2 == '401' && res2 == '402') {     
+              if (res2 === '400') {     
                 next3.unshift({ item: '不限' })
-              } else if(res2 == '400'){
-                
+              } else if (res2 == '401') {
+                next3.unshift({ item: '不限' })
+              } else if(res2 == '402'){ 
                 next3.unshift({ item: '不限' })
               }else{
                 next[itemIndex + 1].option = 1
                 next3.unshift({ item: '请选择' })
               }
-
+                      
               next[itemIndex + 1].item = next3
+              
+              if (selectedIndex == 0) {
+                next[itemIndex].index = 0
+                next[itemIndex].item[0].item ='请选择'
+                next[itemIndex+1].index = 0
+                next[itemIndex + 1].item[0].item = '不限'
+                next[itemIndex + 1].option = 0     
+              }
+              if (next[itemIndex].item[0].item == '请选择'){
+                next[itemIndex].item[0].item = '不限'
+              }
+          
               that.setData({ goodsSpec: next })
           }
         })

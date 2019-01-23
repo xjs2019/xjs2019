@@ -20,15 +20,15 @@
       
       <picker class="item" range="{{item.item}}" range-key="item" data-index="{{index}}" bindchange="pickerChange">
         <view class="item-select {{item.index>0?'item-color':''}}">
-         {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限1'}}
+         {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限'}}
         </view>
       </picker>  
       </block>
       <block wx:else>
       <picker class="item" range="{{item.item}}" range-key="item" data-index="{{index}}" bindchange="pickerChange" 
       disabled ="{{item.option >0?false:true}}" >
-        <view class="item-select {{item.option>0?'item-color':''}}" >
-          {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限2'}}
+        <view class="item-select {{item.option >0?'item-color':''}}" >
+          {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限'}}
         </view>
       </picker>
     

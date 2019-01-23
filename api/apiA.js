@@ -27,6 +27,10 @@ export default {
     goodsSpec(param) {
         return ajax.post('index/goodsSpec', param)
     },
+    // 商品规格参数的筛选
+    goodsFilter(param) {
+      return ajax.post('index/goodsFilter', param)
+    },
     // 根据商品规格获取商品ID
     getGoodsID(param) {
         return ajax.post('index/getGoodsID', param)

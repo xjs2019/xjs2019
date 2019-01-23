@@ -49,13 +49,101 @@ Page({
 
     // 商品规格改变
     pickerChange(e) {
+        var data2 = {}
         // 所有规格数组下标
         const itemIndex = e.target.dataset.index
+      
         // 选中规格数组下标
         const selectedIndex = e.detail.value
+        
         //修改下标
         this.data.goodsSpec[itemIndex].index = selectedIndex
-        this.setData({goodsSpec: this.data.goodsSpec})
+        //console.log(this.data.goodsSpec[itemIndex].item[selectedIndex])
+        console.log(this.data.goodsSpec)
+        var k=0;
+        var check_n = '';
+        this.data.goodsSpec.forEach(items => {
+          //屏蔽点击项的后面
+          if (k>itemIndex){
+            this.data.goodsSpec[k].index = 0
+            this.data.goodsSpec[k].option = 0
+            //var mm ={ item: '不限' }
+            this.data.goodsSpec[k].item[0].item = '不限'
+          }
+          //获取点击项的前面参数,itemIndex规格下标，规格参数下标
+          if (k <= itemIndex){
+            if (k == 0) {
+              check_n += items.item[items.index].item
+            }else{
+              if (items.index >0){
+                check_n += '-' + items.item[items.index].item
+              }         
+            }
+          }
+          k++;
+        })
+      console.log(check_n)
+      //console.log(this.data.goodsSpec)
+      
+      data2.attr_id = itemIndex
+      data2.checked_id = selectedIndex
+      data2.total_num = this.data.goodsSpec.length
+      data2.checked_name = check_n
+      data2.first_name = this.data.goodsSpec[0].item[1]['item']
+      
+      console.log(data2)
+
+      if (data2.attr_id+1 <data2.total_num){  
+      
+      
+        
+      var that = this; 
+        
+      app.api.apiA.goodsFilter({ 'data': data2 }).then(res => {
+        var res2 =[]
+        res2 = res['data']
+        console.log(res2)
+
+        if (res2 !== undefined){
+          var next = []
+          next = that.data.goodsSpec
+            var next2 = []
+            var next3 = []
+            
+            next2 = wx.getStorageSync('info-goodsSpec')
+            //console.log(next4)
+            
+              console.log(next)
+              console.log(next2)
+              for (var i = 0; i < next2[itemIndex + 1].item.length; i++) {
+                for (let j in res2) {
+                  if (next2[itemIndex + 1].item[i].item == res2[j]) {
+                    next3.push(next2[itemIndex + 1].item[i])
+                    
+                    
+                  }
+                }
+              }
+              console.log(next3)
+              
+              if (res2 == '401' && res2 == '402') {     
+                next3.unshift({ item: '不限' })
+              } else if(res2 == '400'){
+                
+                next3.unshift({ item: '不限' })
+              }else{
+                next[itemIndex + 1].option = 1
+                next3.unshift({ item: '请选择' })
+              }
+
+              next[itemIndex + 1].item = next3
+              that.setData({ goodsSpec: next })
+          }
+        })
+      }else{
+        this.setData({ goodsSpec: this.data.goodsSpec })
+      }
+      
     },
 
     // 获取选择的类别id

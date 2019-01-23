@@ -16,13 +16,23 @@
 
   <view class="type-list">
     <block wx:for="{{goodsSpec}}" wx:key="{{item.id}}">
-
+      <block wx:if="{{item.index}}" >
+      
       <picker class="item" range="{{item.item}}" range-key="item" data-index="{{index}}" bindchange="pickerChange">
         <view class="item-select {{item.index>0?'item-color':''}}">
-          {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限'}}
+         {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限1'}}
+        </view>
+      </picker>  
+      </block>
+      <block wx:else>
+      <picker class="item" range="{{item.item}}" range-key="item" data-index="{{index}}" bindchange="pickerChange" 
+      disabled ="{{item.option >0?false:true}}" >
+        <view class="item-select {{item.option>0?'item-color':''}}" >
+          {{item.name}}:{{item.index!==undefined?item.item[item.index].item:'不限2'}}
         </view>
       </picker>
-
+    
+      </block>
     </block>
   </view>
 

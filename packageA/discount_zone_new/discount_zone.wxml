@@ -13,9 +13,6 @@
         
           <view>{{item.special_price}}元起/{{item.sku}}</view>
           <view>{{item.old_price}}元起/{{item.sku}}</view>
-        <!--<block wx:if="{{check}}">
-          <view>{{item.special_price}}元起/{{item.sku}}</view>
-          <view>{{item.old_price}}元起/{{item.sku}}</view>
         
         <!-- <block wx:if="{{check}}">
           <view>{{item.special_price}}元起/{{item.sku}}</view>

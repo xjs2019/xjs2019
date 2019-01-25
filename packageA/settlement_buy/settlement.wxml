@@ -173,6 +173,6 @@
       <!--<view class="total">合计：￥{{orderPrice}}</view> -->
 
     </view>
-    <view class="box-btn" bindtap="addOrder">提交订单</view>
+    <view class="box-btn" bindtap="addOrder">去付款</view>
   </view>
 </view>

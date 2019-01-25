@@ -174,7 +174,7 @@ Page({
         }).then(res => {
             if (res.response === 'data' && res.data) {
                 app.data.order = res.data
-                wx.reLaunch({url: '/packageA/settlement_pay/settlement_pay'})
+              wx.reLaunch({ url: '/packageA/settlement_pay/settlement_pay'})
             } else {
                 wx.showToast({title: res.error.message, icon: 'none'})
             }

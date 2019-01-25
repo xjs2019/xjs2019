@@ -11,7 +11,7 @@
       <view class="title">{{item.title}}</view>
       <view class="watch">
         <view class="icon icon-watch">{{item.views}}</view>
-        <view class="icon icon-watch">33</view>
+        <!-- <view class="icon icon-watch">33</view> -->
         
       </view>
       

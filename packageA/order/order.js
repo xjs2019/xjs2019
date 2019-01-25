@@ -8,9 +8,25 @@ Page({
         page: 1,
     },
 
-    onLoad() {
-        this.init()
+  onLoad(options) {
+    this.init()
+    var g = wx.getStorageSync('tabIndex') 
+       console.log(g)
+    this.setData({
+      tabIndex: g,
+    })
     },
+  // onLoad: function (e) {
+  //   console.log(e)
+  //   this.init()
+  // },
+  // onLoad: (options) => {
+  //   var g = wx.getStorageSync('tabIndex') 
+  //   console.log(g)
+  //   this.setData({
+  //     tabIndex: 0,
+  //   })
+  // },
 
     init() {
         this.orderList()

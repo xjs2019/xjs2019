@@ -29,7 +29,7 @@
         {{item}}
        </view>
       </block>
-    </block> 
+    </block>
   </view>
   <view bindtap="tej"  class="tej" data-index="">特价专区</view>
 

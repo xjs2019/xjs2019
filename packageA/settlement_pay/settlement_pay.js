@@ -30,8 +30,19 @@ Page({
                             wx.reLaunch({url: '/packageA/order/order'})
                         },
                         complete: () => {
-
+                           wx.reLaunch({ url: '/packageA/order/order' })
                         },
+                      'fail': () => { 
+                        //wx.reLaunch({ url: '/packageA/order/order?tabIndex=0' })
+                        var a =1
+                        
+                          wx.setStorage({ key: 'tabIndex', data: 0})
+                        wx.navigateTo({
+                          url: '../order/order'
+                        })
+                       
+                      },
+
                     })
                 })
             },

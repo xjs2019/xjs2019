@@ -10,7 +10,7 @@
       <view class="title">{{item.title}}</view>
       <view class="watch">
         <view class="meter"><image style="" src='../../image/watch.png'></image>{{item.views}}</view>
-        <view class="meter"><image src='../../image/zan.png'></image>33</view>
+        <!-- <view class="meter"><image src='../../image/zan.png'></image>33</view> -->
         <view class="meter"><image src='../../image/clock.png'></image>2019-01-19</view>
         <!-- <view>{{item.create_time}}</view>  -->
       </view>
@@ -21,4 +21,3 @@
 
 </block>
 <tabBar set-index="{{tabBar}}"></tabBar> 
-

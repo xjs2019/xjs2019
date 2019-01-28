@@ -1,5 +1,8 @@
 {
   "navigationBarBackgroundColor": "#f64a48",
   "navigationBarTextStyle": "#ffffff",
-  "navigationBarTitleText": "订单列表"
+  "navigationBarTitleText": "订单列表",
+  "usingComponents": {
+    "tabBar": "/components/tabBar/tabBar"
+  }
 }

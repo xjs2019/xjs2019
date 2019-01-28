@@ -44,7 +44,9 @@
 
             <block
               wx:if="{{item.status===0||(item.status===6&&(item.pay_type==='支付宝'||item.pay_type==='微信'||item.pay_type==='现金'))}}">
-              <view class="pay-btn" data-order_sn="{{item.order_sn}}" catchtap="pay">立即付款</view>
+              <view class="pay-btn" data-order_sn="{{item.order_sn}}" catchtap="pay">立即付款
+                  <view class='countDown'><text style='color:red'>{{countDownNum}}</text></view>
+              </view>
             </block>
             <block wx:if="{{item.status===2}}">
               <view class="pay-btn pay-get" data-order_id="{{item.id}}" catchtap="closed">确认收货</view>
@@ -67,3 +69,4 @@
     <view class="null-desc">你还没有商品哦~</view>
   </view>
 </block>
+<tabBar set-index="{{tabBar}}"></tabBar> 

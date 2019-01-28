@@ -1,5 +1,6 @@
-<!-- <view>显示剩余时间：{{wxTimer}}</view> -->
-<view>显示剩余时间：{{clock}}</view>
+ <!-- <view>显示剩余时间：{{wxTimer}}</view>  -->
+<!-- <view>显示剩余时间：{{clock}}</view> -->
+<view class='countDown'>倒计时：<text style='color:red'>{{countDownNum}}</text>s</view>
 <view class="order">
   <view class="title">
     <view class="icon icon-shuxian"></view>

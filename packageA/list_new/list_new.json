@@ -1,7 +1,7 @@
 {
   "navigationBarBackgroundColor": "#f64a48",
   "navigationBarTextStyle": "#fff",
-  "navigationBarTitleText": "公司动态",
+  "navigationBarTitleText": "新捷仕覆铜板超市",
   "usingComponents": {
     "tabBar": "/components/tabBar/tabBar"
   }

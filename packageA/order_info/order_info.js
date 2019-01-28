@@ -1,60 +1,60 @@
 
 const app = getApp()
 // 倒计时
-function countdown(that) {
-  var EndTime = new Date(that.data.collage.collage_end).getTime() || [];
-  // console.log(EndTime);
-  var NowTime = new Date().getTime();
-  var total_micro_second = EndTime - NowTime || [];   //单位毫秒
-  if (total_micro_second < 0) {
-    // console.log('时间初始化小于0，活动已结束状态');
-    total_micro_second = 1;     //单位毫秒 ------  WHY？
-  }
+// function countdown(that) {
+//   var EndTime = new Date(that.data.collage.collage_end).getTime() || [];
+//   // console.log(EndTime);
+//   var NowTime = new Date().getTime();
+//   var total_micro_second = EndTime - NowTime || [];   //单位毫秒
+//   if (total_micro_second < 0) {
+//     // console.log('时间初始化小于0，活动已结束状态');
+//     total_micro_second = 1;     //单位毫秒 ------  WHY？
+//   }
   // console.log('剩余时间：' + total_micro_second);
   // 渲染倒计时时钟
-  that.setData({
-    clock: dateformat(total_micro_second)   //若已结束，此处输出'0天0小时0分钟0秒'
-  });
-  if (total_micro_second <= 0) {
-    that.setData({
-      clock: "已经截止"
-    });
-    return;
-  }
-  setTimeout(function () {
-    total_micro_second -= 1000;
-    countdown(that);
-  }
-    , 1000)
-}
+//   that.setData({
+//     clock: dateformat(total_micro_second)   //若已结束，此处输出'0天0小时0分钟0秒'
+//   });
+//   if (total_micro_second <= 0) {
+//     that.setData({
+//       clock: "已经截止"
+//     });
+//     return;
+//   }
+//   setTimeout(function () {
+//     total_micro_second -= 1000;
+//     countdown(that);
+//   }
+//     , 1000)
+// }
 
 // 时间格式化输出，如11天03小时25分钟19秒  每1s都会调用一次
-function dateformat(micro_second) {
-  // 总秒数
-  var second = Math.floor(micro_second / 1000);
-  // 天数
-  var day = Math.floor(second / 3600 / 24);
-  // 小时
-  var hr = Math.floor(second / 3600 % 24);
-  // 分钟
-  var min = Math.floor(second / 60 % 60);
-  // 秒
-  var sec = Math.floor(second % 60);
-  return day + "天" + hr + "小时" + min + "分钟" + sec + "秒";
-}
+// function dateformat(micro_second) {
+//   // 总秒数
+//   var second = Math.floor(micro_second / 1000);
+//   // 天数
+//   var day = Math.floor(second / 3600 / 24);
+//   // 小时
+//   var hr = Math.floor(second / 3600 % 24);
+//   // 分钟
+//   var min = Math.floor(second / 60 % 60);
+//   // 秒
+//   var sec = Math.floor(second % 60);
+//   return day + "天" + hr + "小时" + min + "分钟" + sec + "秒";
+// }
 Page({
-  // data: {
-  //   timer: '',//定时器名字
-  //   countDownNum: '1800'//倒计时初始值
-  // },
+   data: {
+     timer: '',//定时器名字
+     countDownNum: '10'//倒计时初始值
+   },
   onLoad: function (options) {
     this.orderInfo()
-    wx.request({
-      success: function (request) {
-        // 倒计时(获取结束时间后再进行倒计时方法调用)
-        countdown(that);
-      }
-    })
+    // wx.request({
+    //   success: function (request) {
+    //     // 倒计时(获取结束时间后再进行倒计时方法调用)
+    //     countdown(that);
+    //   }
+    // })
   },  
 
     // onLoad() {
@@ -71,6 +71,7 @@ Page({
                 for (let i = 0; i < data.log.length; i++) {
                     data.log[i].create_time = app.dateformat(data.log[i].create_time * 1000)
                 }
+              console.log(data)
                 this.setData({
                     orderInfo: data,
                 })

@@ -83,14 +83,14 @@ radio .wx-radio-input {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.order .order-info .item .info .info-price {
+/* .order .order-info .item .info .info-price {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-top: 15rpx;
   font-size: 24rpx;
   color: #999999;
-}
+} */
 .order .order-info .item .info .info-price .price-box {
   margin-right: 30rpx;
 }
@@ -186,3 +186,26 @@ radio .wx-radio-input {
 }
 .dfk{text-indent:25rpx; margin-top:18rpx; color:red; }
 .time_sy{ font-size:28rpx; }
+.pay-btn {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120rpx;
+  height: 60rpx;
+  margin-left: 30rpx;
+  border-radius: 8rpx;
+  color: #ffffff;
+  background-color: red;
+}
+.pay-get {
+  background-color: #f64a48;
+}
+.info-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  color: #999999;
+}

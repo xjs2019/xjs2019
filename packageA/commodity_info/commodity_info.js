@@ -18,7 +18,7 @@ Page({
                 let goodsSpec = res.data.item
 
                 goodsSpec.forEach(items => {
-                    items.item.unshift({item: '不限'})
+                    items.item.unshift({item: '请选择'})
                     for (let i = 0; i < items.item.length; i++) {
                         if (items.item[i].check) {
                             items.index = i

@@ -3,35 +3,30 @@ const app = getApp()
 Page({
 
     data: {
-        tabIndex: -1,
+        tabIndex: 0,
         orderList: [],
         page: 1,
-      timer: '',//定时器名字
-      countDownNum: '10'//倒计时初始值
+        //status: 0
+      //timer: '',//定时器名字
+      //countDownNum: '10'//倒计时初始值
     },
 
   onLoad(options) {
     this.init()
     var g = wx.getStorageSync('tabIndex') 
-       console.log(g)
+       
     this.setData({
-      tabIndex: g,
+      tabIndex: g, 
     })
-    },
+  },
   // onLoad: function (e) {
   //   console.log(e)
   //   this.init()
   // },
-  // onLoad: (options) => {
-  //   var g = wx.getStorageSync('tabIndex') 
-  //   console.log(g)
-  //   this.setData({
-  //     tabIndex: 0,
-  //   })
-  // },
+  
 
     init() {
-        this.orderList()
+      this.orderList(0)
     },
 
     /********************event********************/

@@ -1,5 +1,5 @@
 <view class="order-nav">
-  <view class="nav-item {{tabIndex===-1?'nav-selected':''}}" data-index="{{-1}}" bindtap="tab">
+  <view class="nav-item {{tabIndex===-1 ?'nav-selected':''}}" data-index="{{-1}}" bindtap="tab">
     <view class="icon icon-quanbu"></view>
     <view>全部</view>
   </view>
@@ -42,10 +42,15 @@
             <!--</view>-->
             <view>{{item.goods_list.length}}件商品</view>
 
-            <block
-              wx:if="{{item.status===0||(item.status===6&&(item.pay_type==='支付宝'||item.pay_type==='微信'||item.pay_type==='现金'))}}">
+            <!--<block
+              wx:if="{{item.status===0||(item.status===0&&(item.pay_type==='支付宝'||item.pay_type==='微信'||item.pay_type==='现金'))}}">-->
+              <block
+              wx:if="{{item.status===0||(item.status===0&&item.pay_type==='微信')}}">
+
               <view class="pay-btn" data-order_sn="{{item.order_sn}}" catchtap="pay">立即付款
-                  <view class='countDown'><text style='color:red'>{{countDownNum}}</text></view>
+                  <!--<view class='countDown'>
+                  <text style='color:red'>{{countDownNum}}</text>
+                  </view>-->
               </view>
             </block>
             <block wx:if="{{item.status===2}}">

@@ -7,13 +7,13 @@ Page({
         orderList: [],
         page: 1,
       timer: '',//定时器名字
-      countDownNum: '10'//倒计时初始值
+      //countDownNum: '10'//倒计时初始值
     },
 
   onLoad(options) {
     this.init()
     var g = wx.getStorageSync('tabIndex') 
-       console.log(g)
+       //console.log(g)
     this.setData({
       tabIndex: g,
     })
@@ -61,8 +61,10 @@ Page({
         this.data.page = 1
         this.data.orderList = []
         const {index} = e.currentTarget.dataset
+      
         if (index === this.data.tabIndex) return
         // 获取tab下标,查询相应数据
+      
         this.orderList(index)
         this.setData({
             tabIndex: index,

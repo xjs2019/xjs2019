@@ -64,7 +64,7 @@ Page({
                 wx.showToast({title: '登录成功'})
                 setTimeout(() => {
                     this.isLogin(Number(res.data.type))
-                }, 1000)
+                }, 100)
             } else {
                 wx.showToast({title: res.error.message, icon: 'none'})
             }

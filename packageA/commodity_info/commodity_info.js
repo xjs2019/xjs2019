@@ -16,14 +16,24 @@ Page({
             if (res.response === 'data') {
 
                 let goodsSpec = res.data.item
-
+                var j =0;
+              //console.log(goodsSpec);
                 goodsSpec.forEach(items => {
-                    items.item.unshift({item: '不限'})
+                  //console.log(items);
+                  // if (j == 0) {
+                  //   items.item.unshift({ item: '请选择' })  
+                  // }else{
+                  //   items.item.unshift({ item: '不限' }) 
+                  // }
+                  items.item.unshift({ item: '请选择' }) 
+                  
                     for (let i = 0; i < items.item.length; i++) {
+                        
                         if (items.item[i].check) {
                             items.index = i
                         }
                     }
+                    j++;
                 })
 
                 wx.setStorage({key: 'info-goodsSpec', data: goodsSpec})
@@ -58,7 +68,7 @@ Page({
         
         //修改下标
         this.data.goodsSpec[itemIndex].index = selectedIndex
-        
+        //console.log(this.data.goodsSpec)
         var k=0;
         var check_n = '';
         this.data.goodsSpec.forEach(items => {
@@ -110,7 +120,7 @@ Page({
             var next3 = []
             
             next2 = wx.getStorageSync('info-goodsSpec') 
-              console.log(next)
+              //console.log(next)
               
               for (var i = 0; i < next2[itemIndex + 1].item.length; i++) {
                 for (let j in res2) {

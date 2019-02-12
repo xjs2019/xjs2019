@@ -19,7 +19,8 @@ Page({
                 var j =0;
               //console.log(goodsSpec);
                 goodsSpec.forEach(items => {
-                  //console.log(items);
+
+                    items.item.unshift({item: '请选择'})
                   // if (j == 0) {
                   //   items.item.unshift({ item: '请选择' })  
                   // }else{
